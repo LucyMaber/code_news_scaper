@@ -31,10 +31,14 @@ def article(url):
     tag =  soup.select(".CatKey ")[0]
     for s in soup.select('script'):
         s.extract()
-    for s in soup.select('div[class="article__detail-text mdc-typography--body1" > div'):
+    for s in soup.select('.PageContent > .PageStory > :not(p)'):
         s.extract()
-    for s in soup.select('div[class="article__detail-text mdc-typography--body1" > script'):
+    for s in soup.select('.PageContent > .PageStory > p:contains("Read more")'):
         s.extract()
-    bodyCopy =  soup.select('div[class="article__detail-text mdc-typography--body1"]')[0]
+    for s in soup.select('.PageContent > .PageStory > p:contains("Cosgrove Leisure was approached")'):
+        s.extract()
+    # for s in soup.select('div[class="article__detail-text mdc-typography--body1" > script'):
+    #     s.extract()
+    bodyCopy =  soup.select('.PageContent > .PageStory')[0]
     print(bodyCopy)
-article("https://www.kentonline.co.uk/kent/news/campaigners-want-to-reverse-beeching-cuts-256881/")
+article("https://www.kentonline.co.uk/sheerness/news/holiday-parks-need-to-be-regulated-across-uk-257113/")

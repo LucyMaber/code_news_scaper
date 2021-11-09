@@ -1,6 +1,3 @@
-urls = [
-    "https://www.kentonline.co.uk/"
-]
 feeds = [
     "https://www.kentonline.co.uk/_api/rss/kent_online_news_feed.xml",
     "https://www.kentonline.co.uk/_api/rss/dartford_messenger_news_feed.xml",
@@ -31,10 +28,17 @@ def article(url):
     content = requests.get(url,headers=header).content
     soup = BeautifulSoup(content, 'html.parser')
     headline =  soup.select("h1")[0]
+    tag =  soup.select(".CatKey ")[0]
     for s in soup.select('script'):
         s.extract()
-    for s in soup.select('.PageStory > :not(p ,h1 ,h2,h3,h4,h5,h6,h7)'):
+    for s in soup.select('.PageContent > .PageStory > :not(p)'):
         s.extract()
-    bodyCopy =  soup.select('.PageStory')[0]
+    for s in soup.select('.PageContent > .PageStory > p:contains("Read more")'):
+        s.extract()
+    for s in soup.select('.PageContent > .PageStory > p:contains("Cosgrove Leisure was approached")'):
+        s.extract()
+    # for s in soup.select('div[class="article__detail-text mdc-typography--body1" > script'):
+    #     s.extract()
+    bodyCopy =  soup.select('.PageContent > .PageStory')[0]
     print(bodyCopy)
-article("https://www.kentonline.co.uk/sheerness/news/shot-fired-during-disturbance-on-boat-256941/")
+article("https://www.kentonline.co.uk/sheerness/news/holiday-parks-need-to-be-regulated-across-uk-257113/")

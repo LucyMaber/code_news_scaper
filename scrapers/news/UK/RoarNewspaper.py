@@ -1,8 +1,8 @@
 urls = [
-    "https://www.nme.com/"
+    "http://roarnews.co.uk/"
 ]
 feeds = [
-    "https://www.nme.com/feed"
+
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',
@@ -18,10 +18,12 @@ import requests
 def article(url):
     content = requests.get(url,headers=header).content
     soup = BeautifulSoup(content, 'html.parser')
-    headline =  soup.select('.c-article-header__title')[0]
-    subheadline =  soup.select('.c-article-excerpt')[0]
-    for s in soup.select('.c-article-content__container > :not(p)'):
+    headline =  soup.select('header > h1')[0]
+    subheadline =  soup.select('.td-post-content ')[0]
+    for s in soup.select('img'):
         s.extract()
-    bodyCopy =  soup.select('.c-article-content__container')[0] ### READ THE FULL STORY
+    for s in soup.select('.td-post-content > :not(p,h2,h3,h4,h5,h6)'):
+        s.extract()
+    bodyCopy =  soup.select('.td-post-content ')[0] ### READ THE FULL STORY
     print(bodyCopy)
-article("https://www.nme.com/blogs/nme-radar/jada-kingdom-interview-jungle-jamaica-3089955")
+article("http://roarnews.co.uk/2021/wigan-may-be-redeveloped-on-the-blood-of-uyghurs-this-must-be-stopped/")
