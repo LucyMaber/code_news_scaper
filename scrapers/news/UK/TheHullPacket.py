@@ -1,8 +1,8 @@
 urls = [
-    "https://www.theguardian.com"
+    "https://www.hulldailymail.co.uk/"
 ]
 feeds = [
-
+    "https://www.hulldailymail.co.uk/rss.xml"
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',
@@ -18,17 +18,18 @@ import requests
 def article(url):
     content = requests.get(url,headers=header).content
     soup = BeautifulSoup(content, 'html.parser')
-    headline =  soup.select('article > div > div > div > div > div > h1')[0]
-    # tags =  soup.select('.tags')[0]
-    # datePublished =  soup.select('.datePublished > time')[0]
-    # datePublished =  soup.select('.dateModified > time')[0]
-    # tags =  soup.select('.tags')[0]
+    headline =  soup.select('[itemprop="headline name"]')[0]
+    subheadline =  soup.select('[itemprop="description"]')[0]
     for s in soup.select('script'):
         s.extract()
-    for s in soup.select('#maincontent > div > :not(ul ,p, strong)'):
+    for s in soup.select('img'):
         s.extract()
     for s in soup.select('[itemprop="articleBody"] > :not(p)'):
         s.extract()
-    content =  soup.select('#maincontent > div')[0]
+    for s in soup.select('[itemprop="articleBody"] > :contains("Read more")'):
+        s.extract()
+    for s in soup.select('[itemprop="articleBody"] > :contains("For the latest Hull crime news straight into your inbox,")'):
+        s.extract()
+    content =  soup.select('[itemprop="articleBody"]')[0]
     print(content)
-article("https://www.theguardian.com/politics/2021/nov/05/article-16-very-much-on-the-table-in-brexit-row-david-frost")
+article("https://www.hulldailymail.co.uk/news/hull-east-yorkshire-news/brazen-gang-terrorising-hulls-no-6187118")
