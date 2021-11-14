@@ -1,22 +1,13 @@
 import os
 import importlib.util
+from os import listdir
+from os.path import isfile, join
+mypath = "/home/william/Code/news_scaper/scrapers/news/UK"
+onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
 
-data = []
+for file in onlyfiles:
+    file = join(mypath, file)
+    f = open(file, "r")
+    if "article" in f.read():
+        os.remove(file)
 
-for root, dirs, files in os.walk("./scrapers/news/UK"):
-    for file_A in files:
-        try:
-            spec_a = importlib.util.spec_from_file_location("module.name", "./scrapers/news/UK/"+file_A)
-            foo_a = importlib.util.module_from_spec(spec_a)
-            spec_a.loader.exec_module(foo_a)
-            for file_B in files:
-                try:
-                    spec_b = importlib.util.spec_from_file_location("module.name", "./scrapers/news/UK/"+file_B)
-                    foo_b = importlib.util.module_from_spec(spec_b)
-                    spec_b.loader.exec_module(foo_b)
-                except:
-                    pass
-        except:
-            data.append({"type":"unknow Error","file":file_A})
-print(data)
-            
