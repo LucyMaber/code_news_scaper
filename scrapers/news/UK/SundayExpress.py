@@ -1,3 +1,4 @@
+Q =''
 urls = [
     "https://www.express.co.uk/"
 ]

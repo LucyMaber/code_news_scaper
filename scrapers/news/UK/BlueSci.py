@@ -1,3 +1,4 @@
+Q =''
 urls = [
     "https://www.bluesci.co.uk/"
 ]

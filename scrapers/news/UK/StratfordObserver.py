@@ -1,3 +1,4 @@
+Q ='[[wikidata:Q7621974]]'
 urls = [
     "https://stratfordobserver.co.uk/"
 ]

@@ -1,3 +1,4 @@
+Q =''
 urls = [
     "https://www.argyllbute24.co.uk/"
 ]

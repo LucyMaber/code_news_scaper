@@ -1,3 +1,4 @@
+Q =''
 urls = [
     "http://exiledonline.com/"
 ]

@@ -1,3 +1,4 @@
+Q ='[[wikidata:Q5744786]]'
 urls = [
     "https://www.hertfordshiremercury.co.uk/"
 ]

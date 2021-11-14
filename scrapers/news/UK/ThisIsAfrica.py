@@ -1,3 +1,4 @@
+Q ='[[wikidata:Q17032517]]'
 urls = [
     "https://thisisafrica.me/"
 ]

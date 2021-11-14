@@ -1,3 +1,4 @@
+Q ='[[wikidata:Q7681164]]'
 urls = [
     "https://www.manchestereveningnews.co.uk/"
 ]

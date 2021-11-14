@@ -1,3 +1,4 @@
+Q ='[[wikidata:Q4672877]]'
 urls = []
 feeds = [
 

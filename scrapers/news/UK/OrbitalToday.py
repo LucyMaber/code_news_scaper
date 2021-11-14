@@ -1,3 +1,4 @@
+Q =''
 urls = [
     "https://orbitaltoday.com/"
 ]

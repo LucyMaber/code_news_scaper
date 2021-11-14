@@ -1,3 +1,4 @@
+Q =''
 urls = [
     "https://www.ilfordrecorder.co.uk/"
 ]

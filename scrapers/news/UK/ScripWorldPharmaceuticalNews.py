@@ -1,3 +1,4 @@
+Q ='[[wikidata:Q7439180]]'
 urls = [
     "https://scrip.pharmaintelligence.informa.com/"
 ]

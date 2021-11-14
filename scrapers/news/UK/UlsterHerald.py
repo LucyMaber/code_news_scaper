@@ -1,3 +1,4 @@
+Q ='[[wikidata:Q7879965]]'
 urls = [
     "https://www.wearetyrone.com/"
 ]

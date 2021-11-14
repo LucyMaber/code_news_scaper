@@ -1,3 +1,4 @@
+Q ='[[wikidata:Q585287]]'
 urls = [
     "https://theecologist.org/"
 ]

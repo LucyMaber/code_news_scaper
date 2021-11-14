@@ -1,3 +1,4 @@
+Q ='[[wikidata:Q1566255]]'
 urls = []
 feeds = [
     "https://www.newstatesman.com/feed",

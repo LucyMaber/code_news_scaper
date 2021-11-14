@@ -1,3 +1,4 @@
+Q ='[[wikidata:Q7681172]]'
 urls = [
     "https://www.questmedianetwork.co.uk/news/tameside-reporter/advice-available-to-families-at-the-healthy-hub-club/"
 ]
