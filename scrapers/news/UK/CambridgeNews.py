@@ -44,6 +44,6 @@ def article(url):
     for s in soup.select('[itemprop="articleBody"] > section'):
         s.extract()
     articleBody  =  soup.select('[itemprop="articleBody"]') [0]
-    print(subhedding)
+    
 
 article("https://www.cambridge-news.co.uk/news/cambridge-news/devastated-dad-cambridge-teen-totally-22039696")

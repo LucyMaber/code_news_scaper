@@ -30,5 +30,5 @@ def article(url):
     for s in soup.select('main > div.c-richText > div'):
         s.extract()
     bodyCopy =  soup.select('main > div.c-richText')[0]
-    print(bodyCopy)
+    
 article("https://thenextweb.com/news/your-spotify-wrapped-2021-is-embarrassing-and-youre-too-late-to-change-it")

@@ -26,5 +26,5 @@ def article(url):
     for s in soup.select('[itemprop="articleBody"] >  :not(p)'):
         s.extract()
     bodyCopy =  soup.select('[itemprop="articleBody"]')[0]
-    print(bodyCopy)
+    
 article("https://www.birminghammail.co.uk/news/midlands-news/survivor-shamed-sea-cadet-leader-20224932")

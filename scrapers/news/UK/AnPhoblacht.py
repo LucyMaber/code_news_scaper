@@ -19,9 +19,9 @@ def article(url):
     a = soup.select('p.author > span')[0]
     a.extract()
     author =  soup.select('p.author') [0]
-    print(author)
+    
     edition_title =  soup.select('.edition-title') [0]
-    print(edition_title)
+    
     articleBody = soup.select('.span5')[0]
-    print(articleBody)
+    
 article("https://www.anphoblacht.com/contents/28198")

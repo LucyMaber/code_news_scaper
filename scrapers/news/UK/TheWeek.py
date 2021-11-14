@@ -28,5 +28,5 @@ def article(url):
     # for s in soup.select('#main > div > div > :not(p)'):
     #     s.extract()
     bodyCopy =  soup.select('#main > div > div:nth-child(2)')[0]
-    print(bodyCopy)
+    
 article("https://www.theweek.co.uk/news/environment/954753/cop26-what-unexpected-us-china-climate-deal-means-global-emissions")

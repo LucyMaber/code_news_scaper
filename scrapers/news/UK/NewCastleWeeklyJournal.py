@@ -22,5 +22,5 @@ def article(url):
     for s in soup.select('img'):
         s.extract()
     bodyCopy =  soup.select('[class="tdb-block-inner td-fix-index"]:has(p)')[0]
-    print(headline)
+    
 article("https://newcastleweekly.com.au/angry-gallen-challenges-aloiai-to-man-up-in-newcastle/")

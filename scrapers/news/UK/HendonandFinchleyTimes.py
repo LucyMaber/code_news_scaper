@@ -21,6 +21,6 @@ def article(url):
     for s in soup.select('#content-wrapper > div:not(.markup)'):
         s.extract()
     article =  soup.select('.p402_hide > div')[0]
-    print(article)
+    
 article("https://www.times-series.co.uk/news/national/uk-today/19697158.life-uk-test-can-pass-british-citizenship-test-take-quiz/")
 ### NEED JAVASCRIPT

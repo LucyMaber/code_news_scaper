@@ -37,5 +37,5 @@ def article(url):
     for s in soup.select("p:has(b)"):
         s.extract()
     article_body =  soup.select_one('[itemprop="articleBody"]')
-    print(article_body)
+    
 article("https://www.business-live.co.uk/enterprise/entrepreneur-meets-wayne-rooney-discuss-22030735")

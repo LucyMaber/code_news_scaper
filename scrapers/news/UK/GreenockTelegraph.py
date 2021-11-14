@@ -32,5 +32,5 @@ def article(url):
     for s in soup.select('p > :-soup-contains("please log in and leave you comments below.")'):
         s.extract()
     content =  soup.select('.p402_hide')[0]
-    print(content)
+    
 article("https://www.greenocktelegraph.co.uk/news/19694121.7m-investment-project-loch-thom-wins-scottish-civil-engineering-award/")

@@ -31,5 +31,5 @@ def article(url):
     for s in soup.select('[itemprop="text"] > p:contains("Click here for Digital ePaper")'):
         s.extract()
     bodyCopy =  soup.select('[itemprop="text"]')[0]
-    print(bodyCopy)
+    
 article("https://www.tyronecourier.co.uk/news/2021/11/11/news/fivemiletown-fraudster-unmasked-and-jailed-19772/")

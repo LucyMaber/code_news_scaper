@@ -31,5 +31,5 @@ def article(url):
     for s in soup.select('script'):
         s.extract()
     bodyCopy =  soup.select(".main")[0]
-    print(bodyCopy)
+    
 article("https://www.evangelical-times.org/articles/as-we-prepare-to-remember/")

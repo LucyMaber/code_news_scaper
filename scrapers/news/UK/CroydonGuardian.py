@@ -23,5 +23,5 @@ def article(url):
     for s in soup.select("script"):
         s.extract()
     headline =  soup.select('h1.headline')
-    print(article_body)
+    
 article("https://www.yourlocalguardian.co.uk/news/19687215.police-arrest-man-armed-knife-sutton/")

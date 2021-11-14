@@ -22,5 +22,5 @@ def article(url):
     for s in soup.select('#article-body > :not(p, h1,h2,h3,h4,h5,h6,.twitter-tweet) '):
         s.extract()
     article =  soup.select('#article-body')[0]
-    print(article)
+    
 article("https://www.irishpost.com/sport/seizure-of-banned-animal-remedies-occurs-during-raid-on-irish-horse-racing-yard-223840")

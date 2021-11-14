@@ -25,5 +25,5 @@ def article(url):
     for s in soup.select("img"):
         s.extract()
     article_body =  soup.select('div.entry') [0]
-    print(article_body)
+    
 article("https://banglamirrornews.com/2021/11/01/we-are-digging-our-own-graves/")

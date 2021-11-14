@@ -22,5 +22,5 @@ def article(url):
     for s in soup.select('.c-article-content__container > :not(p)'):
         s.extract()
     bodyCopy =  soup.select('.c-article-content__container')[0] ### READ THE FULL STORY
-    print(bodyCopy)
+    
 article("https://www.newstatesman.com/politics/2021/11/britannia-chained-why-the-legacy-of-brexit-threatens-boris-johnsons-global-britain")

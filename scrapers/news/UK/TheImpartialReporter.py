@@ -22,5 +22,5 @@ def article(url):
     for s in soup.select('script'):
         s.extract()
     content =  soup.select('.p402_hide')[0]
-    print(headline)
+    
 article("https://www.impartialreporter.com/news/19708222.fermanagh-2001-reflections-ruc-force-enniskillen-ties-end/")

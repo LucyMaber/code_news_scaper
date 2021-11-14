@@ -27,5 +27,5 @@ def article(url):
     for s in soup.select('[class="td-post-content tagdiv-type"] > :not(p)'):
         s.extract()
     content =  soup.select('[class="td-post-content tagdiv-type"]')[0]
-    print(content)
+    
 article("https://wrp.org.uk/news/anti-deportation-fighters-block-removals-are-backed-by-tuc/")

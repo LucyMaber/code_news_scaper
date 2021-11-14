@@ -33,5 +33,5 @@ def article(url):
     for s in soup.select('p:has(a[data-link-tracking="InArticle|Link"])'):
         s.extract()
     article =  soup.select('.article-content')[0]
-    print(article)
+    
 article("https://inews.co.uk/news/politics/booster-jabs-can-be-booked-one-month-early-from-monday-under-new-plan-to-speed-up-rollout-1287380")

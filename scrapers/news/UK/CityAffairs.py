@@ -34,6 +34,6 @@ def article(url):
     articleContent  =  soup.select('.articleContent > div') [0]
     #print(articleBod
     # y)
-    print(articleSummary)
+    
 
 article("https://www.churchtimes.co.uk/articles/2021/29-october/comment/opinion/stop-the-sex-education-opt-out")

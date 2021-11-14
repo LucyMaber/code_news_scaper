@@ -25,5 +25,5 @@ def article(url):
     for s in soup.select('#content-wrapper > :not(.markup)'):
         s.extract()
     bodyCopy =  soup.select('#content-wrapper')[0]
-    print(headline)
+    
 article("https://www.daventryexpress.co.uk/news/people/five-escape-with-minor-injuries-after-three-car-pile-up-on-a5-in-northamptonshire-3443417")

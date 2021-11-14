@@ -29,5 +29,5 @@ def article(url):
     for s in soup.select('#content-wrapper > :not(.markup)'):
         s.extract()
     articleBody =  soup.select('#content-wrapper')[0]
-    print(articleBody)
+    
 article("https://www.fifetoday.co.uk/news/crime/fife-man-sentenced-to-10-years-for-child-sex-abuse-at-the-high-court-in-edinburgh-3447757")

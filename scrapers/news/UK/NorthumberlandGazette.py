@@ -29,5 +29,5 @@ def article(url):
     for s in soup.select('#content-wrapper > :contains("Support your Gazette and become a subscriber today.")'):
         s.extract()
     bodyCopy =  soup.select('#content-wrapper')[0] ### READ THE FULL STORY
-    print(bodyCopy)
+    
 article("https://www.northumberlandgazette.co.uk/news/politics/council/plans-submitted-for-overnight-motorhome-parking-in-northumberland-coastal-car-park-3442473")

@@ -22,5 +22,5 @@ def article(url):
     for s in soup.select('script'):
         s.extract()
     content =  soup.select('.entry-content')[0]
-    print(content)
+    
 article("https://www.idler.co.uk/article/who-modern-stoicism-misses-the-point/")

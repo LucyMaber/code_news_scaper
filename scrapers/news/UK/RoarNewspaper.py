@@ -25,5 +25,5 @@ def article(url):
     for s in soup.select('.td-post-content > :not(p,h2,h3,h4,h5,h6)'):
         s.extract()
     bodyCopy =  soup.select('.td-post-content ')[0] ### READ THE FULL STORY
-    print(bodyCopy)
+    
 article("http://roarnews.co.uk/2021/wigan-may-be-redeveloped-on-the-blood-of-uyghurs-this-must-be-stopped/")

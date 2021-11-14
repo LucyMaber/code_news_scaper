@@ -27,6 +27,6 @@ def article(url):
     for s in soup.select('#content-wrapper > :not(.markup)'):
         s.extract()
     bodyCopy =  soup.select('#content-wrapper')[0]
-    print(bodyCopy)
+    
 article("https://www.thestar.co.uk/health/coronavirus/sajid-javid-says-get-covid-booster-jabs-to-prevent-restrictions-over-christmas-3448247")
 

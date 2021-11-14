@@ -31,5 +31,5 @@ def article(url):
     for s in soup.select('[itemprop="articleBody"] > :not(p,h1,h2,h3,h4,h5)'):
         s.extract()
     bodyCopy = soup.select('[itemprop="articleBody"]')[0]
-    print(bodyCopy)
+    
 article("https://www.thecanary.co/uk/news/2021/11/10/who-covid-special-envoy-calls-out-pm-for-not-wearing-a-mask-during-hospital-visit/")

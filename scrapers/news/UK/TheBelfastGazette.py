@@ -32,6 +32,6 @@ def article(url):
     for s in soup.select('article > div >  :contains("See also") ~ *'):
         s.extract()
     bodyCopy = soup.select('article > div')[0]
-    print(bodyCopy)
+    
 article("https://www.thegazette.co.uk/all-notices/content/103996/")
 ## ERROR uninow

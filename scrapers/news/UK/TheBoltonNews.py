@@ -30,5 +30,5 @@ def article(url):
     for s in soup.select('#subscription-content > div'):
         s.extract()
     bodyCopy = soup.select('.p402_hide')[0]
-    print(bodyCopy)
+    
 article("https://www.theboltonnews.co.uk/news/19704222.war-memorial-project-bolton-honours-men-behind-names/")

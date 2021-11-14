@@ -30,5 +30,5 @@ def article(url):
     for s in soup.select('.markup:contains("Support The Yorkshire Post and become a subscriber today")'):
         s.extract()
     bodyCopy =  soup.select('.article-content')[0]
-    print(bodyCopy)
+    
 article("https://www.yorkshirepost.co.uk/news/crime/watch-the-moment-hapless-yorkshire-driver-crashes-into-wall-landing-him-with-ps310-fine-3453729")

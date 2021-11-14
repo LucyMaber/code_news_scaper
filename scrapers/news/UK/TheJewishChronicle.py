@@ -39,5 +39,5 @@ def article(url):
     for s in soup.select('.article section > :contains("For the latest Hull crime news straight into your inbox,")'):
         s.extract()
     content =  soup.select('.article > .prose')[0]
-    print(content)
+    
 article("https://www.thejc.com/comment/opinion/diversity-obsession-has-ruined-the-marvel-fun-1.522406")

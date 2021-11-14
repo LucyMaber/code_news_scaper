@@ -24,5 +24,5 @@ def article(url):
     for s in soup.select('.entry-content > :not(p, h1,h2,h3,h4,h5,h6) '):
         s.extract()
     article =  soup.select('.entry-content')[0]
-    print(article)
+    
 article("https://iwobserver.co.uk/members-decide-officers-advise/")

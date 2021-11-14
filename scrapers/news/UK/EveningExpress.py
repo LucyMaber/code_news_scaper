@@ -22,6 +22,6 @@ def article(url):
     date_published =  soup.select('.post-timestamp__published')[0]
     time =  soup.select('.byline__name')[0]
     tag =  soup.select('.tag-list')[0]
-    print(tag)
+    
     tag =  soup.select('.lightbox-content')[0]
 article("https://www.eveningexpress.co.uk/fp/news/local/m90-perth-crash-lorry-driver-killed-in-bridge-plunge-named-by-police/")

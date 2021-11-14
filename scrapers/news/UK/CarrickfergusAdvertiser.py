@@ -28,8 +28,8 @@ def article(url):
     # for s in soup.select('#content-wrapper > #axate-wallet'):
     #     s.extract()
     articleBody  =  soup.select('#content-wrapper') [0]
-    #print(articleBody)
-    print(hedding)
-    print(tags)
+    #
+    
+    
 
 article("https://www.carrickfergustimes.co.uk/business/carrick-business-awards-final-call-for-nominations-3440961")

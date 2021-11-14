@@ -25,6 +25,6 @@ def article(url):
     for s in soup.select('script'):
         s.extract()
     bodyCopy =  soup.select('[class="article-content"]')[0]
-    print(bodyCopy)
+    
 article("https://www.thesphere.com.au/news/a-world-turned-topsy-turvy-maridulu-budyari-gumal-sphere-ccikt-platform-uses-art-to-communicate-covid-19-experiences")
 

@@ -29,5 +29,5 @@ def article(url):
     for s in soup.select('p:has([data-link-tracking="InArticle|Link"])'):
         s.extract()
     article =  soup.select('[itemprop="articleBody"]')[0]
-    print(article)
+    
 article("https://www.hertfordshiremercury.co.uk/news/uk-world-news/jet-2-tui-ryanair-easyjet-6170632")

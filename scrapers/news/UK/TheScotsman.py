@@ -30,6 +30,6 @@ def article(url):
     for s in soup.select('.article-content > :not(.markup)'):
         s.extract()
     bodyCopy =  soup.select('.article-content')[0]
-    print(bodyCopy)
+    
 article("https://www.scotsman.com/sport/football/rangers/aston-villa-confirm-steven-gerrard-appointment-as-he-notes-special-place-in-his-heart-for-rangers-3453857")
 

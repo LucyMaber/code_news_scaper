@@ -23,5 +23,5 @@ def article(url):
     for s in soup.select('#content-wrapper > :not(.markup)'):
         s.extract()
     bodyCopy =  soup.select('#content-wrapper')[0] ### READ THE FULL STORY
-    print(bodyCopy)
+    
 article("https://www.northantstelegraph.co.uk/news/crime/rushden-burglar-steals-games-consoles-and-jewellery-after-breaking-into-home-3449846")

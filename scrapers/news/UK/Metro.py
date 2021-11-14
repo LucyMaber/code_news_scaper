@@ -27,5 +27,5 @@ def article(url):
     for s in soup.select('p:has([data-link-tracking="InArticle|Link"])'):
         s.extract()
     bodyCopy =  soup.select('.article-body')[0]
-    print(bodyCopy)
+    
 article("https://metro.co.uk/2021/11/07/six-essential-habits-that-will-help-you-live-your-best-life-15558008/")

@@ -31,5 +31,5 @@ def article(url):
     for s in soup.select('[itemprop="articleBody"] > :contains("For the latest Hull crime news straight into your inbox,")'):
         s.extract()
     content =  soup.select('[itemprop="articleBody"]')[0]
-    print(content)
+    
 article("https://www.hulldailymail.co.uk/news/hull-east-yorkshire-news/brazen-gang-terrorising-hulls-no-6187118")

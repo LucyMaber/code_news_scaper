@@ -32,5 +32,5 @@ def article(url):
     for s in soup.select('.entry-content > p:contains("Read more")'):
         s.extract()
     bodyCopy =  soup.select('.entry-content')[0]
-    print(bodyCopy)
+    
 article("https://thisisafrica.me/arts-and-culture/mohamed-mbougar-sarr-senegalese-novelists-win-is-a-landmark-for-african-literature/")

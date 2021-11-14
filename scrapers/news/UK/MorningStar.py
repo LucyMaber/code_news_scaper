@@ -25,5 +25,5 @@ def article(url):
     for s in soup.select('img'):
         s.extract()
     bodyCopy =  soup.select('#changefont')[0]
-    print(headline)
+    
 article("https://www.morningstar.co.uk/uk/news/216636/cop26-big-banks-and-climate-change.aspx")

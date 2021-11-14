@@ -25,5 +25,5 @@
 #     for s in soup.select('article > :not(p,h1,h2,h3,h4,h5,h6,strong)'):
 #         s.extract()
 #     bodyCopy = soup.select('.p402_hide')[0]
-#     print(bodyCopy)
+#     
 # article("https://www.test-and-measurement-world.com/Articles/Mobile-phone-hardware-testing-and-repairing.html")

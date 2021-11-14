@@ -23,5 +23,5 @@ def article(url):
     for s in soup.select("script"):
         s.extract()
     articleBody =  soup.select('.p402_hide')[0]
-    print(articleBody)
+    
 article("https://www.cravenherald.co.uk/news/national/uk-today/19690399.toby-carvery-issues-facebook-scam-warning-uk-customers/")

@@ -29,5 +29,5 @@ def article(url):
     # for s in soup.select('.fl-module-content > p:contains("Get more Salisbury news.")'):
     #     s.extract()
     bodyCopy =  soup.select('[class="fl-module fl-module-fl-post-content fl-node-5c7e18968ba4f extra-formating scidev-table-responsive"]>[class="fl-module-content fl-node-content"]')[0]
-    print(bodyCopy)
+    
 article("https://www.scidev.net/global/news/doubt-grows-over-cop26-forest-pledge/")

@@ -26,5 +26,5 @@ def article(url):
     for s in soup.select('.td-post-content > :not(p) '):
         s.extract()
     article =  soup.select('.td-post-content')[0]
-    print(headline)
+    
 article("https://www.investortimes.co.uk/experian/")

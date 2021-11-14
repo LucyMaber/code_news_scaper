@@ -23,5 +23,5 @@ def article(url):
     for s in soup.select('.article-content > :not(p, h1,h2,h3,h4,h5,h6,.twitter-tweet)'):
         s.extract()
     article =  soup.select('.article-content')[0]
-    print(article)
+    
 article("https://www.joe.co.uk/news/man-trapped-in-wall-of-new-york-theatre-for-two-days-completely-naked-298237")

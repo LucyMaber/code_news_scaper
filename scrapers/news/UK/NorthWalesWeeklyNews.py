@@ -25,5 +25,5 @@ def article(url):
     for s in soup.select('img'):
         s.extract()
     bodyCopy =  soup.select('[itemprop="articleBody"]')[0] ### READ THE FULL STORY
-    print(bodyCopy)
+    
 article("https://www.dailypost.co.uk/news/north-wales-news/forgotten-community-heart-abersoch-who-22088430")

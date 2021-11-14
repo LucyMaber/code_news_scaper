@@ -26,6 +26,6 @@ def article(url):
     for s in soup.select('.PageStory > :not(p , h1 , h2 , h3 , h4 , h5 , h6 , h7 , h8 , h9)'):
         s.extract()
     artcal =  soup.select('[itemprop="articleBody"]')[0]
-    print(artcal)
+    
 
 article("https://www.football.london/arsenal-fc/fixtures-results/arsenal-press-conference-live-mikel-22072410")

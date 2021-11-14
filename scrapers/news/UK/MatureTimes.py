@@ -27,5 +27,5 @@ def article(url):
     for s in soup.select('p:has([data-link-tracking="InArticle|Link"])'):
         s.extract()
     bodyCopy =  soup.select('.entry-content')[0]
-    print(bodyCopy)
+    
 article("http://www.maturetimes.co.uk/robert-tanitch-reviews-enos-hms-pinafore-at-london-coliseum/")

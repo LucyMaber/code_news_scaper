@@ -33,5 +33,5 @@ def article(url):
     for s in soup.select('script'):
         s.extract()
     bodyCopy =  soup.select('.p402_hide')[0]
-    print(bodyCopy)
+    
 article("https://www.darlingtonandstocktontimes.co.uk/news/19689944.battling-win-sees-guisborough-rufc-go-nine-points-clear-top-division-two/")

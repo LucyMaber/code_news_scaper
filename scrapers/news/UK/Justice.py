@@ -24,5 +24,5 @@ def article(url):
     for s in soup.select('script'):
         s.extract()
     article =  soup.select('.p402_hide')[0]
-    print(article)
+    
 article("https://www.keighleynews.co.uk/news/19699350.letter-keighley-councillor-resigns-committee-cemetery-lighting-decision/")

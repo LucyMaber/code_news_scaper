@@ -27,5 +27,5 @@ def article(url):
     for s in soup.select("div.article__detail-text > div"):
         s.extract()
     article_body =  soup.select('div.article__detail-text') [0]
-    print(article_body)
+    
 article("https://www.barkinganddagenhampost.co.uk/news/traffic/road-and-rail-delays-to-avoid-november-1-8449954")

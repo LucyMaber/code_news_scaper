@@ -28,5 +28,5 @@ def article(url):
     for s in soup.select('.access-body > :not(p)'):
         s.extract()
     content =  soup.select('.access-body')[0]
-    print(tags)
+    
 article("https://www.law.com/international-edition/2021/11/10/us-investigates-tencents-1-3b-acquisition-of-british-videogame-maker/")

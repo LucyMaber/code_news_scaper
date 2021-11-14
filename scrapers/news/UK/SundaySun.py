@@ -29,5 +29,5 @@ def article(url):
     for s in soup.select('.article__content >  p:contains(" Read our")'):
         s.extract()
     bodyCopy =  soup.select('.article__content')[0]
-    print(bodyCopy)
+    
 article("https://www.thesun.co.uk/news/16683232/prince-andrew-virginia-roberts-witness-evidence-documentary/")

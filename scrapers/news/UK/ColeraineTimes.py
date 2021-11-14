@@ -28,5 +28,5 @@ def article(url):
         s.extract()
     content_wrapper = soup.select(".entry-content")[0]
     #article =  soup.select("div.article__detail-text")[0]
-    print(article_title)
+    
 article("https://www.concrete-online.co.uk/university-to-reintroduce-discounted-taxi-scheme-after-student-staff-outrage/")

@@ -35,5 +35,5 @@ def article(url):
     for s in soup.select('.commercialSlot'):
         s.extract()
     bodyCopy = soup.select('.ArticleBodyPaywall')[0]
-    print(bodyCopy)
+    
 article("https://www.campaignlive.co.uk/article/christmas-ads-2021-adland-reviews-m-s-boots-john-lewis/1732699/")

@@ -24,5 +24,5 @@ def article(url):
     articleBody =  soup.select('[itemprop="articleBody"]')[0]
     for s in soup.select('[itemprop="articleBody"] > div:not(.mol-para-with-font)'):
         s.extract()
-    print(articleBody)
+    
 article("https://www.dailymail.co.uk/news/article-10159877/Yorkshires-board-pressure-resign-brushing-P-slur-levelled-Azeem-Rafiq.html")

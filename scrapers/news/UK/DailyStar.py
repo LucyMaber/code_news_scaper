@@ -56,5 +56,5 @@ def article(url):
     for s in soup.select('.html-embed'):
         s.extract()
     bodyCopy =  soup.select('[itemprop="articleBody"]')[0]
-    print(headline)
+    
 article("https://www.dailystar.co.uk/news/world-news/cleo-smith-abduction-suspect-viciously-25372777")

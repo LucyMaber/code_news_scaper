@@ -21,5 +21,5 @@ def article(url):
     # for s in soup.select('.Article__content  > div > :not(p, h1,h2,h3,h4,h5,h6) '):
     #     s.extract()
     article =  soup.select('.Article__content > div')[0]
-    print(tags)
+    
 article("http://islingtontribune.com/article/care-homes-abuse-scandal-was-my-sons-life-worthless")

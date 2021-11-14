@@ -29,5 +29,5 @@ def article(url):
     for s in soup.select('script'):
         s.extract()
     article =  soup.select('[itemprop="articleBody"]')[0]
-    print(article)
+    
 article("https://www.birminghammail.co.uk/news/midlands-news/murder-accused-girlfriend-apologises-referring-22115654")

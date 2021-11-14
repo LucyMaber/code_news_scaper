@@ -34,5 +34,5 @@ def article(url):
     for s in soup.select('script'):
         s.extract()
     bodyCopy =  soup.select('.article-main')[0] ### READ THE FULL STORY
-    print(bodyCopy)
+    
 article("https://techxplore.com/news/2021-11-merlin-self-supervised-strategy-deep-despeckling.html")

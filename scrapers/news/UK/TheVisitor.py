@@ -26,5 +26,5 @@ def article(url):
     for s in soup.select('#content-wrapper > :not(.markup)'):
         s.extract()
     bodyCopy =  soup.select('#content-wrapper')[0]
-    print(headline)
+    
 article("https://www.thevisitor.co.uk/news/crime/posh-trees-stolen-from-outside-jewellers-in-lancaster-3453033")

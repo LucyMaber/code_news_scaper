@@ -25,5 +25,5 @@ def article(url):
     publishedDate =  soup.select('.date-published')[0]
     for s in soup.select('[itemprop="articleBody"] > :not(p)'):
         s.extract()
-    print(headline)
+    
 article("https://www.mirror.co.uk/news/world-news/cleo-smith-found-girl-4-25371357")

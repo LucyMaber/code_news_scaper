@@ -21,8 +21,8 @@ def article(url):
     article =  soup.select('#subscription-replace-entire-article') [0]
     for s in soup.select("script"):
         s.extract()
-    #print(article)
+    #
     headline =  soup.select('h1.headline ') [0]
     time =  soup.select('time ') [0]
-    print(author)
+    
 article("https://www.banburycake.co.uk/news/19678856.kaleb-cooper-opens-farming-area-banbury-bicester-college/")

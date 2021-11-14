@@ -30,5 +30,5 @@ def article(url):
     for s in soup.select('#content-wrapper > :not(.markup)'):
         s.extract()
     bodyCopy =  soup.select('#content-wrapper')[0]
-    print(bodyCopy)
+    
 article("https://www.wakefieldexpress.co.uk/news/people/castleford-family-business-celebrates-its-100th-birthday-3454376")

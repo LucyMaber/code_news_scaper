@@ -26,5 +26,5 @@ def article(url):
     for s in soup.select('script'):
         s.extract()
     bodyCopy =  soup.select('.body-content')[0] ### READ THE FULL STORY
-    print(headline)
+    
 article("https://peterborough.net/the-best-ways-to-choose-the-appropriate-used-plant-machinery/")

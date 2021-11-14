@@ -30,5 +30,5 @@ def article(url):
         bodyCopy = soup.select('.livefeed-summary')[0]
     except:
         bodyCopy = soup.select('.p402_hide')[0]
-    print(bodyCopy)
+    
 article("https://www.thetelegraphandargus.co.uk/news/19705510.hospital-trust-acknowledges-missed-opportunity-tragic-stroke-death/")

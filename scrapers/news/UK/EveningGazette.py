@@ -40,5 +40,5 @@ def article(url):
     for s in soup.select('p:has(b)'):
         s.extract()
     articleBody =  soup.select('[itemprop="articleBody"]')[0]
-    print(headline)
+    
 article("https://www.northantstelegraph.co.uk/news/people/a45-chowns-mill-closures-start-tonight-with-more-to-come-3447223")

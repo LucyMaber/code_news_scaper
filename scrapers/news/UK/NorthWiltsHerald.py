@@ -27,5 +27,5 @@ def article(url):
     for s in soup.select('script'):
         s.extract()
     bodyCopy =  soup.select('.p402_hide')[0] ### READ THE FULL STORY
-    print(bodyCopy)
+    
 article("https://www.gazetteandherald.co.uk/news/19702830.questions-heads-devizes-will-panel/")

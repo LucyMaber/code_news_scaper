@@ -30,7 +30,7 @@ def article(url):
     # for s in soup.select('#content-wrapper > #axate-wallet'):
     #     s.extract()
     articleBody  =  soup.select('#content-wrapper') [0]
-    #print(articleBody)
-    print(articleBody)
+    #
+    
 
 article("https://www.chardandilminsternews.co.uk/news/19686802.12-15-year-olds-can-use-walk-in-sites-covid-19-vaccinations/")

@@ -26,5 +26,5 @@ def article(url):
     for s in soup.select('#content-wrapper > :not(.markup)'):
         s.extract()
     bodyCopy =  soup.select('#content-wrapper')[0]
-    print(subheadline)
+    
 article("https://www.dorsetecho.co.uk/news/19692080.tributes-paid-selfless-passionate-youtuber-died-crash-dorset-route/")

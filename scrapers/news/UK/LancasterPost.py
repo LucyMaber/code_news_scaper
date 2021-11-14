@@ -26,5 +26,5 @@ def article(url):
     for s in soup.select('#content-wrapper >:not(.markup)'):
         s.extract()
     bodyCopy =  soup.select("#content-wrapper")[0]
-    print(bodyCopy)
+    
 article("https://www.lep.co.uk/news/environment/landlord-first-from-preston-to-be-added-to-national-rogue-list-3447955/")

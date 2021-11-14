@@ -26,5 +26,5 @@ def article(url):
     for s in soup.select('script'):
         s.extract()
     bodyCopy =  soup.select('.article__detail-text')[0] ### READ THE FULL STORY
-    print(bodyCopy)
+    
 article("https://www.eveningnews24.co.uk/news/alexandra-road-stafford-street-junction-accident-8472630")

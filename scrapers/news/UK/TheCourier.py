@@ -30,5 +30,5 @@ def article(url):
     for s in soup.select('[class="lightbox-content"] > :not(p,h1,h2,h3,h4,h5)'):
         s.extract()
     bodyCopy = soup.select('[class="lightbox-content"]')[0]
-    print(bodyCopy)
+    
 article("https://www.thecourier.co.uk/fp/news/dundee/2722185/multimillion-pound-broughty-ferry-waterfront-plan-delayed/")

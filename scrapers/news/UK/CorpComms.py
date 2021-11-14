@@ -28,5 +28,5 @@ def article(url):
         s.extract()
     for s in soup.select('[itemprop="text"] > img'):
         s.extract()
-    print(datePublished)
+    
 article("https://www.corpcommsmagazine.co.uk/2021/07/lessons-from-our-corporate-purpose-summit/")

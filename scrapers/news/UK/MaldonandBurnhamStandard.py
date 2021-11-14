@@ -27,5 +27,5 @@ def article(url):
     for s in soup.select('p:has([data-link-tracking="InArticle|Link"])'):
         s.extract()
     bodyCopy =  soup.select('.p402_hide')[0]
-    print(bodyCopy)
+    
 article("https://www.maldonandburnhamstandard.co.uk/news/19698830.plume-academy-celebrates-superpowers-adhd-awareness-month/")

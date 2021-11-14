@@ -26,5 +26,5 @@ def article(url):
     #    s.extract()
     for s in soup.select('.ad-placeholder'):
         s.extract()
-    print(published)
+    
 article("https://www.bluesci.co.uk/posts/changing-climate-alters-how-volcanic-eruptions-affect-our-planet")

@@ -28,5 +28,5 @@ def article(url):
     for s in soup.select('div.text-description > div > div > div > div > p > strong:contains("FOLLOW LIVE UPDATES BELOW")'):
         s.extract()
     article_body_part =  soup.select('article div.ctx_content.p402_premium div.clearfix.hR.new-style')[0]
-    print(article_body_part)
+    
 article("https://www.express.co.uk/news/politics/1515820/PMQs-live-Rayner-Paterson-by-election-Johnson")

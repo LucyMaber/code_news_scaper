@@ -29,6 +29,6 @@ def article(url):
     for s in soup.select('.article__content >  :contains("Tell your story to adriana.elgueta@the-sun.co.uk.")'):
         s.extract()
     bodyCopy =  soup.select('.article__content')[0]
-    print(bodyCopy)
+    
 article("https://www.thesun.co.uk/news/16630158/house-sandwiched-by-nightmare-dumping-grounds/")
 

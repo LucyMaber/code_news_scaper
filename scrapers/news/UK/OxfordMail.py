@@ -27,6 +27,6 @@ def article(url):
     for s in soup.select('script'):
         s.extract()
     bodyCopy =  soup.select('.p402_hide')[0] ### READ THE FULL STORY
-    print(bodyCopy)
+    
 article("https://www.oxfordmail.co.uk/news/19702314.witney-firm-installs-cctv-free-protect-community-bus-depot-vandals/")
 

@@ -31,6 +31,6 @@ def article(url):
     for s in soup.select('script'):
         s.extract()
     bodyCopy =  soup.select('[itemprop="articleBody"]')[0] ### READ THE FULL STORY
-    print(bodyCopy)
+    
 article("https://www.coventrytelegraph.net/in-your-area/warning-three-different-roadworks-hit-22101509")
 

@@ -32,5 +32,5 @@ def article(url):
     for s in soup.select('.article__detail-text > :not(p)'):
         s.extract()
     bodyCopy = soup.select('.p402_hide')[0]
-    print(bodyCopy)
+    
 article("https://www.eveningnews24.co.uk/news/crime/woman-wanted-for-prince-of-wales-burglary-norwich-8478690")

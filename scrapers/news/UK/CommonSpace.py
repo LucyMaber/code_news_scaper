@@ -25,5 +25,5 @@ def article(url):
     for s in soup.select("script"):
         s.extract()
     entry_content =  soup.select(".entry-content")[0]
-    print(article_subtitle)
+    
 article("https://sourcenews.scot/source-direct-independence-fantasy-and-reality/")

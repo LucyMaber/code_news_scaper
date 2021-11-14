@@ -35,5 +35,5 @@ def article(url):
     for s in soup.select('i:contains("straight to your inbox by signing up to our daily newsletters")'):
         s.extract()
     articleBody =  soup.select('[itemprop="articleBody"]')[0]
-    print(articleBody)
+    
 article("https://www.devonlive.com/news/teignmouth-gp-surgery-reveals-shocking-6162016")

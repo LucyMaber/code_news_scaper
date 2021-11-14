@@ -27,6 +27,6 @@ def article(url):
     for s in soup.select('.the_content > :not(p)'):
         s.extract()
     bodyCopy =  soup.select('.the_content')[0]
-    print(bodyCopy)
+    
 article("https://theshuttle.org.uk/blackburns-city-bid-explained-how-you-can-get-involved/")
 

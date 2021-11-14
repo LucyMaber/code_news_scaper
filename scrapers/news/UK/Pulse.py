@@ -26,5 +26,5 @@ def article(url):
     for s in soup.select('script'):
         s.extract()
     bodyCopy =  soup.select('[class="article-body-text mb-40"]')[0] ### READ THE FULL STORY
-    print(bodyCopy)
+    
 article("https://www.pulsetoday.co.uk/resource/pulse-pcn/how-to-employ-a-pharmacy-technician/")

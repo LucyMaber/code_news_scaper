@@ -27,5 +27,5 @@ def article(url):
     for s in soup.select('#content-wrapper > :not(.markup)'):
         s.extract()
     content =  soup.select('#content-wrapper')[0]
-    print(content)
+    
 article("https://www.derryjournal.com/news/people/derry-man-edward-meenan-was-a-victim-of-a-brutal-and-savage-attack-prosecutor-tells-jury-at-trial-3453336")

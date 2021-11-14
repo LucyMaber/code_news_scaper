@@ -27,5 +27,5 @@ def article(url):
     for s in soup.select('.body-copy > :not(p , .twitter-tweet )'):
         s.extract()
     bodyCopy =  soup.select('.body-copy')[0]
-    print(time)
+    
 article("https://www.dailynews.com/2021/11/03/la-mayor-eric-garcetti-test-positive-for-covid-19-during-scotland-trip/")

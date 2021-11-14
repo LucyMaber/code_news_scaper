@@ -33,6 +33,6 @@ def article(url):
     for s in soup.select('#subscription-content > :not(p,h1,h2,h3,h4)'):
         s.extract()
     bodyCopy =  soup.select('.lightbox-content')[0]
-    print(bodyCopy)
+    
 article("https://www.pressandjournal.co.uk/fp/news/aberdeen-aberdeenshire/3662706/dunkirk-veteran-died-in-peterhead-beach-blast/")
 

@@ -28,5 +28,5 @@ def article(url):
     for s in soup.select('figure'):
         s.extract()
     bodyCopy =  soup.select('.article__content > .text-formatted')[0]
-    print(bodyCopy)
+    
 article("https://www.tes.com/news/gcses-2022-run-exam-condition-mocks-schools-told")

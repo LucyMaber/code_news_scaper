@@ -24,5 +24,5 @@ def article(url):
     for s in soup.select('[itemprop="text"] > div > :not(p)'):
         s.extract()
     bodyCopy =  soup.select('[itemprop="text"] > div')[0]
-    print(author)
+    
 article("https://www.newrydemocrat.com/sport/2021/10/24/gallery/toothless-city-drop-three-vital-points-19331/")

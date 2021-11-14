@@ -24,5 +24,5 @@ def article(url):
     for s in soup.select('[class="article__detail-text mdc-typography--body1"] > :not(p,h2,h3,h4,h5,h6)'):
         s.extract()
     bodyCopy =  soup.select('[class="article__detail-text mdc-typography--body1"]')[0] ### READ THE FULL STORY
-    print(headline)
+    
 article("https://www.romfordrecorder.co.uk/news/health/st-georges-health-hub-hornchurch-approved-by-havering-8467984")

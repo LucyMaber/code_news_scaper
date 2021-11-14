@@ -48,5 +48,5 @@ def article(url):
     for s in soup.select('article > div > div > div:contains("DON\'T MISS:")'):
         s.extract()
     articleBody =  soup.select('article > div > div')[0]
-    print(articleBody)
+    
 article("https://www.express.co.uk/news/politics/1516560/eu-news-eu-fisheries-funds-Netherlands-dutch-fishermen-france")

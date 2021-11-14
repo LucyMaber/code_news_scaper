@@ -33,6 +33,6 @@ def article(url):
     for s in soup.select('#subscription-content > :not(p,h1,h2,h3,h4)'):
         s.extract()
     bodyCopy =  soup.select('.p402_hide')[0]
-    print(bodyCopy)
+    
 article("https://www.yorkpress.co.uk/news/19707190.bid-build-new-knaresborough-elevate-school-hit-delays/")
 

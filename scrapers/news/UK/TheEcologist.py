@@ -30,5 +30,5 @@ def article(url):
     for s in soup.select('[class="field__item"]> div > div > :not(p,h1,h2,h3,h4,h5)'):
         s.extract()
     bodyCopy = soup.select('[class="field field--name-field-paragraphs field--type-entity-reference-revisions field--label-hidden field__items"]')[0]
-    print(bodyCopy)
+    
 article("https://theecologist.org/2021/nov/09/technology-fetishism-reigns-cop26")

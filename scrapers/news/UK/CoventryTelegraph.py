@@ -28,5 +28,5 @@ def article(url):
     #title =  soup.select('h1')[0]
     for s in soup.select("script"):
         s.extract()
-    print(articleBody)
+    
 article("https://www.cravenherald.co.uk/news/19687851.shop-offices-skipton-become-holiday-let-groups-cyclists-walkers/")

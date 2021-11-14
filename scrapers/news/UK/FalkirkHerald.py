@@ -29,5 +29,5 @@ def article(url):
     for s in soup.select('#content-wrapper > div:not(.markup)'):
         s.extract()
     articleBody =  soup.select('#content-wrapper')[0]
-    print(articleBody)
+    
 article("https://www.falkirkherald.co.uk/health/coronavirus/wait-before-booster-jabs-could-be-cut-to-5-months-to-speed-up-rollout-3428808")

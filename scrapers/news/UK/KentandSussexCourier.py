@@ -46,6 +46,6 @@ def article(url):
     for s in soup.select('[itemprop="articleBody"] > :not(p , h1 , h2 , h3 , h4 , h5 , h6 , h7 , h8 , h9 , time)'):
         s.extract()
     artcal =  soup.select('.article-body')[0]
-    print(artcal)
+    
 
 article("https://www.kentlive.news/news/uk-world-news/delivery-scams-rise--how-6142803")

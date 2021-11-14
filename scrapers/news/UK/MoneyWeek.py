@@ -31,5 +31,5 @@ def article(url):
     for s in soup.select('.polaris__related-links--list-item'):
         s.extract()
     bodyCopy =  soup.select('[class="polaris__content polaris__simple-grid -body-copy"]')[0]
-    print(bodyCopy)
+    
 article("https://moneyweek.com/economy/global-economy/604074/central-banks-are-still-sticking-to-the-plan-on-inflation/")

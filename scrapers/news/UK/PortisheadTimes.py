@@ -28,5 +28,5 @@ def article(url):
     for s in soup.select('.article__detail-text > p:contains("READ MORE")'):
         s.extract()
     bodyCopy =  soup.select('[class="single-body entry-content typography-copy"]')[0] ### READ THE FULL STORY
-    print(bodyCopy)
+    
 article("https://www.propertynotify.co.uk/news/featured/commercial-properties-without-integrated-technology-will-struggle-to-find-tenants/")

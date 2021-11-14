@@ -25,5 +25,5 @@ def article(url):
     for s in soup.select('article > div:not(.twitter-tweet)'):
         s.extract()
     article_body =  soup.select('article') [0]
-    print(time)
+    
 article("https://www.breakingnews.ie/entertainment/jessica-simpson-celebrates-four-years-of-being-sober-1207860.html")

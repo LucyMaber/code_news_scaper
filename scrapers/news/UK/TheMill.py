@@ -24,5 +24,5 @@ def article(url):
     for s in soup.select('img'):
         s.extract()
     content =  soup.select('.text-inner')[0]
-    print(content)
+    
 article("https://www.themill.com/newsfeed/racing-through-mexico-with-xbox-forza-horizon-5/")

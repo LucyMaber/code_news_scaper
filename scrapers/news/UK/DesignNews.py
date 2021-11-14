@@ -41,5 +41,5 @@ def article(url):
     for s in soup.select('[data-link-tracking="InArticle|Link"]'):
         s.extract()
     bodyCopy =  soup.select('[itemprop="articleBody"]')[0]
-    print(bodyCopy)
+    
 article("https://www.derbytelegraph.co.uk/news/derby-news/more-300-homes-planned-site-6155495")

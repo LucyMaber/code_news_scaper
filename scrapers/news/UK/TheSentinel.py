@@ -28,6 +28,6 @@ def article(url):
     for s in soup.select('[itemprop="articleBody"] > :not(p)'):
         s.extract()
     bodyCopy =  soup.select('[itemprop="articleBody"]')[0]
-    print(bodyCopy)
+    
 article("https://www.stokesentinel.co.uk/news/stoke-on-trent-news/bmw-driver-checked-damage-car-6182663")
 

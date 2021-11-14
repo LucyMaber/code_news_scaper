@@ -31,5 +31,5 @@ def article(url):
     for s in soup.select('script'):
         s.extract()
     article =  soup.select('.p402_hide')[0]
-    print(article)
+    
 article("https://www.dailyecho.co.uk/news/19703139.row-plans-mend-southampton-road-not-owned-council/")

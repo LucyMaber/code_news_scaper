@@ -27,5 +27,5 @@ def article(url):
     for s in soup.select('#jwp-outstream-unit'):
         s.extract()
     articleBody =  soup.select('.td-post-content > div')[0]
-    print(articleBody)
+    
 article("https://extra.ie/2021/11/06/entertainment/full-line-up-of-im-a-celebrity-revealed-as-david-ginola-frankie-bridge-and-soap-legends-set-for-stints")

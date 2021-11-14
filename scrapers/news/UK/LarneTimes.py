@@ -24,5 +24,5 @@ def article(url):
     for s in soup.select('#content-wrapper >:not(.markup)'):
         s.extract()
     bodyCopy =  soup.select("#content-wrapper")[0]
-    print(bodyCopy)
+    
 article("https://www.larnetimes.co.uk/news/crime/court-hears-concerned-member-of-public-stopped-over-the-limit-carnlough-driver-3447086")

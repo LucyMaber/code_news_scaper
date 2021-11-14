@@ -24,5 +24,5 @@ def article(url):
     for s in soup.select('img'):
         s.extract()
     bodyCopy =  soup.select('.pagestory')[0]
-    print(bodyCopy)
+    
 article("https://www.newburytoday.co.uk/my-newbury/police-appeal-for-help-after-victim-left-with-facial-injurie-9224614/")

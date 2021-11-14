@@ -31,5 +31,5 @@ def article(url):
     for s in soup.select('p:has(a[data-link-tracking="InArticle|Link"])'):
         s.extract()
     article =  soup.select('[itemprop="articleBody"]')[0]
-    print(article)
+    
 article("https://www.examinerlive.co.uk/news/west-yorkshire-news/armed-cops-swoop-huddersfield-estate-22087484")

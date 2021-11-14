@@ -22,5 +22,5 @@ def article(url):
     for s in soup.select('[class="article__detail-text mdc-typography--body1"] > :not(p)'):
         s.extract()
     bodyCopy =  soup.select('[class="article__detail-text mdc-typography--body1"]:has(p)')[0]
-    print(bodyCopy)
+    
 article("https://www.newhamrecorder.co.uk/news/westfield-stratford-city-car-fire-cause-being-investigated-8471470")

@@ -29,5 +29,5 @@ def article(url):
     for s in soup.select('main > div.c-richText > div'):
         s.extract()
     bodyCopy =  soup.select('div.blog-content-wrap > .w-richtext ')[0]
-    print(bodyCopy)
+    
 article("https://www.tonguesonfire.com/news/big-wins-for-raahgir-at-the-uk-asian-film-festival")

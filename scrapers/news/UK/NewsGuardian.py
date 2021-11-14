@@ -25,5 +25,5 @@ def article(url):
     for s in soup.select('#content-wrapper > :contains("READ THE FULL STORY")'):
         s.extract()
     bodyCopy =  soup.select('#content-wrapper')[0] ### READ THE FULL STORY
-    print(bodyCopy)
+    
 article("https://www.newsguardian.co.uk/news/people/police-targeting-those-spiking-drinks-following-rise-in-cases-in-the-region-3449909")

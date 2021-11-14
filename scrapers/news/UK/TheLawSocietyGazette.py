@@ -21,5 +21,5 @@ def article(url):
     soup = BeautifulSoup(content, 'html.parser')
     story_title =  soup.select('.story_title > h1')[0]
     content =  soup.select('.articleContent')[0]
-    print(content)
+    
 article("https://www.lawgazette.co.uk/news/supreme-court-shut-the-door-on-google-claim-but-left-it-ajar-for-others/5110480.article")

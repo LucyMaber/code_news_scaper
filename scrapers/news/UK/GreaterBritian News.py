@@ -28,5 +28,5 @@ def article(url):
     for s in soup.select('.bodytext > :not(ul ,p, strong)'):
         s.extract()
     content =  soup.select('.bodytext')[0]
-    print(content)
+    
 article("https://www.gbnews.uk/news/covid-booster-jab-bookings-extended-to-a-month-in-advance/154362")

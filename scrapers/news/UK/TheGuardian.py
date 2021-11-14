@@ -30,5 +30,5 @@ def article(url):
     for s in soup.select('[itemprop="articleBody"] > :not(p)'):
         s.extract()
     content =  soup.select('#maincontent > div')[0]
-    print(content)
+    
 article("https://www.theguardian.com/politics/2021/nov/05/article-16-very-much-on-the-table-in-brexit-row-david-frost")

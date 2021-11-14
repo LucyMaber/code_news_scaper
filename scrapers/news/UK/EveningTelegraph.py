@@ -36,5 +36,5 @@ def article(url):
     for s in soup.select('[data-link-tracking="InArticle|Link"]'):
         s.extract()
     articleBody =  soup.select('[itemprop="articleBody"]')[0]
-    print(articleBody)
+    
 article("https://www.devonlive.com/news/devon-news/pictures-show-quiet-street-heart-6104302")

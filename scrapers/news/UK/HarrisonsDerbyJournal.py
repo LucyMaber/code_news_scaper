@@ -22,6 +22,6 @@ def article(url):
     for s in soup.select('#content-wrapper > div:not(.markup)'):
         s.extract()
     article =  soup.select('#content-wrapper')[0]
-    print(article)
+    
 article("https://www.hamhigh.co.uk/news/products-recalled-due-to-safety-concerns-november-5-8465994")
 ### NEED JAVASCRIPT

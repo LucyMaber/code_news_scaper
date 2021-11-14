@@ -28,5 +28,5 @@ def article(url):
     for s in soup.select('[itemprop="articleBody"] >  p:contains("Have your say in the comment section")'):
         s.extract()
     bodyCopy =  soup.select('[itemprop="articleBody"]')[0]
-    print(bodyCopy)
+    
 article("https://www.mirror.co.uk/news/politics/tory-plotters-gather-throw-boris-25397062")

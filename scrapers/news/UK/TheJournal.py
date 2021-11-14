@@ -28,5 +28,5 @@ def article(url):
     for s in soup.select('#contribution-prompt-article'):
         s.extract()
     content =  soup.select('#articleContent')[0]
-    print(content)
+    
 article("https://www.thejournal.ie/tony-holohan-cut-socialising-by-half-covid-19-5597460-Nov2021/")

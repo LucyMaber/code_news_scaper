@@ -25,5 +25,5 @@ def article(url):
     for s in soup.select('script'):
         s.extract()
     bodyCopy =  soup.select("div.p402_hide")[0]
-    print(author)
+    
 article("https://www.yourlocalguardian.co.uk/news/19691129.chelseas-tuchel-safe-now/")

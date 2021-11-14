@@ -27,5 +27,5 @@ def article(url):
     for s in soup.select('#content-wrapper > :not(.markup)'):
         s.extract()
     content =  soup.select('#content-wrapper')[0]
-    print(content)
+    
 article("https://www.newsletter.co.uk/news/opinion/letters/austin-currie-was-a-true-giant-of-irish-politics-3453490")

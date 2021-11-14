@@ -30,5 +30,5 @@ def article(url):
     for s in soup.select('[itemprop="articleBody"] >  :contains("Download the SurreyLive app for a better reader experience and to get news from the areas you care most about. Download it via the ")'):
         s.extract()
     bodyCopy =  soup.select('[itemprop="articleBody"]')[0]
-    print(bodyCopy)
+    
 article("https://www.getsurrey.co.uk/news/surrey-news/surrey-woman-49-claims-spiked-22111819")

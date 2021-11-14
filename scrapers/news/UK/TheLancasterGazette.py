@@ -30,5 +30,5 @@ def article(url):
     for s in soup.select('.primary-content > :contains("The business website is www.vitalitybowls.com. Choose the Pickerington location once there. The business is also present on Facebook and Instagram.")'):
         s.extract()
     content =  soup.select('.primary-content')[0]
-    print(content)
+    
 article("https://eu.lancastereaglegazette.com/story/news/2021/11/10/local-restaurant-vitality-bowls-superfood-cafe-expands-menu-options/6336354001/")

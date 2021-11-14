@@ -30,5 +30,5 @@ def article(url):
     for s in soup.select('div.article-body.container-fluid > div > div.col-sm-9.col-lg-6 > :not(div > p , p)'):
         s.extract()
     bodyCopy =  soup.select('div.article-body.container-fluid > div > div.col-sm-9.col-lg-6')[0]
-    print(bodyCopy)
+    
 article("https://unherd.com/2021/11/what-the-poppy-really-means/")

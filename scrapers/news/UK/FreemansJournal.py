@@ -41,5 +41,5 @@ def article(url):
     for s in soup.select('.subscription-content > :not(p)'):
         s.extract()
     content =  soup.select('.subscription-content')[0]
-    print(content)
+    
 article("https://www.gazetteandherald.co.uk/news/19690841.public-notices-restaurants-pubs-road-closures/")

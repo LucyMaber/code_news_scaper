@@ -45,5 +45,5 @@ def article(url):
     for s in soup.select('.p402_hide > :not(p,#subscription-content)'):
         s.extract()
     bodyCopy =  soup.select('.p402_hide')[0] ### READ THE FULL STORY
-    print(bodyCopy)
+    
 article("https://www.thenorthernecho.co.uk/news/19703324.data-reveals-darlington-councils-climate-ambitions/")

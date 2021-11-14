@@ -33,5 +33,5 @@ def article(url):
     for s in soup.select('[itemprop="articleBody"] > :not(p)'):
         s.extract()
     content =  soup.select('[itemprop="articleBody"]')[0]
-    print(content)
+    
 article("https://www.grimsbytelegraph.co.uk/whats-on/shopping/shops-you-really-wish-grimsby-6160673")

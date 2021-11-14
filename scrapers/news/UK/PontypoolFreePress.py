@@ -28,5 +28,5 @@ def article(url):
     for s in soup.select('.p402_hide > p:contains("READ MORE")'):
         s.extract()
     bodyCopy =  soup.select('.article-body')[0] ### READ THE FULL STORY
-    print(bodyCopy)
+    
 article("https://www.freepressseries.co.uk/news/19457276.court-newport-cwmbran-caerphilly/")

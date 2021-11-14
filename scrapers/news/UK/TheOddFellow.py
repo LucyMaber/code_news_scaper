@@ -29,5 +29,5 @@ def article(url):
     for s in soup.select('.main-content > div :not(p,h2,h3,h4,h5,h6,h2)'):
         s.extract()
     bodyCopy =  soup.select('.main-content > div')[0] ### READ THE FULL STORY
-    print(bodyCopy)
+    
 article("https://www.oddfellows.co.uk/news/destination-dinner-table/")

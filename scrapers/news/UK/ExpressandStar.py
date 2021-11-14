@@ -27,5 +27,5 @@ def article(url):
     for s in soup.select('script'):
         s.extract()
     articleBody =  soup.select('.story-content > .row')[0]
-    print(articleBody)
+    
 article("https://www.expressandstar.com/news/Features/2021/11/06/photo-exhibition-takes-people-back-to-their-black-country-youth/")

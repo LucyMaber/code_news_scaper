@@ -36,5 +36,5 @@ def article(url):
     for s in soup.select('script'):
         s.extract()
     content =  soup.select('.p402_hide')[0]
-    print(content)
+    
 article("https://www.gazetteandherald.co.uk/news/19690841.public-notices-restaurants-pubs-road-closures/")

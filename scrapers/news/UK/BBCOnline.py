@@ -37,5 +37,5 @@ def article(url):
         s.extract()
     for s in soup.select('header'):
         s.extract()
-    print(headline)
+    
 article("https://www.bbc.co.uk/news/science-environment-59088498")

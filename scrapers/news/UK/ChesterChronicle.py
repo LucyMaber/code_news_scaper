@@ -49,7 +49,7 @@ def article(url):
     # for s in soup.select('#content-wrapper > #axate-wallet'):
     #     s.extract()
     articleBody  =  soup.select('.article-body') [0]
-    #print(articleBody)
-    print(articleBody)
+    #
+    
 
 article("https://www.chardandilminsternews.co.uk/news/somerset_news/19688562.discovery-community-fund-invites-somerset-groups-apply-grants/")

@@ -49,5 +49,5 @@ def article(url):
     for s in soup.select('p:has(b > [data-link-tracking="InArticle|Link"])'):
         s.extract()
     bodyCopy =  soup.select('[itemprop="articleBody"]')[0]
-    print(bodyCopy)
+    
 article("https://www.chroniclelive.co.uk/news/north-east-news/thief-snatched-1k-casino-winnings-22064327")

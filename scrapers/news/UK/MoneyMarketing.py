@@ -26,5 +26,5 @@ def article(url):
     for s in soup.select('.article-body >:not(p,h1,h2,h3,h4,h5,h6,strong)'):
         s.extract()
     bodyCopy =  soup.select('.article-body')[0]
-    print(bodyCopy)
+    
 article("https://www.moneymarketing.co.uk/news/affordable-advice-gap-widens-to-record-level/")

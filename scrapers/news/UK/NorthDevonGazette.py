@@ -21,5 +21,5 @@ def article(url):
     for s in soup.select('.article__detail-text > :not(p)'):
         s.extract()
     bodyCopy =  soup.select('.article__detail-text')[0] ### READ THE FULL STORY
-    print(bodyCopy)
+    
 article("https://www.northdevongazette.co.uk/news/north-devon-mp-criticises-support-green-party-bill-8472564")

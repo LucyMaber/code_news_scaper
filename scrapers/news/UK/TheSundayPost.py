@@ -27,6 +27,6 @@ def article(url):
     for s in soup.select('.lightbox-content > :not(p)'):
         s.extract()
     bodyCopy =  soup.select('.lightbox-content')[0]
-    print(bodyCopy)
+    
 article("https://www.sundaypost.com/fp/peter-capaldi-album/")
 

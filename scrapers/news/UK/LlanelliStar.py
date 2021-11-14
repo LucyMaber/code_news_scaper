@@ -33,5 +33,5 @@ def article(url):
     for s in soup.select('.share-title'):
         s.extract()
     bodyCopy =  soup.select('#main')[0]
-    print(bodyCopy)
+    
 article("https://www.standard.co.uk/news/uk/uk-travellers-covid-booster-jab-travel-restriction-b964815.html")

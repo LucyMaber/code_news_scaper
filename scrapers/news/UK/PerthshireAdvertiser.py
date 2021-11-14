@@ -33,5 +33,5 @@ def article(url):
     for s in soup.select('script'):
         s.extract()
     bodyCopy =  soup.select('[itemprop="articleBody"]')[0] ### READ THE FULL STORY
-    print(bodyCopy)
+    
 article("https://www.dailyrecord.co.uk/sport/local-sport/perthshire-curlers-eve-muirhead-mili-25405333")

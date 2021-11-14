@@ -52,5 +52,5 @@ def article(url):
     for s in soup.select('#ayl-wrapper'):
         s.extract()
     content =  soup.select('.article-body')[0]
-    print(content)
+    
 article("https://www.thenational.scot/news/19708592.bbc-outrage-tory-donor-helps-pick-next-board-member-scotland/")

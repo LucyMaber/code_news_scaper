@@ -30,5 +30,5 @@ def article(url):
     for s in soup.select('#content-wrapper >  div:contains("Support your Echo and become a subscriber today.")'):
         s.extract()
     bodyCopy =  soup.select('#content-wrapper')[0]
-    print(bodyCopy)
+    
 article("https://www.sunderlandecho.com/news/crime/police-make-cctv-appeal-after-two-sunderland-shops-were-targeted-by-suspected-robbers-armed-with-a-bladed-article-3451237")

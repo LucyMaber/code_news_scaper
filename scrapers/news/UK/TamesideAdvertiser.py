@@ -30,5 +30,5 @@ def article(url):
     for s in soup.select('p:has([data-link-tracking="InArticle|Link"])'):
         s.extract()
     bodyCopy =  soup.select('[itemprop="articleBody"]')[0]
-    print(bodyCopy)
+    
 article("https://www.manchestereveningnews.co.uk/news/greater-manchester-news/man-banned-keeping-pets-after-22116437")

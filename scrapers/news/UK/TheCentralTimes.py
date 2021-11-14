@@ -31,5 +31,5 @@ def article(url):
     for s in soup.select('.entry-content > :not(p,h1,h2,h3,h4,h5)'):
         s.extract()
     bodyCopy = soup.select('.entry-content')[0]
-    print(bodyCopy)
+    
 article("https://thecentraltimes.com/asaduddin-owaisi-visits-bengal-holds-meeting-with-abbas-siddiqui-of-futura-sharif/")

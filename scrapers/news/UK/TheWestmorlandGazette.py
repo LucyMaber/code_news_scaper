@@ -27,5 +27,5 @@ def article(url):
     for s in soup.select('#subscription-content > :not(p)'):
         s.extract()
     bodyCopy =  soup.select('.p402_hide')[0]
-    print(bodyCopy)
+    
 article("https://www.thewestmorlandgazette.co.uk/news/19707722.consultant-anaesthetist-morecambe-bay-trust-suspended-misconduct-tribunal/")

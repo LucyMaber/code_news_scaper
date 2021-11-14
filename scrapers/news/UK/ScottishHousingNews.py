@@ -27,5 +27,5 @@ def article(url):
     for s in soup.select('article  figure'):
         s.extract()
     bodyCopy =  soup.select('article')[0]
-    print(bodyCopy)
+    
 article("https://www.scottishhousingnews.com/article/pentland-tenants-vote-in-favour-of-transfer-to-cairn")

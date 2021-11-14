@@ -26,5 +26,5 @@ def article(url):
     for s in soup.select('figure'):
         s.extract()
     bodyCopy =  soup.select('[itemprop="text"]')[0]
-    print(bodyCopy)
+    
 article("https://www.tyronecon.co.uk/news/2021/11/11/news/support-scheme-to-be-set-up-as-firmus-blame-gas-tariff-rise-on-wholesale-costs-19754/")

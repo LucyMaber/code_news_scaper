@@ -33,6 +33,6 @@ def article(url):
     for s in soup.select('.bodyText > .wp-block-image'):
         s.extract()
     article_body =  soup.select_one('.bodyText')
-    print(hedding.getText())
+    
 article("https://bylinetimes.com/2021/11/02/hot-air-and-wind-why-johnsons-cop-looks-likely-to-flop/")
 #frameInner > article > div.sc-bmyXtO.darZld > div.sc-jtggT.iedqFq > div:nth-child(2)

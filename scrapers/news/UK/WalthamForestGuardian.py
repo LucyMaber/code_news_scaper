@@ -28,5 +28,5 @@ def article(url):
     for s in soup.select('#subscription-content > :not(p,h2,h3,h4,h5,h6)'):
         s.extract()
     bodyCopy =  soup.select('.p402_hide')[0]
-    print(bodyCopy)
+    
 article("https://www.guardian-series.co.uk/news/19710185.six-teens-arrested-cash-seized-chingford-shooting/")

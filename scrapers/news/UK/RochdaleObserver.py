@@ -29,5 +29,5 @@ def article(url):
     for s in soup.select('[itemprop="articleBody"] > p:contains("by receiving email updates")'):
         s.extract()
     bodyCopy =  soup.select('[itemprop="articleBody"]')[0] ### READ THE FULL STORY
-    print(bodyCopy)
+    
 article("https://www.manchestereveningnews.co.uk/news/greater-manchester-news/pervert-33-followed-schoolgirls-shopped-22060354")

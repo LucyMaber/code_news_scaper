@@ -27,5 +27,5 @@ def article(url):
     for s in soup.select(".uk-grid > .uk-width-large-4-6 > :not(p)"):
         s.extract()
     content =  soup.select('.uk-grid > .uk-width-large-4-6')[0]
-    print(content)
+    
 article("https://mancunion.com/2021/11/06/university-of-manchester-staff-to-strike-over-pay/")

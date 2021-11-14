@@ -32,5 +32,5 @@ def article(url):
     for s in soup.select('#subscription-content > :not(p)'):
         s.extract()
     bodyCopy = soup.select('.p402_hide')[0]
-    print(bodyCopy)
+    
 article("https://www.nwemail.co.uk/news/19705185.chris-barker-barrow-sheds-mammoth-seven-stone/")

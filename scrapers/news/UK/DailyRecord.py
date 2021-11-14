@@ -33,5 +33,5 @@ def article(url):
     for s in soup.select('p:has([data-link-tracking="InArticle|Link"])'):
         s.extract()
     bodyCopy =  soup.select('[itemprop="articleBody"]')[0]
-    print(time)
+    
 article("https://www.dailyrecord.co.uk/news/scottish-news/photo-man-wearing-blackface-mr-25368767")

@@ -30,5 +30,5 @@ def article(url):
     for s in soup.select('script'):
         s.extract()
     bodyCopy =  soup.select('[itemprop="articleBody"]')[0] ### READ THE FULL STORY
-    print(bodyCopy)
+    
 article("https://www.nottinghampost.com/news/nottingham-news/ruddington-families-want-move-out-6177145")

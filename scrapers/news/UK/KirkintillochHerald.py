@@ -27,5 +27,5 @@ def article(url):
     for s in soup.select('div.article-content > :not(.markup)'):
         s.extract()
     bodyCopy =  soup.select("div.article-content")[0]
-    print(subheadline)
+    
 article("https://www.glasgowworld.com/news/cop26-thousands-of-protesters-in-glasgow-for-global-day-of-action-3447945")

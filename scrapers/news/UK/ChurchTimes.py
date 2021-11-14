@@ -32,7 +32,7 @@ def article(url):
     # for s in soup.select('#content-wrapper > #axate-wallet'):
     #     s.extract()
     articleContent  =  soup.select('.articleContent > div') [0]
-    #print(articleBody)
-    print(articleContent)
+    #
+    
 
 article("https://www.churchtimes.co.uk/articles/2021/29-october/comment/opinion/stop-the-sex-education-opt-out")

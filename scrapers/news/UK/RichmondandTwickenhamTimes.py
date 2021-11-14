@@ -24,5 +24,5 @@ def article(url):
     for s in soup.select('[itemprop="articleBody"] > :not(p,h2,h3,h4,h5,h6)'):
         s.extract()
     bodyCopy =  soup.select('[itemprop="articleBody"] ')[0] ### READ THE FULL STORY
-    print(bodyCopy)
+    
 article("https://www.richmondandtwickenhamtimes.co.uk/news/19703214.arrest-pedestrian-hit-heathrow-critical/")

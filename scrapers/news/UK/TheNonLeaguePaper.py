@@ -28,5 +28,5 @@ def article(url):
     for s in soup.select('[class="entry-content"] > :not(p)'):
         s.extract()
     content =  soup.select('[class="entry-content"]')[0]
-    print(content)
+    
 article("https://www.thenonleaguefootballpaper.com/latest-news/step-1/national-league/412892/the-nl-full-time-podcast-3/")

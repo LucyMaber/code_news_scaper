@@ -30,5 +30,5 @@ def article(url):
     for s in soup.select('.code-block'):
         s.extract()
     bodyCopy =  soup.select('.post-single-contents')[0]
-    print(bodyCopy)
+    
 article("https://www.argyllbute24.co.uk/man-remanded-youth-on-bail-after-dunoon-fire/")

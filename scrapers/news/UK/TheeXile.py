@@ -29,5 +29,5 @@ def article(url):
     for s in soup.select('em'):
         s.extract()
     article =  soup.select('.entry')[0]
-    print(article)
+    
 article("http://exiledonline.com/the-war-nerd-was-there-a-plan-in-afghanistan/")

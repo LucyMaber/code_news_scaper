@@ -26,6 +26,6 @@ def article(url):
     for s in soup.select('.live-event-lead-entry > :not(p)'):
         s.extract()
     artcal =  soup.select('.live-event-lead-entry')[0]
-    print(artcal)
+    
 
 article("https://www.football.london/arsenal-fc/fixtures-results/arsenal-press-conference-live-mikel-22072410")

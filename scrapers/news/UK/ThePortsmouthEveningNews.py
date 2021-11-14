@@ -27,6 +27,6 @@ def article(url):
     for s in soup.select('#content-wrapper > :not(.markup)'):
         s.extract()
     bodyCopy =  soup.select('#content-wrapper')[0]
-    print(bodyCopy)
+    
 article("https://www.portsmouth.co.uk/health/coronavirus/frontline-nhs-staff-given-deadline-to-get-covid-vaccine-to-continue-jobs-3450563")
 

@@ -29,5 +29,5 @@ def article(url):
     # for s in soup.select('div[class="article__detail-text mdc-typography--body1" > script'):
     #     s.extract()
     bodyCopy =  soup.select('[itemprop="articleBody"]')[0]
-    print(bodyCopy)
+    
 article("https://socialistworker.co.uk/art/52643/Radical+climate+action+is+more+than+slogans")

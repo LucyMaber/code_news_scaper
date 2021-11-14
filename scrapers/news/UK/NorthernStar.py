@@ -25,5 +25,5 @@ def article(url):
     for s in soup.select('img'):
         s.extract()
     bodyCopy =  soup.select('.article-content')[0] ### READ THE FULL STORY
-    print(bodyCopy)
+    
 article("https://northernstar.co.uk/small-business-guide-ransomware/")

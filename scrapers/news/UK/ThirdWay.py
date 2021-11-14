@@ -31,5 +31,5 @@ def article(url):
     for s in soup.select('.markup:contains("Support The Yorkshire Post and become a subscriber today")'):
         s.extract()
     bodyCopy =  soup.select('.article-body')[0]
-    print(bodyCopy)
+    
 article("https://www.washingtonpost.com/opinions/2021/11/08/democrats-cannot-simply-ignore-gops-culture-war-attacks/")

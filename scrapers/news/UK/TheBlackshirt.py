@@ -29,6 +29,6 @@ def article(url):
     for s in soup.select('.post-content figure'):
         s.extract()
     bodyCopy = soup.select('.post-content')[0]
-    print(bodyCopy)
+    
 article("https://www.theblackshirt.org/2021/11/08/the-mystery-of-the-zodiac-killer/")
 ## ERROR uninow

@@ -26,5 +26,5 @@ def article(url):
     for s in soup.select('[data-type="article-body"] > div > :not(.text-description)'):
         s.extract()
     bodyCopy =  soup.select('[data-type="article-body"] > div ')[0]
-    print(bodyCopy)
+    
 article("https://www.express.co.uk/comment/expresscomment/1517762/owen-paterson-arlene-foster-claudia-webbe-acid-threat-MPs-standards")

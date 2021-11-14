@@ -32,5 +32,5 @@ def article(url):
     for s in soup.select('[itemprop="articleBody"] > :contains("For breaking news in your area direct to your inbox every day, go ")'):
         s.extract()
     content =  soup.select('[itemprop="articleBody"]')[0]
-    print(content)
+    
 article("https://www.gazettelive.co.uk/news/teesside-news/middlesbroughs-tallest-building-could-huge-22127663")

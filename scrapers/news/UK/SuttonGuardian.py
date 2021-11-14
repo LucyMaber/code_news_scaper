@@ -29,5 +29,5 @@ def article(url):
     for s in soup.select('p:has([data-link-tracking="InArticle|Link"])'):
         s.extract()
     bodyCopy =  soup.select('.p402_hide')[0]
-    print(bodyCopy)
+    
 article("https://www.yourlocalguardian.co.uk/news/19705284.new-addington-stabbing-teen-rushed-major-trauma-centre/")

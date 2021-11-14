@@ -40,5 +40,5 @@ def article(url):
     # for s in soup.select('div[class="article__detail-text mdc-typography--body1" > script'):
     #     s.extract()
     bodyCopy =  soup.select('.PageContent > .PageStory')[0]
-    print(bodyCopy)
+    
 article("https://www.kentonline.co.uk/sheerness/news/holiday-parks-need-to-be-regulated-across-uk-257113/")

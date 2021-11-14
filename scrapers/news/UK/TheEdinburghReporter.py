@@ -31,5 +31,5 @@ def article(url):
     for s in soup.select('.td-post-content > :not(p,h1,h2,h3,h4,h5,.wp-block-embed-twitter)'):
         s.extract()
     bodyCopy = soup.select('.td-post-content')[0]
-    print(bodyCopy)
+    
 article("https://theedinburghreporter.co.uk/2021/11/all-three-christmas-planning-applications-recommended-for-approval/")

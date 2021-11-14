@@ -26,5 +26,5 @@ def article(url):
     for s in soup.select('.subscription-content > :not(p,h2,h3,h4,h5,h6)'):
         s.extract()
     bodyCopy =  soup.select('.p402_hide ')[0] ### READ THE FULL STORY
-    print(bodyCopy)
+    
 article("https://www.richmondandtwickenhamtimes.co.uk/news/19703214.arrest-pedestrian-hit-heathrow-critical/")

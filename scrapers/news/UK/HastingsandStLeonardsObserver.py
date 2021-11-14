@@ -24,6 +24,6 @@ def article(url):
     for s in soup.select('iframe'):
         s.extract()
     article =  soup.select('#content-wrapper')[0]
-    print(article)
+    
 article("https://www.hastingsobserver.co.uk/news/crime/st-leonards-elderly-couples-house-damaged-and-car-set-alight-in-mistaken-identity-attacks-3447988")
 ### NEED JAVASCRIPT

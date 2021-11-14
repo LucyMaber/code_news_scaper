@@ -32,5 +32,5 @@ def article(url):
     for s in soup.select('#subscription-content > img'):
         s.extract()
     bodyCopy =  soup.select('.p402_hide')[0]
-    print(bodyCopy)
+    
 article("https://www.dorsetecho.co.uk/news/19692080.tributes-paid-selfless-passionate-youtuber-died-crash-dorset-route/")

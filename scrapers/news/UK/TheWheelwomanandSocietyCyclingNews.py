@@ -28,5 +28,5 @@ def article(url):
     for s in soup.select('#article-body > :not(p)'):
         s.extract()
     bodyCopy =  soup.select('#article-body')[0]
-    print(bodyCopy)
+    
 article("https://www.cyclingnews.com/news/zeits-rejoins-nibali-and-lopez-in-return-to-astana/")

@@ -50,7 +50,7 @@ def newsDataQurry():
     sparql.setQuery(qaurry)
     results = sparql.query().convert()
     for result in results["results"]["bindings"]:
-        print(result)
+        
 newsDataQurry()
 
 """

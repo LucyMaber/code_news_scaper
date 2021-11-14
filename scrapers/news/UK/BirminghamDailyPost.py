@@ -29,5 +29,5 @@ def article(url):
     for s in soup.select('[itemprop="articleBody"] > h3'):
         s.extract()
     article_body =  soup.select_one('[itemprop="articleBody"]')
-    print(article_body)
+    
 article("https://www.business-live.co.uk/manufacturing/computer-chip-shortage-continues-hit-22032800")

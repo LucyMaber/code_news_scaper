@@ -29,5 +29,5 @@ def article(url):
     for s in soup.select('#main> p:contains("Sign up for our newsletter and get the top stories")'):
         s.extract()
     bodyCopy =  soup.select('#main')[0] ### READ THE FULL STORY
-    print(bodyCopy)
+    
 article("https://www.independent.co.uk/news/uk/politics/boris-johnson-news-debate-owen-paterson-b1954076.html")

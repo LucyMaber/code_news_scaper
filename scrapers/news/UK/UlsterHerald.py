@@ -30,5 +30,5 @@ def article(url):
     for s in soup.select('.pigeon-remove > div'):
         s.extract()
     bodyCopy =  soup.select('.pigeon-remove')[0]
-    print(bodyCopy)
+    
 article("https://www.wearetyrone.com/news/business/mining-critical-to-climate-change-targets/")

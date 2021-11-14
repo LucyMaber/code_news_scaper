@@ -25,5 +25,5 @@ def article(url):
     for s in soup.select('.section_content > :contains("READ THE FULL STORY")'):
         s.extract()
     bodyCopy =  soup.select('.section_content')[0] ### READ THE FULL STORY
-    print(bodyCopy)
+    
 article("http://www.newryreporter.com/pages/?title=absolute-outrage")

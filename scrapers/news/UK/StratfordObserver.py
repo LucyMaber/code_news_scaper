@@ -25,5 +25,5 @@ def article(url):
     for s in soup.select('article >:not(p,h1,h2,h3,h4,h5,h6,strong)'):
         s.extract()
     bodyCopy =  soup.select('article')[0]
-    print(bodyCopy)
+    
 article("https://stratfordobserver.co.uk/news/kineton-sports-and-social-club-equipped-for-sustainable-future-33413/")

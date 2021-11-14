@@ -28,5 +28,5 @@ def article(url):
     for s in soup.select('h3'):
         s.extract()
     bodyCopy =  soup.select('.cell_right_sub1')[0]
-    print(bodyCopy)
+    
 article("http://www.thedownrecorder.co.uk/pages/?title=Vandals_target_special_school")

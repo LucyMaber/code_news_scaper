@@ -25,5 +25,5 @@ def article(url):
     for s in soup.select('#content-wrapper > :not(.markup)'):
         s.extract()
     bodyCopy =  soup.select('#content-wrapper')[0]
-    print(bodyCopy)
+    
 article("https://www.eastbourneherald.co.uk/news/crime/footage-shows-the-moment-heathfield-necrophiliac-who-killed-two-women-is-taken-into-custody-3445706")

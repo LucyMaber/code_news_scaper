@@ -26,5 +26,5 @@ def article(url):
     for s in soup.select('.pagestory > :not(p, h1,h2,h3,h4,h5,h6) '):
         s.extract()
     article =  soup.select('.pagestory')[0]
-    print(article)
+    
 article("https://www.inverness-courier.co.uk/news/scottish-and-german-collaboration-to-look-at-potential-of-ex-256655/")

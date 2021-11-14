@@ -23,5 +23,5 @@ def article(url):
     for s in soup.select('.bodyHeadingTag > :not(p)'):
         s.extract()
     bodyCopy =  soup.select('.bodyHeadingTag:has(p)')[0]
-    print(bodyCopy)
+    
 article("https://www.newlawjournal.co.uk/content/pro-bono-week-behind-the-numbers")

@@ -24,5 +24,5 @@ def article(url):
     for s in soup.select('.article_bodycopy > :not(p, h1,h2,h3,h4,h5,h6,.twitter-tweet) '):
         s.extract()
     article =  soup.select('.article_bodycopy')[0]
-    print(article)
+    
 article("https://www.irishtimes.com/news/politics/northern-ireland-s-access-to-single-market-may-be-jeopardised-says-taoiseach-1.4724621")

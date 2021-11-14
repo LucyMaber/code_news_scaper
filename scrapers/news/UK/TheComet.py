@@ -31,5 +31,5 @@ def article(url):
     for s in soup.select('.article__detail-text > :not(p,h1,h2,h3,h4,h5)'):
         s.extract()
     bodyCopy = soup.select('.article__detail-text')[0]
-    print(headline)
+    
 article("https://www.thecomet.net/news/skull-essex-building-site-letchworth-veteran-john-dick-8372220")

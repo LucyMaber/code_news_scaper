@@ -27,5 +27,5 @@ def article(url):
     for s in soup.select('#article-content > :not(p)'):
         s.extract()
     bodyCopy =  soup.select('#article-content')[0]
-    print(bodyCopy)
+    
 article("https://waterford-news.ie/2021/11/09/i-felt-ghosts-leaving-my-body/")

@@ -25,5 +25,5 @@ def article(url):
     for s in soup.select('script'):
         s.extract()
     article =  soup.select('#single-article-content')[0]
-    print(article)
+    
 article("https://www.southwarknews.co.uk/news/inner-london-crown-court-to-be-spared-axe-amid-spiralling-criminal-case-backlog/")

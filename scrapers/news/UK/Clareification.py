@@ -37,5 +37,5 @@ def article(url):
     for s in soup.select("p:has(b)"):
         s.extract()
     headline =  soup.select('[itemprop="headline name"]')[0]
-    print(article_body)
+    
 article("https://www.somersetlive.co.uk/news/somerset-news/somerset-towns-could-underwater-2090-6143822")

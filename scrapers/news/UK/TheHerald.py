@@ -36,5 +36,5 @@ def article(url):
     for s in soup.select('#subscription-content > :not(p)'):
         s.extract()
     content =  soup.select('.article-body')[0]
-    print(content)
+    
 article("https://www.heraldscotland.com/politics/19707778.net-zero-planning-shake-up-town-retail-penalised-regeneration-favoured/")

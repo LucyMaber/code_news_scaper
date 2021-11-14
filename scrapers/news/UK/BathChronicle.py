@@ -23,5 +23,5 @@ def article(url):
     for s in soup.select("script"):
         s.extract()
     headline =  soup.select('[itemprop="headline name"]')
-    print(article_body)
+    
 article("https://www.somersetlive.co.uk/news/somerset-news/girl-14-suffered-head-injury-6142049/")

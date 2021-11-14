@@ -26,5 +26,5 @@ def article(url):
     for s in soup.select('[itemprop="articleBody"] > :not(ul ,p, strong)'):
         s.extract()
     content =  soup.select('[itemprop="articleBody"]')[0]
-    print(content)
+    
 article("https://www.gloucestershirelive.co.uk/news/gloucester-news/wolf-sighting-near-forest-dean-6151117")

@@ -43,5 +43,5 @@ def article(url):
     for s in soup.select('p:has(b)'):
         s.extract()
     acale =  soup.select('[itemprop="articleBody"]') [0]
-    print(by)
+    
 article("https://www.bristolpost.co.uk/news/bristol-news/insulate-britain-m25-bristol-reverend-6146771")

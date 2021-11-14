@@ -31,5 +31,5 @@ def article(url):
     for s in soup.select('p:has([data-link-tracking="InArticle|Link"])'):
         s.extract()
     bodyCopy =  soup.select('#content-wrapper')[0]
-    print(bodyCopy)
+    
 article("https://www.lurganmail.co.uk/news/politics/mike-nesbitt-joins-calls-for-apology-over-mlas-sectarian-ruc-comments-3447554")

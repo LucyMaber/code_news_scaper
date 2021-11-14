@@ -27,5 +27,5 @@ def article(url):
     for s in soup.select('article  figure'):
         s.extract()
     bodyCopy =  soup.select('article')[0]
-    print(bodyCopy)
+    
 article("https://socialistvoice.scot/2021/07/31/danny-odonnell/")

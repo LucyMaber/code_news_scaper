@@ -27,5 +27,5 @@ def article(url):
     for s in soup.select('p:has([data-link-tracking="InArticle|Link"])'):
         s.extract()
     bodyCopy =  soup.select('#subscription-replace-entire-article')[0]
-    print(bodyCopy)
+    
 article("https://www.malverngazette.co.uk/sport/19699902.reaction-bristol-bears-27-worcester-warriors-5---jonathan-thomas/")

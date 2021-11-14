@@ -29,5 +29,5 @@ def article(url):
     for s in soup.select('[itemprop="articleBody"] >  :contains("READ MORE")'):
         s.extract()
     bodyCopy =  soup.select('[itemprop="articleBody"]')[0]
-    print(bodyCopy)
+    
 article("https://www.birminghammail.co.uk/news/midlands-news/tamworth-borough-council-defends-huge-22112455")

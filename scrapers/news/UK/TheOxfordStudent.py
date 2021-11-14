@@ -26,5 +26,5 @@ def article(url):
     for s in soup.select('.entry-content > :contains("Image credit")'):
         s.extract()
     bodyCopy =  soup.select('.entry-content')[0] ### READ THE FULL STORY
-    print(bodyCopy)
+    
 article("https://www.oxfordstudent.com/2021/11/11/christ-church-dean-compares-investigation-into-sexual-harassment-to-holocaust-persecution/")

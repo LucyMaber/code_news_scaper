@@ -32,5 +32,5 @@ def article(url):
     for s in soup.select('.entry-content > p:contains("Read more")'):
         s.extract()
     bodyCopy =  soup.select('.entry-content')[0]
-    print(bodyCopy)
+    
 article("https://www.bedfordtoday.co.uk/whats-on/arts-and-entertainment/don-broco-back-in-bedford-for-sold-out-hometown-esquires-show-3450123")

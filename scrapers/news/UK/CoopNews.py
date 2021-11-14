@@ -29,5 +29,5 @@ def article(url):
     for s in soup.select('[itemprop="articleBody"] > div'):
         s.extract()
     entry_content =  soup.select('[itemprop="articleBody"]')[0]
-    print(entry_content)
+    
 article("https://www.thenews.coop/158165/topic/economy/us-co-op-apex-welcomes-joe-bidens-post-covid-rebuild-plan/")

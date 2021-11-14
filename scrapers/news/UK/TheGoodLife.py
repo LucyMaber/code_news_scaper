@@ -20,5 +20,5 @@ def article(url):
     soup = BeautifulSoup(content, 'html.parser')
     headline =  soup.select('h1.post_title')[0]
     article =  soup.select('.text')[0]
-    print(headline)
+    
 article("https://thegoodlifesurbiton.co.uk/2021/11/03/talk-on-titanic-and-link-with-st-marys-church-long-ditton/")

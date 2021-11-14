@@ -21,11 +21,11 @@ def article(url):
     content = requests.get(url,headers=header).content
     soup = BeautifulSoup(content, 'html.parser')
     author =  soup.select('a[rel="author"]') [0]
-    print(author)
+    
     co_author =  soup.select('a[rel="author"]') [0]
-    print(author)
+    
     time =  soup.select('time.ms-article-header-prime__date_value') [0]
-    print(time)
+    
     for s in soup.select("section[contenteditable]"):
         s.extract()
     for s in soup.select("div.ms-article-content > div"):
@@ -47,8 +47,8 @@ def article(url):
     for s in soup.select(".party-poker"):
         s.extract()
     article =  soup.select('div.ms-article-content') [0]
-    print(article)
+    
     subtitle =  soup.select('h2.ms-article_preview') [0]
-    print(subtitle)
+    
     ##FIX ME SILL NEED TO REMOVE JUNK
 article("https://www.autosport.com/f1/news/williams-f1-walrus-nose-aerodynamicist-terzi-dies/6734186/")

@@ -31,5 +31,5 @@ def article(url):
     for s in soup.select('script'):
         s.extract()
     bodyCopy =  soup.select('div.entry-content')[0] ### READ THE FULL STORY
-    print(bodyCopy)
+    
 article("https://plantbasednews.org/lifestyle/food/start-up-those-vegan-cowboys-cheese/")

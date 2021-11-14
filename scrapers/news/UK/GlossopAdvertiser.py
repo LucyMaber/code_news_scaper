@@ -32,5 +32,5 @@ def article(url):
     for s in soup.select('p:contains("Click here")'):
         s.extract()
     content =  soup.select('article')[0]
-    print(content)
+    
 article("https://www.questmedianetwork.co.uk/news/glossop-chronicle/staff-from-glossop-charity-join-forces-with-digital-forum/")

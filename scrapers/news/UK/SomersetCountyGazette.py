@@ -26,5 +26,5 @@ def article(url):
     for s in soup.select('#subscription-content > p:contains("READ MORE")'):
         s.extract()
     article =  soup.select('#subscription-content')[0]
-    print(article)
+    
 article("https://www.somersetcountygazette.co.uk/news/19704289.next-steps-revealed-single-unitary-authority-somerset/")

@@ -33,6 +33,6 @@ def article(url):
     for s in soup.select('script'):
         s.extract()
     bodyCopy =  soup.select('[itemprop="articleBody"]')[0] ### READ THE FULL STORY
-    print(bodyCopy)
+    
 article("https://www.manchestereveningnews.co.uk/news/greater-manchester-news/oldham-secondary-school-pupils-asked-22106539")
 

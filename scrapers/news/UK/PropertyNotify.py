@@ -28,5 +28,5 @@ def article(url):
     for s in soup.select('.entry-content > p:contains("READ MORE")'):
         s.extract()
     bodyCopy =  soup.select('.entry-content')[0] ### READ THE FULL STORY
-    print(bodyCopy)
+    
 article("https://www.northsomersettimes.co.uk/news/clevedon-art-club-s-autumn-art-show-8473860")

@@ -33,5 +33,5 @@ def article(url):
     for s in soup.select('script'):
         s.extract()
     bodyCopy =  soup.select('[itemprop="articleBody"]')[0] ### READ THE FULL STORY
-    print(bodyCopy)
+    
 article("https://www.dailyrecord.co.uk/news/local-news/petition-launched-families-fight-back-25417312")

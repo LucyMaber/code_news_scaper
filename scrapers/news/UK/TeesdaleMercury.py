@@ -25,5 +25,5 @@ def article(url):
     for s in soup.select('#subscription-content >:not(p,h1,h2,h3,h4,h5,h6,strong)'):
         s.extract()
     bodyCopy = soup.select('.articleBody > p')[0]
-    print(bodyCopy)
+    
 article("https://www.teesdalemercury.co.uk/news/cutlery-crafter-serves-up-successful-new-venture")

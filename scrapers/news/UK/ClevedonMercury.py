@@ -25,6 +25,6 @@ def article(url):
     for s in soup.select(".article__detail-text > div"):
         s.extract()
     article_text  =  soup.select("div.article__detail-text")[0]
-    print(article_updated)
+    
 
 article("https://www.thewestonmercury.co.uk/news/baytree-school-judicial-review-lodged-8432964")

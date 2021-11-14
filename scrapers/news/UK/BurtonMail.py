@@ -54,5 +54,5 @@ def article(url):
     for s in soup.select('p:has(b)'):
         s.extract()
     articleBody =  soup.select('[itemprop="articleBody"]') [0]
-    print(hedding)
+    
 article("https://www.staffordshire-live.co.uk/news/local-news/criminals-who-been-locked-up-6143221")

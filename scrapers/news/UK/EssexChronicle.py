@@ -25,5 +25,5 @@ def article(url):
     for s in soup.select('script'):
         s.extract()
     bodyCopy =  soup.select(".p402_hide")[0]
-    print(bodyCopy)
+    
 article("https://www.surreycomet.co.uk/news/national/uk-today/19697000.eagles-play-outdoor-shows-uk-next-year-including-london---get-tickets/")

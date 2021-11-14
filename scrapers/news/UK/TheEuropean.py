@@ -33,5 +33,5 @@ def article(url):
     for s in soup.select('[class="pp-content__body pp-subs pp-subs__post-end"] > :not(p)'):
         s.extract()
     bodyCopy = soup.select('main')[0]
-    print(bodyCopy)
+    
 article("https://www.theneweuropean.co.uk/jk-rowling-trans-culture-war/")

@@ -21,6 +21,6 @@ def article(url):
     for s in soup.select('.article__detail-text > :not(p,h1,h2,h3,h4,h5,h6)'):
         s.extract()
     article =  soup.select('.article__detail-text')[0]
-    print(article)
+    
 article("https://www.hamhigh.co.uk/news/products-recalled-due-to-safety-concerns-november-5-8465994")
 ### NEED JAVASCRIPT

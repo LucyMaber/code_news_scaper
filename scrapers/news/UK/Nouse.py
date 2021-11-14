@@ -31,5 +31,5 @@ def article(url):
     for s in soup.select('#articleText > p:contains("Links to support:")'):
         s.extract()
     bodyCopy =  soup.select('#articleText')[0] ### READ THE FULL STORY
-    print(bodyCopy)
+    
 article("https://nouse.co.uk/2021/04/10/the-last-taboo-releases-report-on-universitys-actions-towards-sexual-assault-and-harassment-")

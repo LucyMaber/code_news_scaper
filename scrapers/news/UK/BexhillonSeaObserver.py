@@ -25,5 +25,5 @@ def article(url):
     for s in soup.select('#content-wrapper >h3'):
         s.extract()
     article_body =  soup.select_one('#content-wrapper')
-    print(article_body)
+    
 article("https://www.bexhillobserver.net/sport/football/hollingtons-halloween-nightmare-delivery-was-nothing-short-of-atrocious-3439329")

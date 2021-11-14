@@ -29,5 +29,5 @@ def article(url):
     for s in soup.select('#article-body > :not(br , b)'):
         s.extract()
     bodyCopy =  soup.select('.article-body')[0]
-    print(bodyCopy)
+    
 article("https://www.universityworldnews.com/post.php?story=20211105110142162")

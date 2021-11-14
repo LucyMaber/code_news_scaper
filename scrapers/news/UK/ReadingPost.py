@@ -32,5 +32,5 @@ def article(url):
     for s in soup.select('#main> p:contains("To sign up for the Lincolnshire Live newsletter")'):
         s.extract()
     bodyCopy =  soup.select('[itemprop="articleBody"]')[0] ### READ THE FULL STORY
-    print(bodyCopy)
+    
 article("https://www.getreading.co.uk/news/reading-berkshire-news/wokingham-traffic-plans-direct-link-22068653")

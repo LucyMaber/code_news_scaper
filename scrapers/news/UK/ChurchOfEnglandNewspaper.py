@@ -27,7 +27,7 @@ def article(url):
     # for s in soup.select('#content-wrapper > #axate-wallet'):
     #     s.extract()
     articleBody  =  soup.select('.entry-content') [0]
-    #print(articleBody)
-    print(articleBody)
+    #
+    
 
 article("https://www.churchnewspaper.com/86267/archives")

@@ -27,6 +27,6 @@ def article(url):
     for s in soup.select('iframe'):
         s.extract()
     bodyCopy =  soup.select('#viewer-foo')[0]
-    print(bodyCopy)
+    
 article("https://www.thesaint.scot/post/action-not-words-a-message-to-leaders-at-cop26")
 

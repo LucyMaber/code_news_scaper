@@ -26,5 +26,5 @@ def article(url):
     for s in soup.select('script'):
         s.extract()
     article =  soup.select('#content-wrapper')[0]
-    print(article)
+    
 article("https://www.thesouthernreporter.co.uk/news/people/salon-owner-thanks-crisis-team-for-help-with-mental-health-issues-3451378")

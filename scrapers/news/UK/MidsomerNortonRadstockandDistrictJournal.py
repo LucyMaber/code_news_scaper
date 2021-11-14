@@ -27,5 +27,5 @@ def article(url):
     for s in soup.select('.p402_premium >:not(p,h1,h2,h3,h4,h5,h6,strong)'):
         s.extract()
     articleBody =  soup.select('.p402_premium')[0]
-    print(articleBody)
+    
 article("https://www.motorcyclenews.com/news/new-tech/aegis-rider-ag/")

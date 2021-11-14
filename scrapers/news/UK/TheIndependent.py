@@ -24,5 +24,5 @@ def article(url):
     for s in soup.select('#main > :not(p, h1,h2,h3,h4,h5,h6) '):
         s.extract()
     article =  soup.select('#main')[0]
-    print(article)
+    
 article("https://www.independent.co.uk/news/us-urges-un-council-to-press-myanmar-to-return-to-democracy-myanmar-covid-united-nations-antonio-guterres-china-b1893423.html")
