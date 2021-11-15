@@ -34,23 +34,28 @@ for file in onlyfiles:
     print(name)
     file = join(mypath, file)
 
+    with open(file, 'r') as original: 
+        if len(original.read()) < 100:
+            os.remove(file)
+            continue
+
     try:
         f = path_import(file,file)
         print(file)
+        if f.Q == "":
+            output.write("Need Q:"+file + "\n") 
         for i in f.urls:
             if i in urls:
                 os.remove(file)
                 continue
-        
         with open(file, 'r') as original: 
             data = original.read()
-            with open(file, 'w') as modified: 
-                modified.write("Q ='" +item+"'\n"+ data)
-                modified.close()
+            print(dir(f))
+            # with open(file, 'w') as modified: 
+            #     modified.write("Q ='" +item+"'\n"+ data)
+            #     modified.close()
         if len(f.urls) == 0:
             output.write("Need URL:"+file + "\n") 
-            continue
-            urls.append(i)
         if len(f.feeds) == 0:
             output.write("Need Feed:"+file + "\n") 
     except:
