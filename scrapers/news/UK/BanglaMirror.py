@@ -1,5 +1,7 @@
 Q ='[[wikidata:Q4855248]]'
-urls = []
+urls = [
+    "https://banglamirrornews.com/"
+]
 feeds = [
 
 ]

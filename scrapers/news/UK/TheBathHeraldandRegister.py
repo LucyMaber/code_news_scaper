@@ -1,5 +1,7 @@
 Q =''
-urls = []
+urls = [
+    "https://www.bathrecitals.com/"
+]
 feeds = [
     "https://www.bathrecitals.com/feed/"
 ]

@@ -1,5 +1,7 @@
 Q =''
-urls = []
+urls = [
+    "https://www.barkinganddagenhampost.co.uk/"
+]
 feeds = [
 
 ]

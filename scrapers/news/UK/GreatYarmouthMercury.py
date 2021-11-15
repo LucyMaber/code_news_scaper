@@ -1,5 +1,7 @@
 Q ='[[wikidata:Q23018636]]'
-urls = []
+urls = [
+    "https://www.greatyarmouthmercury.co.uk/"
+]
 feeds = [
 
 ]

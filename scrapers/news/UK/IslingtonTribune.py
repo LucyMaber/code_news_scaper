@@ -1,5 +1,7 @@
 Q =""
-urls = []
+urls = [
+    "http://islingtontribune.com/"
+]
 feeds = [
 
 ]

@@ -24,19 +24,19 @@ def article(url):
     # 
     for s in soup.select("p:has(b)"):
         s.extract()
-    for s in soup.select("p:-soup-contains('Download the LancsLive app for free on')"):
+    for s in soup.select("p:contains('Download the LancsLive app for free on')"):
         
         s.extract()
-    for s in soup.select("p:-soup-contains('To keep updated, follow LancsLive on Facebook and')"):
+    for s in soup.select("p:contains('To keep updated, follow LancsLive on Facebook and')"):
         
         s.extract()
-    for s in soup.select("p:-soup-contains('To keep updated, follow LancsLive on Facebook and')"):
+    for s in soup.select("p:contains('To keep updated, follow LancsLive on Facebook and')"):
         
         s.extract()
-    for s in soup.select("p:-soup-contains(' got news for us? Contact our newsdesk')"):
+    for s in soup.select("p:contains(' got news for us? Contact our newsdesk')"):
         
         s.extract()
-    for s in soup.select("p:has(b:-soup-contains(' all the latest news, sport and what's on stories sent to your inbox'))"):
+    for s in soup.select("p:has(b:contains(' all the latest news, sport and what's on stories sent to your inbox'))"):
         
         s.extract()
     for s in soup.select("[data-mod='renderRecommendation']"):

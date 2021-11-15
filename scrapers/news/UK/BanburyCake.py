@@ -1,5 +1,7 @@
 Q =''
-urls = []
+urls = [
+    "https://www.banburycake.co.uk/"
+]
 feeds = [
 
 ]

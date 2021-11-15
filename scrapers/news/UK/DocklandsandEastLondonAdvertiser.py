@@ -1,6 +1,6 @@
 Q =''
 urls = [
-
+    "https://www.eastlondonadvertiser.co.uk"
 ]
 feeds = [
 
