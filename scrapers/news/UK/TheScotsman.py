@@ -32,5 +32,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.article-content')[0]
     
-article("https://www.scotsman.com/sport/football/rangers/aston-villa-confirm-steven-gerrard-appointment-as-he-notes-special-place-in-his-heart-for-rangers-3453857")
-
+async def scan():
+    return False

@@ -29,5 +29,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.lightbox-content')[0]
     
-article("https://www.sundaypost.com/fp/peter-capaldi-album/")
-
+async def scan():
+    return False

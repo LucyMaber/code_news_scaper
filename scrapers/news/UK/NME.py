@@ -24,4 +24,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.c-article-content__container')[0] ### READ THE FULL STORY
     
-article("https://www.nme.com/blogs/nme-radar/jada-kingdom-interview-jungle-jamaica-3089955")
+async def scan():
+    return False

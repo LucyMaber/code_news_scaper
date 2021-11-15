@@ -33,4 +33,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('#articleText')[0] ### READ THE FULL STORY
     
-article("https://nouse.co.uk/2021/04/10/the-last-taboo-releases-report-on-universitys-actions-towards-sexual-assault-and-harassment-")
+async def scan():
+    return False

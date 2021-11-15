@@ -26,4 +26,5 @@ def article(url):
         s.extract()
     content =  soup.select('.text-inner')[0]
     
-article("https://www.themill.com/newsfeed/racing-through-mexico-with-xbox-forza-horizon-5/")
+async def scan():
+    return False

@@ -26,4 +26,5 @@ def article(url):
         s.extract()
     article =  soup.select('.article_bodycopy')[0]
     
-article("https://www.irishtimes.com/news/politics/northern-ireland-s-access-to-single-market-may-be-jeopardised-says-taoiseach-1.4724621")
+async def scan():
+    return False

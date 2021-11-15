@@ -29,4 +29,5 @@ def article(url):
         s.extract()
     content =  soup.select('.uk-grid > .uk-width-large-4-6')[0]
     
-article("https://mancunion.com/2021/11/06/university-of-manchester-staff-to-strike-over-pay/")
+async def scan():
+    return False

@@ -30,4 +30,5 @@ def article(url):
         s.extract()
     content =  soup.select('#articleContent')[0]
     
-article("https://www.thejournal.ie/tony-holohan-cut-socialising-by-half-covid-19-5597460-Nov2021/")
+async def scan():
+    return False

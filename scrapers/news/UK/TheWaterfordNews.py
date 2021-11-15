@@ -29,4 +29,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('#article-content')[0]
     
-article("https://waterford-news.ie/2021/11/09/i-felt-ghosts-leaving-my-body/")
+async def scan():
+    return False

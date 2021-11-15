@@ -38,4 +38,5 @@ def article(url):
         s.extract()
     content =  soup.select('.article-body')[0]
     
-article("https://www.heraldscotland.com/politics/19707778.net-zero-planning-shake-up-town-retail-penalised-regeneration-favoured/")
+async def scan():
+    return False

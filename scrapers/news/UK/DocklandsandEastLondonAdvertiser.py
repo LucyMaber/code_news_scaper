@@ -28,4 +28,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('div[class="article__detail-text mdc-typography--body1"]')[0]
     
-article("https://www.eastlondonadvertiser.co.uk/news/crime/men-sentenced-for-alexandra-palace-cash-raid-8461072")
+async def scan():
+    return False

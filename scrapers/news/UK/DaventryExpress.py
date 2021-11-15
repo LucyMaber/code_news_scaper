@@ -27,4 +27,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('#content-wrapper')[0]
     
-article("https://www.daventryexpress.co.uk/news/people/five-escape-with-minor-injuries-after-three-car-pile-up-on-a5-in-northamptonshire-3443417")
+async def scan():
+    return False

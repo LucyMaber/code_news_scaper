@@ -26,4 +26,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('div.p402_hide')[0]
     
-article("https://www.dudleynews.co.uk/news/19690545.classical-concert-gig-caritas-set-former-stourbridge-church/")
+async def scan():
+    return False

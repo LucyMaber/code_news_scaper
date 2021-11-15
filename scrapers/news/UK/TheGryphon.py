@@ -22,4 +22,5 @@ def article(url):
     headline =  soup.select('.entry-title')[0]
     article =  soup.select('.entry-content')[0]
     
-article("https://www.thegryphon.co.uk/2021/11/08/university-of-leeds-staff-back-strike-over-pay-and-conditions/")
+async def scan():
+    return False

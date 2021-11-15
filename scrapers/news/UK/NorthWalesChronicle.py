@@ -27,4 +27,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.p402_hide')[0] ### READ THE FULL STORY
     
-article("https://www.northwaleschronicle.co.uk/news/19701504.wales-aims-become-smoke-free-2030-health-reasons/")
+async def scan():
+    return False

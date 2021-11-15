@@ -34,5 +34,5 @@ def article(url):
         s.extract()
     bodyCopy = soup.select('article > div')[0]
     
-article("https://www.thegazette.co.uk/all-notices/content/103996/")
-## ERROR uninow
+async def scan():
+    return False## ERROR uninow

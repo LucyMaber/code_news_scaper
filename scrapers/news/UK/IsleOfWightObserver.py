@@ -26,4 +26,5 @@ def article(url):
         s.extract()
     article =  soup.select('.entry-content')[0]
     
-article("https://iwobserver.co.uk/members-decide-officers-advise/")
+async def scan():
+    return False

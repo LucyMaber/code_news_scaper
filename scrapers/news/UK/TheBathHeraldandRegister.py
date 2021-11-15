@@ -27,5 +27,5 @@ def article(url):
     #     s.extract()
     bodyCopy = soup.select('[itemprop="text"]')[0]
     
-article("https://www.bathrecitals.com/2021/09/26/the-orchid-and-its-hunters/")
-## ERROR uninow
+async def scan():
+    return False## ERROR uninow

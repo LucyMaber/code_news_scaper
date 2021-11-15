@@ -26,4 +26,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('[itemscope="itemscope"]')[0]
     
-article("https://www.monmouthshirebeacon.co.uk/article.cfm?id=118608&headline=Two%20rare%20vintage%20tractors%20up%20for%20sale%20in%20antiques%20auction&sectionIs=news&searchyear=2021")
+async def scan():
+    return False

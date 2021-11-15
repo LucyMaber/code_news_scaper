@@ -26,4 +26,5 @@ def article(url):
         s.extract()
     article =  soup.select('#main')[0]
     
-article("https://www.independent.co.uk/news/obituaries/nicholas-bagnall-independent-on-sunday-columnist-who-also-spent-more-than-half-a-century-with-the-telegraph-papers-a6882811.html")
+async def scan():
+    return False

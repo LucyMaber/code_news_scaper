@@ -31,4 +31,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('#content-wrapper')[0] ### READ THE FULL STORY
     
-article("https://www.northumberlandgazette.co.uk/news/politics/council/plans-submitted-for-overnight-motorhome-parking-in-northumberland-coastal-car-park-3442473")
+async def scan():
+    return False

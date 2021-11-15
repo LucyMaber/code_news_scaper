@@ -27,4 +27,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.section_content')[0] ### READ THE FULL STORY
     
-article("http://www.newryreporter.com/pages/?title=40m-health-hub-to-open-in-2025")
+async def scan():
+    return False

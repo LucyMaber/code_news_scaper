@@ -31,4 +31,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.main-content > div')[0] ### READ THE FULL STORY
     
-article("https://www.oddfellows.co.uk/news/destination-dinner-table/")
+async def scan():
+    return False

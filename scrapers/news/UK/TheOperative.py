@@ -28,4 +28,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('[itemprop="articleBody"]')[0] ### READ THE FULL STORY
     
-article("https://www.thenews.coop/158311/sector/community/new-report-looks-at-co-op-solutions-for-food-justice-in-plymouth/")
+async def scan():
+    return False

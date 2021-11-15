@@ -24,4 +24,5 @@ def article(url):
         s.extract()
     content =  soup.select('.p402_hide')[0]
     
-article("https://www.impartialreporter.com/news/19708222.fermanagh-2001-reflections-ruc-force-enniskillen-ties-end/")
+async def scan():
+    return False

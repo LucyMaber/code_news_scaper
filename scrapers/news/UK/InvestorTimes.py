@@ -28,4 +28,5 @@ def article(url):
         s.extract()
     article =  soup.select('.td-post-content')[0]
     
-article("https://www.investortimes.co.uk/experian/")
+async def scan():
+    return False

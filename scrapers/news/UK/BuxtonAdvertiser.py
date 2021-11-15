@@ -35,5 +35,5 @@ def article(url):
         s.extract()
     article_body =  soup.select_one('#content-wrapper')
     
-article("https://www.buxtonadvertiser.co.uk/health/coronavirus/christmas-will-be-lockdown-free-despite-high-case-numbers-boris-johnson-says-3439055")
-#frameInner > article > div.sc-bmyXtO.darZld > div.sc-jtggT.iedqFq > div:nth-child(2)
+async def scan():
+    return False#frameInner > article > div.sc-bmyXtO.darZld > div.sc-jtggT.iedqFq > div:nth-child(2)

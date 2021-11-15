@@ -26,4 +26,5 @@ def article(url):
         s.extract()
     article =  soup.select('.p402_hide')[0]
     
-article("https://www.keighleynews.co.uk/news/19699350.letter-keighley-councillor-resigns-committee-cemetery-lighting-decision/")
+async def scan():
+    return False

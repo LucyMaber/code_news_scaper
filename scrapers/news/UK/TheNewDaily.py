@@ -28,4 +28,5 @@ def article(url):
         s.extract()
     content =  soup.select('[class="tnd-content-style tnd-content-style--article"]')[0]
     
-article("https://thenewdaily.com.au/news/state/vic/2021/11/11/nsw-storm-floods/?breaking_live_scroll")
+async def scan():
+    return False

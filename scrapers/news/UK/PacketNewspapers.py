@@ -29,5 +29,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.p402_hide')[0] ### READ THE FULL STORY
     
-article("https://www.falmouthpacket.co.uk/news/19702869.300-families-faced-homelessness-cornwall-eviction/")
-
+async def scan():
+    return False

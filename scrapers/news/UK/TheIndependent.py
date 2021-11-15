@@ -26,4 +26,5 @@ def article(url):
         s.extract()
     article =  soup.select('#main')[0]
     
-article("https://www.independent.co.uk/news/us-urges-un-council-to-press-myanmar-to-return-to-democracy-myanmar-covid-united-nations-antonio-guterres-china-b1893423.html")
+async def scan():
+    return False

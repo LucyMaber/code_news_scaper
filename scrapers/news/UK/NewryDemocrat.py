@@ -26,4 +26,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('[itemprop="text"] > div')[0]
     
-article("https://www.newrydemocrat.com/sport/2021/10/24/gallery/toothless-city-drop-three-vital-points-19331/")
+async def scan():
+    return False

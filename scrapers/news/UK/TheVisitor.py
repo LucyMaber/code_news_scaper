@@ -30,4 +30,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('#content-wrapper')[0]
     
-article("https://www.thevisitor.co.uk/news/crime/posh-trees-stolen-from-outside-jewellers-in-lancaster-3453033")
+async def scan():
+    return False

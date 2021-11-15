@@ -33,5 +33,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('[itemprop="articleBody"]')[0] ### READ THE FULL STORY
     
-article("https://www.coventrytelegraph.net/in-your-area/warning-three-different-roadworks-hit-22101509")
-
+async def scan():
+    return False

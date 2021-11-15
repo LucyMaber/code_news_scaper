@@ -47,4 +47,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.p402_hide')[0] ### READ THE FULL STORY
     
-article("https://www.thenorthernecho.co.uk/news/19703324.data-reveals-darlington-councils-climate-ambitions/")
+async def scan():
+    return False

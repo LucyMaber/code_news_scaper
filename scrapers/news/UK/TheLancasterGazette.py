@@ -32,4 +32,5 @@ def article(url):
         s.extract()
     content =  soup.select('.primary-content')[0]
     
-article("https://eu.lancastereaglegazette.com/story/news/2021/11/10/local-restaurant-vitality-bowls-superfood-cafe-expands-menu-options/6336354001/")
+async def scan():
+    return False

@@ -31,5 +31,5 @@ def article(url):
         s.extract()
     bodyCopy = soup.select('.post-content')[0]
     
-article("https://www.theblackshirt.org/2021/11/08/the-mystery-of-the-zodiac-killer/")
-## ERROR uninow
+async def scan():
+    return False## ERROR uninow

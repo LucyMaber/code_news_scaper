@@ -25,4 +25,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.bodyHeadingTag:has(p)')[0]
     
-article("https://www.newlawjournal.co.uk/content/pro-bono-week-behind-the-numbers")
+async def scan():
+    return False

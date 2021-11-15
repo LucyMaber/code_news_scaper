@@ -30,4 +30,5 @@ def article(url):
         s.extract()
     content =  soup.select('.access-body')[0]
     
-article("https://www.law.com/international-edition/2021/11/10/us-investigates-tencents-1-3b-acquisition-of-british-videogame-maker/")
+async def scan():
+    return False

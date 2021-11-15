@@ -29,5 +29,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.the_content')[0]
     
-article("https://theshuttle.org.uk/blackburns-city-bid-explained-how-you-can-get-involved/")
-
+async def scan():
+    return False

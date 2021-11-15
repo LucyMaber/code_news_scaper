@@ -27,4 +27,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('#content-wrapper')[0] ### READ THE FULL STORY
     
-article("https://www.newsguardian.co.uk/news/people/police-targeting-those-spiking-drinks-following-rise-in-cases-in-the-region-3449909")
+async def scan():
+    return False

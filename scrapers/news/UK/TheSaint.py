@@ -29,5 +29,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('#viewer-foo')[0]
     
-article("https://www.thesaint.scot/post/action-not-words-a-message-to-leaders-at-cop26")
-
+async def scan():
+    return False

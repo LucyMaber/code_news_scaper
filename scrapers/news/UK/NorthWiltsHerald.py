@@ -29,4 +29,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.p402_hide')[0] ### READ THE FULL STORY
     
-article("https://www.gazetteandherald.co.uk/news/19702830.questions-heads-devizes-will-panel/")
+async def scan():
+    return False

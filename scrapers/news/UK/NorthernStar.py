@@ -27,4 +27,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.article-content')[0] ### READ THE FULL STORY
     
-article("https://northernstar.co.uk/small-business-guide-ransomware/")
+async def scan():
+    return False

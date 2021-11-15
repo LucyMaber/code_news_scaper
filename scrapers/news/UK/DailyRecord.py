@@ -35,4 +35,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('[itemprop="articleBody"]')[0]
     
-article("https://www.dailyrecord.co.uk/news/scottish-news/photo-man-wearing-blackface-mr-25368767")
+async def scan():
+    return False

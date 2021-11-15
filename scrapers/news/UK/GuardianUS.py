@@ -31,4 +31,5 @@ def article(url):
         s.extract()
     content =  soup.select('#maincontent > div')[0]
     
-article("https://www.theguardian.com/us-news/2021/nov/06/fresno-housing-prices-rent-california")
+async def scan():
+    return False

@@ -29,4 +29,5 @@ def article(url):
         s.extract()
     content =  soup.select('#content-wrapper')[0]
     
-article("https://www.derryjournal.com/news/people/derry-man-edward-meenan-was-a-victim-of-a-brutal-and-savage-attack-prosecutor-tells-jury-at-trial-3453336")
+async def scan():
+    return False

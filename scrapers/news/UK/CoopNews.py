@@ -31,4 +31,5 @@ def article(url):
         s.extract()
     entry_content =  soup.select('[itemprop="articleBody"]')[0]
     
-article("https://www.thenews.coop/158165/topic/economy/us-co-op-apex-welcomes-joe-bidens-post-covid-rebuild-plan/")
+async def scan():
+    return False

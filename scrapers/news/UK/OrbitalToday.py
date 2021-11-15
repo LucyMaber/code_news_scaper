@@ -28,5 +28,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.article-chapter')[0] ### READ THE FULL STORY
     
-article("https://orbitaltoday.com/2021/11/08/peter-beck-from-rocket-lab-shares-the-reason-behind-his-motivation/")
-
+async def scan():
+    return False

@@ -29,4 +29,5 @@ def article(url):
         s.extract()
     content =  soup.select('#content-wrapper')[0]
     
-article("https://www.newsletter.co.uk/news/opinion/letters/austin-currie-was-a-true-giant-of-irish-politics-3453490")
+async def scan():
+    return False

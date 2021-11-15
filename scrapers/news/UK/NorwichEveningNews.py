@@ -28,4 +28,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.article__detail-text')[0] ### READ THE FULL STORY
     
-article("https://www.eveningnews24.co.uk/news/alexandra-road-stafford-street-junction-accident-8472630")
+async def scan():
+    return False

@@ -25,4 +25,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.article__detail-text')[0] ### READ THE FULL STORY
     
-article("https://www.northdevongazette.co.uk/news/north-devon-mp-criticises-support-green-party-bill-8472564")
+async def scan():
+    return False

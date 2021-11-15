@@ -28,4 +28,5 @@ def article(url):
         s.extract()
     article =  soup.select('[class="entry clearfix"]')[0]
     
-article("https://leveller.live/2021/06/08/major-changes-to-somerset-constituencies/")
+async def scan():
+    return False

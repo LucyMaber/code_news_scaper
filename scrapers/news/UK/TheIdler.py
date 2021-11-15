@@ -24,4 +24,5 @@ def article(url):
         s.extract()
     content =  soup.select('.entry-content')[0]
     
-article("https://www.idler.co.uk/article/who-modern-stoicism-misses-the-point/")
+async def scan():
+    return False

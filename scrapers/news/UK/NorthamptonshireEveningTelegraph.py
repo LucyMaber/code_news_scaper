@@ -25,4 +25,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('#content-wrapper')[0] ### READ THE FULL STORY
     
-article("https://www.northantstelegraph.co.uk/news/crime/rushden-burglar-steals-games-consoles-and-jewellery-after-breaking-into-home-3449846")
+async def scan():
+    return False

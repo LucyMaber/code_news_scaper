@@ -24,4 +24,5 @@ def article(url):
         s.extract()
     article =  soup.select('#article-body')[0]
     
-article("https://www.irishpost.com/sport/seizure-of-banned-animal-remedies-occurs-during-raid-on-irish-horse-racing-yard-223840")
+async def scan():
+    return False

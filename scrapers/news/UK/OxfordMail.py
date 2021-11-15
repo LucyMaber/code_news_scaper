@@ -29,5 +29,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.p402_hide')[0] ### READ THE FULL STORY
     
-article("https://www.oxfordmail.co.uk/news/19702314.witney-firm-installs-cctv-free-protect-community-bus-depot-vandals/")
-
+async def scan():
+    return False

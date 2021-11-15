@@ -30,4 +30,5 @@ def article(url):
         s.extract()
     content =  soup.select('[class="entry-content"]')[0]
     
-article("https://www.thenonleaguefootballpaper.com/latest-news/step-1/national-league/412892/the-nl-full-time-podcast-3/")
+async def scan():
+    return False

@@ -28,5 +28,5 @@ def article(url):
         s.extract()
     article =  soup.select('[itemprop="text"] > div')[0]
     
-article("https://www.henleystandard.co.uk/news/goring/166227/physio-appears-on-crimewatch-with-back-care-advice.html")
-### NEED JAVASCRIPT
+async def scan():
+    return False### NEED JAVASCRIPT

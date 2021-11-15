@@ -25,4 +25,5 @@ def article(url):
         s.extract()
     article =  soup.select('.article-content')[0]
     
-article("https://www.joe.co.uk/news/man-trapped-in-wall-of-new-york-theatre-for-two-days-completely-naked-298237")
+async def scan():
+    return False

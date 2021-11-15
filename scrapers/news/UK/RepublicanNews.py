@@ -31,4 +31,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('#main')[0] ### READ THE FULL STORY
     
-article("https://www.independent.co.uk/news/uk/politics/boris-johnson-news-debate-owen-paterson-b1954076.html")
+async def scan():
+    return False

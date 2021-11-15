@@ -23,5 +23,5 @@ def article(url):
         s.extract()
     article =  soup.select('.article__detail-text')[0]
     
-article("https://www.hamhigh.co.uk/news/products-recalled-due-to-safety-concerns-november-5-8465994")
-### NEED JAVASCRIPT
+async def scan():
+    return False### NEED JAVASCRIPT

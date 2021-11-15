@@ -29,5 +29,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('#content-wrapper')[0]
     
-article("https://www.thestar.co.uk/health/coronavirus/sajid-javid-says-get-covid-booster-jabs-to-prevent-restrictions-over-christmas-3448247")
-
+async def scan():
+    return False

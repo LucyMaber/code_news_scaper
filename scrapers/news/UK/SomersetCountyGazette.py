@@ -28,4 +28,5 @@ def article(url):
         s.extract()
     article =  soup.select('#subscription-content')[0]
     
-article("https://www.somersetcountygazette.co.uk/news/19704289.next-steps-revealed-single-unitary-authority-somerset/")
+async def scan():
+    return False

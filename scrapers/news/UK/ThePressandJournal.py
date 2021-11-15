@@ -35,5 +35,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.lightbox-content')[0]
     
-article("https://www.pressandjournal.co.uk/fp/news/aberdeen-aberdeenshire/3662706/dunkirk-veteran-died-in-peterhead-beach-blast/")
-
+async def scan():
+    return False

@@ -29,4 +29,5 @@ def article(url):
         s.extract()
     articleBody =  soup.select('.p402_premium')[0]
     
-article("https://www.motorcyclenews.com/news/new-tech/aegis-rider-ag/")
+async def scan():
+    return False

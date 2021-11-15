@@ -28,4 +28,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('[data-component-name="sdc-article-body"]')[0] ### READ THE FULL STORY
     
-article("https://news.sky.com/story/david-fuller-health-secretary-announces-inquiry-into-sex-attackers-crimes-and-apologises-to-victims-families-12464118")
+async def scan():
+    return False

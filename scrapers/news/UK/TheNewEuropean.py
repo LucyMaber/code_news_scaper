@@ -29,4 +29,5 @@ def article(url):
     #     s.extract()
     content =  soup.select('[class="pp-content__body pp-subs pp-subs__post-start"]')[0]
     
-article("https://www.theneweuropean.co.uk/nazanin-zaghari-ratcliffe-betrayed-by-britain/")
+async def scan():
+    return False

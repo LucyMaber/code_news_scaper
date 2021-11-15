@@ -28,4 +28,5 @@ def article(url):
         s.extract()
     article =  soup.select('.pagestory')[0]
     
-article("https://www.inverness-courier.co.uk/news/scottish-and-german-collaboration-to-look-at-potential-of-ex-256655/")
+async def scan():
+    return False

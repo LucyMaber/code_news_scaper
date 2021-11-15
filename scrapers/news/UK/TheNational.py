@@ -54,4 +54,5 @@ def article(url):
         s.extract()
     content =  soup.select('.article-body')[0]
     
-article("https://www.thenational.scot/news/19708592.bbc-outrage-tory-donor-helps-pick-next-board-member-scotland/")
+async def scan():
+    return False

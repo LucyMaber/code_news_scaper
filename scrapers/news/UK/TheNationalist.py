@@ -36,4 +36,5 @@ def article(url):
         s.extract()
     content =  soup.select('[itemprop="text"]')[0]
     
-article("https://www.tipperarylive.ie/news/local-news/691126/shannon-airport-is-calling-on-tipperary-people-to-nominate-someone-on-world-kindness-day.html")
+async def scan():
+    return False

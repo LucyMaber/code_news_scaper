@@ -29,4 +29,5 @@ def article(url):
         s.extract()
     content =  soup.select('[class="td-post-content tagdiv-type"]')[0]
     
-article("https://wrp.org.uk/news/anti-deportation-fighters-block-removals-are-backed-by-tuc/")
+async def scan():
+    return False

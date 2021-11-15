@@ -35,4 +35,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('[itemprop="articleBody"]')[0] ### READ THE FULL STORY
     
-article("https://www.dailyrecord.co.uk/in-your-area/renfrewshire/former-paisley-man-avoids-jail-25408041")
+async def scan():
+    return False

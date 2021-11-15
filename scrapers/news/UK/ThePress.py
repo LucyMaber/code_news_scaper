@@ -35,5 +35,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.p402_hide')[0]
     
-article("https://www.yorkpress.co.uk/news/19707190.bid-build-new-knaresborough-elevate-school-hit-delays/")
-
+async def scan():
+    return False

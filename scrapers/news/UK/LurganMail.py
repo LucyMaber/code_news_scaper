@@ -33,4 +33,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('#content-wrapper')[0]
     
-article("https://www.lurganmail.co.uk/news/politics/mike-nesbitt-joins-calls-for-apology-over-mlas-sectarian-ruc-comments-3447554")
+async def scan():
+    return False

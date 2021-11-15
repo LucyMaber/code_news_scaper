@@ -35,5 +35,5 @@ def article(url):
         s.extract()
     article_body =  soup.select_one('.bodyText')
     
-article("https://bylinetimes.com/2021/11/02/hot-air-and-wind-why-johnsons-cop-looks-likely-to-flop/")
-#frameInner > article > div.sc-bmyXtO.darZld > div.sc-jtggT.iedqFq > div:nth-child(2)
+async def scan():
+    return False#frameInner > article > div.sc-bmyXtO.darZld > div.sc-jtggT.iedqFq > div:nth-child(2)

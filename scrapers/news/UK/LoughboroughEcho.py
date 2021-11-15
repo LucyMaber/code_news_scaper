@@ -32,4 +32,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('[itemprop="articleBody"]')[0]
     
-article("https://www.leicestermercury.co.uk/news/local-news/police-slow-act-after-vacuum-6160698")
+async def scan():
+    return False

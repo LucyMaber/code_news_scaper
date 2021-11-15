@@ -30,4 +30,5 @@ def article(url):
         s.extract()
     content =  soup.select('[itemprop="articleBody"]')[0]
     
-article("https://www.dailymail.co.uk/news/article-10187571/Under-fire-Boris-refuses-apologise-Owen-Paterson-sleaze-debacle.html")
+async def scan():
+    return False

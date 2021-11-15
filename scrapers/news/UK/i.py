@@ -35,4 +35,5 @@ def article(url):
         s.extract()
     article =  soup.select('.article-content')[0]
     
-article("https://inews.co.uk/news/politics/booster-jabs-can-be-booked-one-month-early-from-monday-under-new-plan-to-speed-up-rollout-1287380")
+async def scan():
+    return False

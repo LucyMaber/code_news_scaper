@@ -25,4 +25,5 @@ def article(url):
     #     s.extract()
     article =  soup.select('.Article__content > div')[0]
     
-article("http://islingtontribune.com/article/care-homes-abuse-scandal-was-my-sons-life-worthless")
+async def scan():
+    return False

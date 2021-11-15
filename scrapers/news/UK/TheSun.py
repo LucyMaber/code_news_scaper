@@ -31,5 +31,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.article__content')[0]
     
-article("https://www.thesun.co.uk/news/16630158/house-sandwiched-by-nightmare-dumping-grounds/")
-
+async def scan():
+    return False

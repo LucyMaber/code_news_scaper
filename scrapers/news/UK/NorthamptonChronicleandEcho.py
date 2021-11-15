@@ -25,4 +25,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('#content-wrapper')[0] ### READ THE FULL STORY
     
-article("https://www.northamptonchron.co.uk/news/crime/northampton-burglar-jailed-after-stealing-ps13500-worth-of-items-from-ransacked-family-home-and-going-on-spending-spree-3450021")
+async def scan():
+    return False

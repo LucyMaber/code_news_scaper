@@ -17,5 +17,5 @@ from bs4 import BeautifulSoup
 import requests
 def article(url):
     pass
-article("https://order-order.com/2021/11/05/zahawi-extinction-rebellion-should-not-be-taught-in-schools/")
-### NEED JAVASCRIPT
+async def scan():
+    return False### NEED JAVASCRIPT

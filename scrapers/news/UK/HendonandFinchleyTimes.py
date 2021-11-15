@@ -23,5 +23,5 @@ def article(url):
         s.extract()
     article =  soup.select('.p402_hide > div')[0]
     
-article("https://www.times-series.co.uk/news/national/uk-today/19697158.life-uk-test-can-pass-british-citizenship-test-take-quiz/")
-### NEED JAVASCRIPT
+async def scan():
+    return False### NEED JAVASCRIPT

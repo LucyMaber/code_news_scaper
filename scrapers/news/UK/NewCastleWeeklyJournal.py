@@ -24,4 +24,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('[class="tdb-block-inner td-fix-index"]:has(p)')[0]
     
-article("https://newcastleweekly.com.au/angry-gallen-challenges-aloiai-to-man-up-in-newcastle/")
+async def scan():
+    return False

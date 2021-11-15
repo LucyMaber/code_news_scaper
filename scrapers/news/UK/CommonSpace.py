@@ -27,4 +27,5 @@ def article(url):
         s.extract()
     entry_content =  soup.select(".entry-content")[0]
     
-article("https://sourcenews.scot/source-direct-independence-fantasy-and-reality/")
+async def scan():
+    return False

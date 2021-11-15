@@ -29,5 +29,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.article-content')[0]
     
-article("https://www.thetablet.co.uk/news/14697/celebrity-priest-convicted-of-rape-and-sexual-abuse-")
-
+async def scan():
+    return False

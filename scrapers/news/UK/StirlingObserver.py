@@ -35,4 +35,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('[itemprop="articleBody"]')[0] ### READ THE FULL STORY
     
-article("https://www.dailyrecord.co.uk/news/local-news/petition-launched-families-fight-back-25417312")
+async def scan():
+    return False

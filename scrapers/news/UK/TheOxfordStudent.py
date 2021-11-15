@@ -28,4 +28,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.entry-content')[0] ### READ THE FULL STORY
     
-article("https://www.oxfordstudent.com/2021/11/11/christ-church-dean-compares-investigation-into-sexual-harassment-to-holocaust-persecution/")
+async def scan():
+    return False
