@@ -1,3 +1,4 @@
+Q =''
 urls = [
     "https://www.concrete-online.co.uk/"
 ]
@@ -21,6 +22,6 @@ def article(url):
     # Need to add author
     for s in soup.select("script"):
         s.extract()
-    entry_content =  soup.select("#main > div > article > div.entry-body > div")[0]
+    entry_content =  soup.select(".entry-content")[0]
     
 article("https://sourcenews.scot/source-direct-independence-fantasy-and-reality/")

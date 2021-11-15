@@ -1,3 +1,4 @@
+Q =""
 urls = [
     "https://www.dorsetecho.co.uk/"
 ]
@@ -19,12 +20,11 @@ def article(url):
     content = requests.get(url,headers=header).content
     soup = BeautifulSoup(content, 'html.parser')
     headline =  soup.select('article > h1')[0]
-    subheadline =  soup.select('article > h2')[0]
     #subheadline =  soup.select('article > h2 ')[0]
     for s in soup.select('script'):
         s.extract()
-    for s in soup.select('#content-wrapper > :not(.markup)'):
+    for s in soup.select('.p402_hide > :not(p)'):
         s.extract()
-    bodyCopy =  soup.select('#content-wrapper')[0]
+    bodyCopy =  soup.select('.article-body')[0]
     
 article("https://www.dorsetecho.co.uk/news/19692080.tributes-paid-selfless-passionate-youtuber-died-crash-dorset-route/")

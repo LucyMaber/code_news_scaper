@@ -1,3 +1,4 @@
+Q =''
 urls = [
     "https://www.northantstelegraph.co.uk/"
 ]
@@ -18,9 +19,8 @@ import requests
 def article(url):
     content = requests.get(url,headers=header).content
     soup = BeautifulSoup(content, 'html.parser')
-    headline =  soup.select('[itemprop="headline name"]')[0]
-    description =  soup.select('[itemprop="description"]')[0]
-    dateModified =  soup.select('[itemprop="dateModified"]')[0]
+    headline =  soup.select('article > h1')[0]
+    description =  soup.select('article > h2')[0]
     for s in soup.select('figure'):
         s.extract()
     for s in soup.select('reach-mpu'):
@@ -39,6 +39,10 @@ def article(url):
         s.extract()
     for s in soup.select('p:has(b)'):
         s.extract()
-    articleBody =  soup.select('[itemprop="articleBody"]')[0]
+    for s in soup.select('#content-wrapper > p:contains("Read more")'):
+        s.extract()
+    for s in soup.select('#content-wrapper > :not(.markup)'):
+        s.extract()
+    articleBody =  soup.select('#content-wrapper')[0]
     
 article("https://www.northantstelegraph.co.uk/news/people/a45-chowns-mill-closures-start-tonight-with-more-to-come-3447223")

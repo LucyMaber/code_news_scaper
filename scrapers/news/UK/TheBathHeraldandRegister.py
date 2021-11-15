@@ -1,3 +1,4 @@
+Q =''
 urls = []
 feeds = [
     "https://www.bathrecitals.com/feed/"
@@ -22,7 +23,7 @@ def article(url):
         s.extract()
     # for s in soup.select('["itemprop="text"] > :not(p,h1,h2,h3,h4,h5,h6,strong)'):
     #     s.extract()
-    bodyCopy = soup.select('["itemprop="text"]')[0]
+    bodyCopy = soup.select('[itemprop="text"]')[0]
     
 article("https://www.bathrecitals.com/2021/09/26/the-orchid-and-its-hunters/")
 ## ERROR uninow

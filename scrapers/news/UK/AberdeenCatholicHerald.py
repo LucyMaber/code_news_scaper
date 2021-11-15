@@ -1,3 +1,4 @@
+Q =''
 urls = [
     "https://www.lancs.live/"
 ]
@@ -12,7 +13,6 @@ header={
 }
 from bs4 import BeautifulSoup
 import requests
-from markdownify import markdownify as md
 
 def article(url):
     

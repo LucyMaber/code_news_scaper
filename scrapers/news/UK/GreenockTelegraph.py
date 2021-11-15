@@ -1,3 +1,4 @@
+Q =""
 urls = [
     "https://www.greenocktelegraph.co.uk/"
 ]
@@ -23,13 +24,11 @@ def article(url):
         s.extract()
     for s in soup.select('.subscription-content > :not(ul ,p, strong)'):
         s.extract()
-    for s in soup.select('a[data-link-tracking="InArticle|Link"]'):
+    for s in soup.select('p > :contains("READ MORE:")'):
         s.extract()
-    for s in soup.select('p > :-soup-contains("READ MORE:")'):
+    for s in soup.select('p > :contains("Get the biggest stories")'):
         s.extract()
-    for s in soup.select('p > :-soup-contains("Get the biggest stories")'):
-        s.extract()
-    for s in soup.select('p > :-soup-contains("please log in and leave you comments below.")'):
+    for s in soup.select('p > :contains("please log in and leave you comments below.")'):
         s.extract()
     content =  soup.select('.p402_hide')[0]
     

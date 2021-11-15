@@ -1,3 +1,4 @@
+Q =""
 urls = [
     "https://www.examinerlive.co.uk/"
 ]
@@ -26,9 +27,7 @@ def article(url):
         pass
     for s in soup.select('[itemprop="articleBody"] > :not(p,b,h1,h2,h3,h4,h5,h6,strong)'):
         s.extract()
-    for s in soup.select('p > :-soup-contains("Enter your postcode")'):
-        s.extract()
-    for s in soup.select('p:has(a[data-link-tracking="InArticle|Link"])'):
+    for s in soup.select('p > :contains("Enter your postcode")'):
         s.extract()
     article =  soup.select('[itemprop="articleBody"]')[0]
     

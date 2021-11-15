@@ -1,3 +1,4 @@
+Q =''
 urls = [
     "https://www.bedfordtoday.co.uk/"
 ]
@@ -18,8 +19,8 @@ import requests
 def article(url):
     content = requests.get(url,headers=header).content
     soup = BeautifulSoup(content, 'html.parser')
-    headline =  soup.select('h1.entry-title')[0]
-    subheadline =  soup.select('.body-excerpt > p')[0]
+    headline =  soup.select('article > h1')[0]
+    subheadline =  soup.select('article > h2')[0]
     # time =  soup.select('#native-content-pub-date')[0]
     for s in soup.select('img'):
         s.extract()
@@ -29,8 +30,10 @@ def article(url):
         s.extract()
     for s in soup.select('hr'):
         s.extract()
-    for s in soup.select('.entry-content > p:contains("Read more")'):
+    for s in soup.select('#content-wrapper > p:contains("Read more")'):
         s.extract()
-    bodyCopy =  soup.select('.entry-content')[0]
+    for s in soup.select('#content-wrapper > :not(.markup)'):
+        s.extract()
+    bodyCopy =  soup.select('#content-wrapper')[0]
     
 article("https://www.bedfordtoday.co.uk/whats-on/arts-and-entertainment/don-broco-back-in-bedford-for-sold-out-hometown-esquires-show-3450123")

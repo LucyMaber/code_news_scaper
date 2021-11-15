@@ -1,3 +1,4 @@
+Q =""
 urls = [
     "https://www.chardandilminsternews.co.uk/"
 ]
@@ -19,18 +20,9 @@ def article(url):
     content = requests.get(url,headers=header).content
     soup = BeautifulSoup(content, 'html.parser')
     hedding =  soup.select('article > .headline ')[0]
-    #subhedding =  soup.select('article > h2')[0]
-    #tags =  soup.select('.article-tag') [0]
-    #time =  soup.select('article > time') [0]
-    author_name =  soup.select('author-name > [href=*"/author/profile/"]') [0]
-    for s in soup.select('#content-wrapper > div:not(.markup)'):
+    for s in soup.select('#subscription-content > :not(p)'):
         s.extract()
-    for s in soup.select('#content-wrapper > aside'):
-        s.extract()
-    # for s in soup.select('#content-wrapper > #axate-wallet'):
-    #     s.extract()
-    articleBody  =  soup.select('#content-wrapper') [0]
-    #
+    articleBody  =  soup.select('#subscription-content') [0]
     
 
 article("https://www.chardandilminsternews.co.uk/news/19686802.12-15-year-olds-can-use-walk-in-sites-covid-19-vaccinations/")

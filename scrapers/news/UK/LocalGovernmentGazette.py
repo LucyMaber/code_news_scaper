@@ -1,3 +1,4 @@
+Q =''
 urls = [
     "https://www.standard.co.uk/"
 ]
@@ -18,8 +19,8 @@ import requests
 def article(url):
     content = requests.get(url,headers=header).content
     soup = BeautifulSoup(content, 'html.parser')
-    headline =  soup.select('header > div > div > h1')[0]
-    tags=  soup.select('#articleTopic')[0]
+    headline =  soup.select('[itemprop="headline name"]')[0]
+    description =  soup.select('[itemprop="description"]')[0]
     #time =  soup.select("article > time")[0]
     for s in soup.select('script'):
         s.extract()
@@ -29,6 +30,6 @@ def article(url):
         s.extract()
     for s in soup.select('p:has([data-link-tracking="InArticle|Link"])'):
         s.extract()
-    bodyCopy =  soup.select('#main')[0]
+    bodyCopy =  soup.select('[itemprop="articleBody"]')[0]
     
 article("https://www.walesonline.co.uk/news/wales-news/men-killed-family-wife-mother-22078077")

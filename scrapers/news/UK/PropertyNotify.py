@@ -1,3 +1,4 @@
+Q =''
 urls = [
     "https://www.propertynotify.co.uk/"
 ]
@@ -18,15 +19,15 @@ import requests
 def article(url):
     content = requests.get(url,headers=header).content
     soup = BeautifulSoup(content, 'html.parser')
-    headline =  soup.select('.entry-title')[0]
+    headline =  soup.select('.article__title')[0]
     for s in soup.select('img'):
         s.extract()
-    for s in soup.select('.entry-content > :not(p,h2,h3,h4,h5,h6)'):
+    for s in soup.select('.article__detail-text > :not(p,h2,h3,h4,h5,h6)'):
         s.extract()
     for s in soup.select('script'):
         s.extract()
-    for s in soup.select('.entry-content > p:contains("READ MORE")'):
+    for s in soup.select('.article__detail-text > p:contains("READ MORE")'):
         s.extract()
-    bodyCopy =  soup.select('.entry-content')[0] ### READ THE FULL STORY
+    bodyCopy =  soup.select('.article__detail-text')[0] ### READ THE FULL STORY
     
 article("https://www.northsomersettimes.co.uk/news/clevedon-art-club-s-autumn-art-show-8473860")

@@ -1,71 +1,84 @@
 import requests
 
+# uk_orgs = """
+# SELECT ?item ?itemLabel ?official_website ?end_time WHERE {
+#   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+#   { ?item wdt:P135 ?movement. }
+#   UNION
+#   { ?item wdt:P101 ?field_of_work. }
+#   UNION
+#   { ?item wdt:P2650 ?interested_in. }
+#   UNION
+#   { ?item wdt:P31 wd:Q43229. }
+#   UNION
+#   { ?item wdt:P31 wd:Q48204. }
+#   UNION
+#   { ?item wdt:P31 wd:Q163740. }
+#   UNION
+#   { ?item wdt:P1454 wd:Q240625. }
+#   UNION
+#   { ?item wdt:P31 wd:Q1077064. }
+#   UNION
+#   { ?item wdt:P1454 wd:Q108514063. }
+#   UNION
+#   { ?item wdt:P1454 wd:Q20014246. }
+#   UNION
+#   { ?item wdt:P3095 wd:Q25048281. }
+#   UNION
+#   { ?item wdt:P1454 wd:Q31273043. }
+#   UNION
+#   { ?item wdt:P1454 wd:Q57655560. }
+#   UNION
+#   { ?item wdt:P31 wd:Q7188. }
+#   UNION
+#   { ?item wdt:P31 wd:Q31728. }
+#   UNION
+#   { ?item wdt:P31 wd:Q41298. }
+#   UNION
+#   { ?item wdt:P31 wd:Q157031. }
+#   UNION
+#   { ?item wdt:P31 wd:Q178790. }
+#   UNION
+#   { ?item wdt:P31 wd:Q192350. }
+#   UNION
+#   { ?item wdt:P5137 wd:Q185359. }
+#   UNION
+#   { ?item wdt:P31 wd:Q210167. }
+#   UNION
+#   { ?item wdt:P31 wd:Q216107. }
+#   UNION
+#   { ?item wdt:P31 wd:Q219577. }
+#   UNION
+#   { ?item wdt:P31 wd:Q206361. }
+#   UNION
+#   { ?item wdt:P31 wd:Q38723. }
+#   UNION
+#   { ?item wdt:P31 wd:Q7278. }
+#   UNION
+#   { ?item wdt:P31 wd:Q929651. }
+#   UNION
+#   { ?item wdt:P31 wd:Q431603. }
+#   UNION
+#   {?item wdt:P31 wd:Q1666019.}
+#   ?item wdt:P17 wd:Q145.
+#   { ?item wdt:P856 ?official_website. }
+#   MINUS { ?item wdt:P582 ?end_time. }
+# }
+# """
 uk_orgs = """
-SELECT ?item ?itemLabel ?official_website ?end_time WHERE {
+SELECT ?item ?official_website ?end_time ?human ?humanLabel WHERE {
   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
-  { ?item wdt:P135 ?movement. }
-  UNION
-  { ?item wdt:P101 ?field_of_work. }
-  UNION
-  { ?item wdt:P2650 ?interested_in. }
-  UNION
-  { ?item wdt:P31 wd:Q43229. }
-  UNION
-  { ?item wdt:P31 wd:Q48204. }
-  UNION
-  { ?item wdt:P31 wd:Q163740. }
-  UNION
-  { ?item wdt:P1454 wd:Q240625. }
-  UNION
-  { ?item wdt:P31 wd:Q1077064. }
-  UNION
-  { ?item wdt:P1454 wd:Q108514063. }
-  UNION
-  { ?item wdt:P1454 wd:Q20014246. }
-  UNION
-  { ?item wdt:P3095 wd:Q25048281. }
-  UNION
-  { ?item wdt:P1454 wd:Q31273043. }
-  UNION
-  { ?item wdt:P1454 wd:Q57655560. }
-  UNION
-  { ?item wdt:P31 wd:Q7188. }
-  UNION
-  { ?item wdt:P31 wd:Q31728. }
-  UNION
-  { ?item wdt:P31 wd:Q41298. }
-  UNION
-  { ?item wdt:P31 wd:Q157031. }
-  UNION
-  { ?item wdt:P31 wd:Q178790. }
-  UNION
-  { ?item wdt:P31 wd:Q192350. }
-  UNION
-  { ?item wdt:P5137 wd:Q185359. }
-  UNION
-  { ?item wdt:P31 wd:Q210167. }
-  UNION
-  { ?item wdt:P31 wd:Q216107. }
-  UNION
-  { ?item wdt:P31 wd:Q219577. }
-  UNION
-  { ?item wdt:P31 wd:Q206361. }
-  UNION
-  { ?item wdt:P31 wd:Q38723. }
-  UNION
-  { ?item wdt:P31 wd:Q7278. }
-  UNION
-  { ?item wdt:P31 wd:Q929651. }
-  UNION
-  { ?item wdt:P31 wd:Q431603. }
-  UNION
-  {?item wdt:P31 wd:Q1666019.}
-  ?item wdt:P17 wd:Q145.
   { ?item wdt:P856 ?official_website. }
+  { ?item wdt:P17 wd:Q145. }
+  MINUS { ?item wdt:P31 wd:Q11032. }
+  MINUS { ?item wdt:P31 wd:Q2305295. }
+  MINUS { ?item wdt:P31 wd:Q1153191. }
+  MINUS { ?item wdt:P31 wd:Q98785129. }
+  MINUS { ?item wdt:P452 wd:Q1962634. }
   MINUS { ?item wdt:P582 ?end_time. }
+  MINUS {?item wdt:P360 wd:Q5.}
 }
 """
-
 data = """
 Q= {Q}
 URL =[{URL}]

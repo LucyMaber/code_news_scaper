@@ -1,3 +1,4 @@
+Q =''
 urls = [
     "https://www.sunderlandecho.com/"
 ]
@@ -31,4 +32,4 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('#content-wrapper')[0]
     
-article("https://www.sunderlandecho.com/news/crime/police-make-cctv-appeal-after-two-sunderland-shops-were-targeted-by-suspected-robbers-armed-with-a-bladed-article-3451237")
+article("https://www.sunderlandecho.com/news/people/family-of-keaton-burton-raise-ps7000-for-mental-health-charities-in-his-honour-3456604")

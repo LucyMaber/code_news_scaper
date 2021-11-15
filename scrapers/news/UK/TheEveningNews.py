@@ -1,3 +1,4 @@
+Q =''
 urls = [
     "https://www.eveningnews24.co.uk/"
 ]
@@ -23,14 +24,12 @@ def article(url):
         s.extract()
     for s in soup.select('img'):
         s.extract()
-    for s in soup.select('main > :not(.ne-article__post-content)'):
-        s.extract()
     for s in soup.select('script'):
         s.extract()
     for s in soup.select('iframe'):
         s.extract()
     for s in soup.select('.article__detail-text > :not(p)'):
         s.extract()
-    bodyCopy = soup.select('.p402_hide')[0]
+    bodyCopy = soup.select('.article__detail-text')[0]
     
 article("https://www.eveningnews24.co.uk/news/crime/woman-wanted-for-prince-of-wales-burglary-norwich-8478690")

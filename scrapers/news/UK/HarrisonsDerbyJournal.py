@@ -1,3 +1,4 @@
+Q =""
 urls = [
     "https://www.hastingsobserver.co.uk/"
 ]
@@ -17,11 +18,10 @@ import requests
 def article(url):
     content = requests.get(url,headers=header).content
     soup = BeautifulSoup(content, 'html.parser')
-    headline =  soup.select('article > h1')[0]
-    subheadline =  soup.select('article > h2')[0]
-    for s in soup.select('#content-wrapper > div:not(.markup)'):
+    headline =  soup.select('.article__title')[0]
+    for s in soup.select('.article__detail-text > :not(p)'):
         s.extract()
-    article =  soup.select('#content-wrapper')[0]
+    article =  soup.select('.article__detail-text')[0]
     
 article("https://www.hamhigh.co.uk/news/products-recalled-due-to-safety-concerns-november-5-8465994")
 ### NEED JAVASCRIPT
