@@ -30,4 +30,5 @@ def article(url):
     for s in soup.select("script"):
         s.extract()
     
-article("https://www.cravenherald.co.uk/news/19687851.shop-offices-skipton-become-holiday-let-groups-cyclists-walkers/")
+async def scan():
+    return False

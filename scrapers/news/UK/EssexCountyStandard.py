@@ -3,7 +3,12 @@ urls = [
     "https://www.surreycomet.co.uk/"
 ]
 feeds = [
-
+    "https://www.surreycomet.co.uk/news/rss/",
+    "https://www.surreycomet.co.uk/news/kingston/rss/",
+    "https://www.surreycomet.co.uk/news/epsom/rss/",
+    "https://www.surreycomet.co.uk/news/coronavirus/rss/",
+    "https://www.surreycomet.co.uk/news/national/rss/",
+    "https://www.surreycomet.co.uk/news/national/uk-today/rss/"
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',
@@ -27,4 +32,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select(".p402_hide")[0]
     
-article("https://www.surreycomet.co.uk/news/national/uk-today/19697000.eagles-play-outdoor-shows-uk-next-year-including-london---get-tickets/")
+async def scan():
+    return False

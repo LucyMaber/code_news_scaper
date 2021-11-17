@@ -3,7 +3,26 @@ urls = [
     "https://www.dudleynews.co.uk/"
 ]
 feeds = [
-
+    "https://www.dudleynews.co.uk/news/rss/",
+    "https://www.dudleynews.co.uk/news/local/rss/",
+    "https://www.dudleynews.co.uk/news/local/your_community/ab/rss/",
+    "https://www.dudleynews.co.uk/news/local/your_community/cd/rss/",
+    "https://www.dudleynews.co.uk/news/local/your_community/cd/dudley/rss/",
+    "https://www.dudleynews.co.uk/news/local/your_community/gh/rss/",
+    "https://www.dudleynews.co.uk/news/local/your_community/kl/rss/",
+    "https://www.dudleynews.co.uk/news/local/your_community/kl/kingswinford/rss/",
+    "https://www.dudleynews.co.uk/news/local/your_community/op/rss/",
+    "https://www.dudleynews.co.uk/news/local/your_community/op/pensnett/rss/",
+    "hhttps://www.dudleynews.co.uk/news/local/your_community/st/rss/",
+    "https://www.dudleynews.co.uk/news/local/your_community/op/pensnett/rss/",
+    "https://www.dudleynews.co.uk/news/local/your_community/st/rss/",
+    "https://www.dudleynews.co.uk/news/local/your_community/st/sedgley/rss/",
+    "https://www.dudleynews.co.uk/news/business_daily/rss/",
+    "https://www.dudleynews.co.uk/news/business_daily/bizblogs/rss/",
+    "https://www.dudleynews.co.uk/news/general-election/rss/",
+    "https://www.dudleynews.co.uk/news/coronavirus/rss/",
+    "https://www.dudleynews.co.uk/news/national/rss/",
+    "https://www.dudleynews.co.uk/news/national/uk-today/rss/",
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',

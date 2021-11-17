@@ -3,7 +3,9 @@ urls = [
     "https://www.times-series.co.uk/"
 ]
 feeds = [
-
+    "https://www.times-series.co.uk/news/general-election/rss/",
+    "https://www.times-series.co.uk/news/rss/",
+    "https://www.times-series.co.uk/news/coronavirus/rss/",
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',

@@ -3,7 +3,48 @@ urls = [
     "https://www.dailyecho.co.uk/"
 ]
 feeds = [
-
+"https://www.dailyecho.co.uk/news/rss/",
+"https://www.dailyecho.co.uk/news/district/rss/",
+"https://www.dailyecho.co.uk/news/district/southampton/rss/",
+"https://www.dailyecho.co.uk/news/district/eastleigh/rss/",
+"https://www.dailyecho.co.uk/news/district/fareham_and_gosport/rss/",
+"https://www.dailyecho.co.uk/news/district/newforest/rss/",
+"https://www.dailyecho.co.uk/news/district/romsey/rss/",
+"https://www.dailyecho.co.uk/news/district/winchester/rss/",
+"https://www.dailyecho.co.uk/news/crime/rss/",
+"https://www.dailyecho.co.uk/news/crime/lucy-mchugh/rss/",
+"https://www.dailyecho.co.uk/news/education/rss/",
+"https://www.dailyecho.co.uk/news/education/ofsted/rss/",
+"https://www.dailyecho.co.uk/news/education/education_awards/rss/",
+"https://www.dailyecho.co.uk/news/nightlife/rss/",
+"https://www.dailyecho.co.uk/news/politics/rss/",
+"https://www.dailyecho.co.uk/news/health/rss/",
+"https://www.dailyecho.co.uk/news/general-election/rss/",
+"https://www.dailyecho.co.uk/news/coronavirus/rss/",
+"https://www.dailyecho.co.uk/yoursay/letters/rss/",
+"https://www.dailyecho.co.uk/yoursay/blogs/ian_murray/rss/",
+"https://www.dailyecho.co.uk/yoursay/blogs/win_with_kids/rss/",
+"https://www.dailyecho.co.uk/yoursay/blogs/martin_lewis/rss/",
+"https://www.dailyecho.co.uk/yoursay/blogs/talking_shop/rss/",
+"https://www.dailyecho.co.uk/yoursay/blogs/winchester_bloke/rss/",
+"https://www.dailyecho.co.uk/news/district/winchester/rss/",
+"https://www.dailyecho.co.uk/news/crime/rss/",
+"https://www.dailyecho.co.uk/news/crime/lucy-mchugh/rss/",
+"https://www.dailyecho.co.uk/news/education/rss/",
+"https://www.dailyecho.co.uk/news/education/ofsted/rss/",
+"https://www.dailyecho.co.uk/news/education/education_awards/rss/",
+"https://www.dailyecho.co.uk/news/nightlife/rss/",
+"https://www.dailyecho.co.uk/news/politics/rss/",
+"https://www.dailyecho.co.uk/news/general-election/rss/",
+"https://www.dailyecho.co.uk/news/coronavirus/rss/",
+"https://www.dailyecho.co.uk/yoursay/letters/rss/",
+"https://www.dailyecho.co.uk/yoursay/blogs/tomkongwatson/rss/",
+"https://www.dailyecho.co.uk/yoursay/letters/rss/",
+"https://www.dailyecho.co.uk/yoursay/blogs/tomkongwatson/rss/",
+"https://www.dailyecho.co.uk/yoursay/blogs/win_with_kids/rss/",
+"https://www.dailyecho.co.uk/yoursay/blogs/martin_lewis/rss/",
+"https://www.dailyecho.co.uk/yoursay/blogs/talking_shop/rss/",
+"https://www.dailyecho.co.uk/yoursay/blogs/winchester_bloke/rss/",
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',
@@ -33,4 +74,5 @@ def article(url):
         s.extract()
     article =  soup.select('.p402_hide')[0]
     
-article("https://www.dailyecho.co.uk/news/19703139.row-plans-mend-southampton-road-not-owned-council/")
+async def scan():
+    return False

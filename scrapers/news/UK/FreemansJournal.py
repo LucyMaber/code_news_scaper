@@ -1,3 +1,4 @@
+Q =''
 urls = [
     "https://www.gazetteandherald.co.uk/"
 ]
@@ -42,4 +43,5 @@ def article(url):
         s.extract()
     content =  soup.select('.subscription-content')[0]
     
-article("https://www.gazetteandherald.co.uk/news/19690841.public-notices-restaurants-pubs-road-closures/")
+async def scan():
+    return False

@@ -1,6 +1,6 @@
 Q =''
 urls = [
-    "https://www.tes.com/news"
+    "https://www.tes.com/"
 ]
 feeds = [
 
@@ -30,4 +30,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.article__content > .text-formatted')[0]
     
-article("https://www.tes.com/news/gcses-2022-run-exam-condition-mocks-schools-told")
+async def scan():
+    return False

@@ -30,4 +30,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('#article-body')[0]
     
-article("https://www.cyclingnews.com/news/zeits-rejoins-nibali-and-lopez-in-return-to-astana/")
+async def scan():
+    return False

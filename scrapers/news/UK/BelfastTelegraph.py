@@ -29,4 +29,5 @@ def article(url):
         s.extract()
     article_body =  soup.select('div.article__detail-text') [0]
     
-article("https://www.barkinganddagenhampost.co.uk/news/crime/witness-appeal-following-two-men-critically-injured-8453428")
+async def scan():
+    return False

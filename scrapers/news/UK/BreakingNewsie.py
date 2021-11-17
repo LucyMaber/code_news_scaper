@@ -27,4 +27,5 @@ def article(url):
         s.extract()
     article_body =  soup.select('article') [0]
     
-article("https://www.breakingnews.ie/entertainment/jessica-simpson-celebrates-four-years-of-being-sober-1207860.html")
+async def scan():
+    return False

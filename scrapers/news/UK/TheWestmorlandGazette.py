@@ -29,4 +29,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.p402_hide')[0]
     
-article("https://www.thewestmorlandgazette.co.uk/news/19707722.consultant-anaesthetist-morecambe-bay-trust-suspended-misconduct-tribunal/")
+async def scan():
+    return False

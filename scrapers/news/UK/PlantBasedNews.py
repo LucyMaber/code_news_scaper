@@ -33,4 +33,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('div.entry-content')[0] ### READ THE FULL STORY
     
-article("https://plantbasednews.org/lifestyle/food/start-up-those-vegan-cowboys-cheese/")
+async def scan():
+    return False

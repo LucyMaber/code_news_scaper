@@ -30,4 +30,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.article-body')[0] ### READ THE FULL STORY
     
-article("https://www.freepressseries.co.uk/news/19457276.court-newport-cwmbran-caerphilly/")
+async def scan():
+    return False

@@ -49,4 +49,5 @@ def article(url):
     artcal =  soup.select('.article-body')[0]
     
 
-article("https://www.kentlive.news/news/uk-world-news/delivery-scams-rise--how-6142803")
+async def scan():
+    return False

@@ -3,7 +3,15 @@ urls = [
     "https://news.sky.com/"
 ]
 feeds = [
-
+    "http://feeds.skynews.com/feeds/rss/home.xml",
+    "http://feeds.skynews.com/feeds/rss/world.xml",
+    "http://feeds.skynews.com/feeds/rss/uk.xml",
+    "http://feeds.skynews.com/feeds/rss/business.xml",
+    "http://feeds.skynews.com/feeds/rss/politics.xml",
+    "http://feeds.skynews.com/feeds/rss/technology.xml",
+    "http://feeds.skynews.com/feeds/rss/entertainment.xml",
+    "http://feeds.skynews.com/feeds/rss/entertainment.xml",
+    "http://feeds.skynews.com/feeds/rss/strange.xml"
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',

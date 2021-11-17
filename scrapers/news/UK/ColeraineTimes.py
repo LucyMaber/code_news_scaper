@@ -30,4 +30,5 @@ def article(url):
     content_wrapper = soup.select(".entry-content")[0]
     #article =  soup.select("div.article__detail-text")[0]
     
-article("https://www.concrete-online.co.uk/university-to-reintroduce-discounted-taxi-scheme-after-student-staff-outrage/")
+async def scan():
+    return False

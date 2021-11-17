@@ -3,7 +3,12 @@ urls = [
     "https://www.propertynotify.co.uk/"
 ]
 feeds = [
-    "https://www.propertynotify.co.uk/feed/"
+    "https://www.propertynotify.co.uk/feed/",
+    "https://www.propertynotify.co.uk/news/press-releases/feed/",
+    "https://www.propertynotify.co.uk/investment/feed/",
+    "https://www.propertynotify.co.uk/tax/feed/",
+    "https://www.propertynotify.co.uk/finance/feed/",
+    "https://www.propertynotify.co.uk/news/feed/"
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',
@@ -30,4 +35,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.article__detail-text')[0] ### READ THE FULL STORY
     
-article("https://www.northsomersettimes.co.uk/news/clevedon-art-club-s-autumn-art-show-8473860")
+async def scan():
+    return False

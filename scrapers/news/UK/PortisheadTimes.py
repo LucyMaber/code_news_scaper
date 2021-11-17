@@ -1,6 +1,6 @@
 Q ='[[wikidata:Q7231835]]'
 urls = [
-    "https://www.northsomersettimes.co.uk/l"
+    "https://www.northsomersettimes.co.uk/"
 ]
 feeds = [
 
@@ -30,4 +30,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('[class="single-body entry-content typography-copy"]')[0] ### READ THE FULL STORY
     
-article("https://www.propertynotify.co.uk/news/featured/commercial-properties-without-integrated-technology-will-struggle-to-find-tenants/")
+async def scan():
+    return False

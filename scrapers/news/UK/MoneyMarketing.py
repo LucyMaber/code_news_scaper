@@ -28,4 +28,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.article-body')[0]
     
-article("https://www.moneymarketing.co.uk/news/affordable-advice-gap-widens-to-record-level/")
+async def scan():
+    return False

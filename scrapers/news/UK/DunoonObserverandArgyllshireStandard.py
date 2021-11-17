@@ -32,4 +32,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.post-single-contents')[0]
     
-article("https://www.argyllbute24.co.uk/man-remanded-youth-on-bail-after-dunoon-fire/")
+async def scan():
+    return False

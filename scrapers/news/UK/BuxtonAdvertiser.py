@@ -3,7 +3,19 @@ urls = [
     "https://www.buxtonadvertiser.co.uk/"
 ]
 feeds = [
-
+    "https://www.buxtonadvertiser.co.uk/rss",
+    "https://www.buxtonadvertiser.co.uk/news/people/rss",
+    "https://www.buxtonadvertiser.co.uk/health/coronavirus/rss",
+    "https://www.buxtonadvertiser.co.uk/news/traffic-and-travel/rss",
+    "https://www.buxtonadvertiser.co.uk/news/crime/rss",
+    "https://www.buxtonadvertiser.co.uk/news/weather/rss",
+    "https://www.buxtonadvertiser.co.uk/news/politics/rss",
+    "https://www.buxtonadvertiser.co.uk/business/rss",
+    "https://www.buxtonadvertiser.co.uk/education/rss",
+    "https://www.buxtonadvertiser.co.uk/health/rss",
+    "https://www.buxtonadvertiser.co.uk/news/opinion/rss",
+    "https://www.buxtonadvertiser.co.uk/news/people/rss",
+    "https://www.buxtonadvertiser.co.uk/read-this/rss",
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',

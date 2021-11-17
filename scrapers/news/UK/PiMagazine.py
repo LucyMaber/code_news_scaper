@@ -28,4 +28,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('div.entry-content > div > div > div > div > div > div:has(p)')[0] ### READ THE FULL STORY
     
-article("https://pimagazine.com/2021/02/18/irbsearch-crosstrax-the-perfect-partnership/")
+async def scan():
+    return False

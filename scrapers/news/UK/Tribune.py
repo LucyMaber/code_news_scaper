@@ -28,4 +28,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('#post-content')[0]
     
-article("https://tribunemag.co.uk/2021/11/metaverse-big-tech-mark-zuckerberg-facebook-microsoft-vr-gig-economy-internet-gaming-fortnite")
+async def scan():
+    return False

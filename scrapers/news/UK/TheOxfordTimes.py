@@ -3,7 +3,32 @@ urls = [
     "https://www.oxfordmail.co.uk/"
 ]
 feeds = [
-
+    "https://www.oxfordmail.co.uk/news/rss/",
+    "https://www.oxfordmail.co.uk/news/yourtown/oxfordshire/rss/",
+    "https://www.oxfordmail.co.uk/news/yourtown/oxford/rss/",
+    "https://www.oxfordmail.co.uk/news/yourtown/abingdon/rss/",
+    "https://www.oxfordmail.co.uk/news/yourtown/banbury/rss/",
+    "https://www.oxfordmail.co.uk/news/yourtown/bicester/rss/",
+    "https://www.oxfordmail.co.uk/news/yourtown/didcot/rss/",
+    "https://www.oxfordmail.co.uk/news/yourtown/wallingford/rss/",
+    "https://www.oxfordmail.co.uk/news/yourtown/wantage/rss/",
+    "https://www.oxfordmail.co.uk/news/yourtown/witney/rss/",
+    "https://www.oxfordmail.co.uk/news/yourtown/vale/rss/",
+    "https://www.oxfordmail.co.uk/news/yourtown/south_oxon/rss/",
+    "https://www.oxfordmail.co.uk/news/yourtown/cherwell/rss/",
+    "https://www.oxfordmail.co.uk/news/crime/rss/",
+    "https://www.oxfordmail.co.uk/news/opinion/columns/rss/",
+    "https://www.oxfordmail.co.uk/news/opinion/columns/billheinecolumn/rss/",
+    "https://www.oxfordmail.co.uk/news/opinion/columns/on_yer_bike/rss/",
+    "https://www.oxfordmail.co.uk/news/opinion/columns/cabbages/rss/",
+    "https://www.oxfordmail.co.uk/news/opinion/columns/legal/rss/",
+    "https://www.oxfordmail.co.uk/news/opinion/columns/insider/rss/",
+    "https://www.oxfordmail.co.uk/news/opinion/columns/faith/rss/",
+    "https://www.oxfordmail.co.uk/news/opinion/yourblogs/rss/",
+    "https://www.oxfordmail.co.uk/news/opinion/columns/faith/rss/",
+    "https://www.oxfordmail.co.uk/news/insta/rss/",
+    "https://www.oxfordmail.co.uk/news/news_bites/rss/",
+    "https://www.oxfordmail.co.uk/news/yourtown/vale/rss/",
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',

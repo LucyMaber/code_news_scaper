@@ -3,7 +3,10 @@ urls = [
     "https://www.theweek.co.uk/"
 ]
 feeds = [
-
+    "https://www.theweek.co.uk/news-opinion/feed",
+    "https://www.theweek.co.uk/politics/feed",
+    "https://www.theweek.co.uk/business/feed",
+    "https://www.theweek.co.uk/arts-life/feed",
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',
@@ -30,4 +33,5 @@ def article(url):
     #     s.extract()
     bodyCopy =  soup.select('#main > div > div:nth-child(2)')[0]
     
-article("https://www.theweek.co.uk/news/environment/954753/cop26-what-unexpected-us-china-climate-deal-means-global-emissions")
+async def scan():
+    return False

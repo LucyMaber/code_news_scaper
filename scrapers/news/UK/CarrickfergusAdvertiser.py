@@ -33,4 +33,5 @@ def article(url):
     
     
 
-article("https://www.carrickfergustimes.co.uk/business/carrick-business-awards-final-call-for-nominations-3440961")
+async def scan():
+    return False

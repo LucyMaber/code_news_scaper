@@ -30,4 +30,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('[itemprop="articleBody"]')[0]
     
-article("https://www.dailymail.co.uk/news/article-10174163/Boris-suffers-sleaze-row-poll-blow-ratings-plunging-worst-EVER.html")
+async def scan():
+    return False

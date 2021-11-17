@@ -3,7 +3,10 @@ urls = [
     "https://www.keighleynews.co.uk/"
 ]
 feeds = [
-
+    "https://www.keighleynews.co.uk/news/rss/",
+    "https://www.keighleynews.co.uk/news/news_keighley/rss/",
+    "https://www.keighleynews.co.uk/leisure/rss/",
+    "https://www.keighleynews.co.uk/business/rss/",
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',

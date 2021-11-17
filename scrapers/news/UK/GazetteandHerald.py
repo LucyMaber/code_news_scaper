@@ -32,4 +32,5 @@ def article(url):
         s.extract()
     content =  soup.select('.p402_hide')[0]
     
-article("https://www.gazetteandherald.co.uk/news/19690841.public-notices-restaurants-pubs-road-closures/")
+async def scan():
+    return False

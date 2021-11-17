@@ -29,4 +29,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.entry-content')[0]
     
-article("http://www.maturetimes.co.uk/robert-tanitch-reviews-enos-hms-pinafore-at-london-coliseum/")
+async def scan():
+    return False

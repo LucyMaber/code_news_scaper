@@ -4,7 +4,46 @@ urls = [
     "https://www.devonlive.com/"
 ]
 feeds = [
-
+"https://www.devonlive.com/all-about/barnstaple/?service=rss",
+"https://www.devonlive.com/all-about/bideford/?service=rss",
+"https://www.devonlive.com/all-about/brixham/?service=rss",
+"https://www.devonlive.com/all-about/crediton/?service=rss",
+"https://www.devonlive.com/all-about/cullompton/?service=rss",
+"https://www.devonlive.com/all-about/dartmoor/?service=rss",
+"https://www.devonlive.com/all-about/dawlish/?service=rss",
+"https://www.devonlive.com/all-about/exeter/?service=rss",
+"https://www.devonlive.com/all-about/exmoor/?service=rss",
+"https://www.devonlive.com/all-about/exmouth/?service=rss",
+"https://www.devonlive.com/all-about/honiton/?service=rss",
+"https://www.devonlive.com/all-about/ilfracombe/?service=rss",
+"https://www.devonlive.com/all-about/newton-abbot/?service=rss",
+"https://www.devonlive.com/all-about/northam/?service=rss",
+"https://www.devonlive.com/all-about/okehampton/?service=rss",
+"https://www.devonlive.com/all-about/paignton/?service=rss",
+"https://www.devonlive.com/all-about/plymouth/?service=rss",
+"https://www.devonlive.com/all-about/sidmouth/?service=rss",
+"https://www.devonlive.com/all-about/tavistock/?service=rss",
+"https://www.devonlive.com/all-about/teignmouth/?service=rss",
+"https://www.devonlive.com/all-about/tiverton/?service=rss",
+"https://www.devonlive.com/all-about/torbay/?service=rss",
+"https://www.devonlive.com/all-about/totnes/?service=rss",
+"https://www.devonlive.com/all-about/torquay/?service=rss",
+"https://www.devonlive.com/news/?service=rss",
+"https://www.devonlive.com/news/devon-news/?service=rss",
+"https://www.devonlive.com/news/local-news/?service=rss",
+"https://www.devonlive.com/all-about/traffic-travel/?service=rss",
+"https://www.devonlive.com/all-about/crime/?service=rss",
+"https://www.devonlive.com/all-about/education/?service=rss",
+"https://www.devonlive.com/news/health/?service=rss",
+"https://www.devonlive.com/all-about/politics/?service=rss",
+"https://www.devonlive.com/news/jobs/?service=rss",
+"https://www.devonlive.com/news/history/?service=rss",
+"https://www.devonlive.com/news/celebs-tv/?service=rss",
+"https://www.devonlive.com/news/property/?service=rss",
+"https://www.devonlive.com/news/motoring/?service=rss",
+"https://www.devonlive.com/news/uk-world-news/?service=rss",
+"https://www.devonlive.com/all-about/farming/?service=rss",
+"https://www.devonlive.com/all-about/environment/?service=rss",
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',
@@ -37,4 +76,5 @@ def article(url):
         s.extract()
     articleBody =  soup.select('[itemprop="articleBody"]')[0]
     
-article("https://www.devonlive.com/news/teignmouth-gp-surgery-reveals-shocking-6162016")
+async def scan():
+    return False

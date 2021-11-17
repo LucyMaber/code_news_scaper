@@ -31,4 +31,5 @@ def article(url):
         s.extract()
     article =  soup.select('.entry')[0]
     
-article("http://exiledonline.com/the-war-nerd-was-there-a-plan-in-afghanistan/")
+async def scan():
+    return False

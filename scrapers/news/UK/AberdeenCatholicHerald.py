@@ -58,4 +58,5 @@ def article(url):
     
 
 
-article("https://www.lancs.live/news/lancashire-news/met-office-weather-forecast-blackpool-22030978")
+async def scan():
+    return False

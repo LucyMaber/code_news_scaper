@@ -29,4 +29,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('article')[0]
     
-article("https://www.scottishhousingnews.com/article/pentland-tenants-vote-in-favour-of-transfer-to-cairn")
+async def scan():
+    return False

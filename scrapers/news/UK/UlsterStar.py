@@ -32,4 +32,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('#content-wrapper')[0]
     
-article("https://www.lisburntoday.co.uk/news/people/daphne-pens-poem-in-memory-of-polish-airman-3454499")
+async def scan():
+    return False

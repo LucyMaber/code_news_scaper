@@ -1,9 +1,9 @@
-Q =''
+Q ='Q19871327'
 urls = [
     "https://www.bluesci.co.uk/"
 ]
 feeds = [
-
+    "https://www.bluesci.co.uk/rss/"
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',
@@ -28,4 +28,5 @@ def article(url):
     for s in soup.select('.ad-placeholder'):
         s.extract()
     
-article("https://www.bluesci.co.uk/posts/changing-climate-alters-how-volcanic-eruptions-affect-our-planet")
+async def scan():
+    return False

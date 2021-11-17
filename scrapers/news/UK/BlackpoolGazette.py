@@ -3,7 +3,27 @@ urls = [
     "https://www.business-live.co.uk/"
 ]
 feeds = [
-
+"https://www.business-live.co.uk/all-about/west-midlands/?service=rss",
+"https://www.business-live.co.uk/all-about/east-midlands/?service=rss",
+"https://www.business-live.co.uk/all-about/south-west/?service=rss",
+"https://www.business-live.co.uk/all-about/north-west/?service=rss",
+"https://www.business-live.co.uk/all-about/north-east/?service=rss",
+"https://www.business-live.co.uk/all-about/yorkshire-/umber/?service=rss ",
+"https://www.business-live.co.uk/all-about/south-east/?service=rss ",
+"https://www.business-live.co.uk/all-about/east/?service=rss ",
+"https://www.business-live.co.uk/all-about/lond/n/?service=rss ",
+"https://www.business-live.co.uk/all-about/northe/n-ireland/?service=rss ",
+"https://www.business-live.co.uk/all-about/wales/?service=rss ",
+"https://www.business-live.co.uk/all-about/brexi/?service=rss ",
+"https://www.business-live.co.uk/enterprise/?service=rss ",
+"https://www.business-live.co.uk/professional-services/?service=rss ",
+"https://www.business-live.co.uk/retail-consumer/?service=rss ",
+"https://www.business-live.co.uk/economic-development/?service=rss ",
+"https://www.business-live.co.uk/technology/?service=rss ",
+"https://www.business-live.co.uk/commercial-property/?service=rss ",
+"https://www.business-live.co.uk/manufacturing/?service=rss",
+"https://www.business-live.co.uk/ports-logistics/?service=rss ",
+"https://www.business-live.co.uk/opinion-analysis/?service=rss",
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',
@@ -39,4 +59,5 @@ def article(url):
         s.extract()
     article_body =  soup.select_one('[itemprop="articleBody"]')
     
-article("https://www.business-live.co.uk/enterprise/entrepreneur-meets-wayne-rooney-discuss-22030735")
+async def scan():
+    return False

@@ -27,4 +27,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('article')[0]
     
-article("https://stratfordobserver.co.uk/news/kineton-sports-and-social-club-equipped-for-sustainable-future-33413/")
+async def scan():
+    return False

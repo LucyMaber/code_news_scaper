@@ -26,4 +26,5 @@ def article(url):
         s.extract()
     bodyCopy = soup.select('article')[0]
     
-article("https://www.test-and-measurement-world.com/Articles/Mobile-phone-hardware-testing-and-repairing.html")
+async def scan():
+    return False

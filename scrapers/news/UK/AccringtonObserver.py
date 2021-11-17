@@ -42,4 +42,5 @@ def article(url):
     
     # dateModified = soup.select('[itemprop="dateModified"]')[0]
     # 
-article("https://catholicherald.co.uk/traditionalist-group-granted-formal-status-within-the-church-after-a-four-year-wait/")
+async def scan():
+    return False

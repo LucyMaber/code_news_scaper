@@ -26,4 +26,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select("#content-wrapper")[0]
     
-article("https://www.larnetimes.co.uk/news/crime/court-hears-concerned-member-of-public-stopped-over-the-limit-carnlough-driver-3447086")
+async def scan():
+    return False

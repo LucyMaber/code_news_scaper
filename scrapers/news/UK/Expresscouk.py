@@ -50,4 +50,5 @@ def article(url):
         s.extract()
     articleBody =  soup.select('article > div > div')[0]
     
-article("https://www.express.co.uk/news/politics/1516560/eu-news-eu-fisheries-funds-Netherlands-dutch-fishermen-france")
+async def scan():
+    return False

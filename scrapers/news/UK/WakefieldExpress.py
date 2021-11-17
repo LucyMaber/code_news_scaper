@@ -32,4 +32,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('#content-wrapper')[0]
     
-article("https://www.wakefieldexpress.co.uk/news/people/castleford-family-business-celebrates-its-100th-birthday-3454376")
+async def scan():
+    return False

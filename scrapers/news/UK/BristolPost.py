@@ -47,4 +47,5 @@ def article(url):
         s.extract()
     acale =  soup.select('[itemprop="articleBody"]') [0]
     
-article("https://www.bristolpost.co.uk/news/bristol-news/insulate-britain-m25-bristol-reverend-6146771")
+async def scan():
+    return False

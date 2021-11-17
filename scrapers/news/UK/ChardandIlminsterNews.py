@@ -25,4 +25,5 @@ def article(url):
     articleBody  =  soup.select('#subscription-content') [0]
     
 
-article("https://www.chardandilminsternews.co.uk/news/19686802.12-15-year-olds-can-use-walk-in-sites-covid-19-vaccinations/")
+async def scan():
+    return False

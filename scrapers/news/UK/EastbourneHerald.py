@@ -27,4 +27,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('#content-wrapper')[0]
     
-article("https://www.eastbourneherald.co.uk/lifestyle/food-and-drink/why-you-should-stock-up-the-cellar-now-for-the-holidays-richard-esling-november-4-3445338")
+async def scan():
+    return False

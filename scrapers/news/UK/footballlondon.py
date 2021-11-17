@@ -3,7 +3,14 @@ urls = [
     "https://www.football.london/"
 ]
 feeds = [
-
+    "https://www.football.london/rss.xml",
+    "https://www.football.london/arsenal-fc/?service=rss",
+    "https://www.football.london/chelsea-fc/?service=rss",
+    "https://www.football.london/chelsea-fc/?service=rss",
+    "https://www.football.london/tottenham-hotspur-fc/?service=rss",
+    "https://www.football.london/west-ham-united-fc/?service=rss",
+    "https://www.football.london/crystal-palace-fc/?service=rss",
+    "https://www.football.london/watford-fc/?service=rss",
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',
@@ -31,4 +38,5 @@ def article(url):
     artcal =  soup.select('.live-event-lead-entry')[0]
     
 
-article("https://www.football.london/arsenal-fc/fixtures-results/arsenal-press-conference-live-mikel-22072410")
+async def scan():
+    return False

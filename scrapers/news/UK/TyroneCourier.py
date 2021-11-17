@@ -33,4 +33,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('[itemprop="text"]')[0]
     
-article("https://www.tyronecourier.co.uk/news/2021/11/11/news/fivemiletown-fraudster-unmasked-and-jailed-19772/")
+async def scan():
+    return False

@@ -3,7 +3,12 @@ urls = [
     "https://www.monmouthshirebeacon.co.uk/"
 ]
 feeds = [
-
+    "https://www.grimsbytelegraph.co.uk/rss.xml",
+    "https://www.grimsbytelegraph.co.uk/news/rss.xml",
+    "https://www.grimsbytelegraph.co.uk/news/",
+    "https://www.grimsbytelegraph.co.uk/news/",
+    "https://www.grimsbytelegraph.co.uk/news/",
+    "https://www.grimsbytelegraph.co.uk/news/",
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',

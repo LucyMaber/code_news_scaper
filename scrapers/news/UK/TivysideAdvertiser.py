@@ -29,4 +29,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.p402_hide')[0]
     
-article("https://www.tivysideadvertiser.co.uk/news/19707206.metalidads-hope-help-fathers-find-friendships-cardigan/")
+async def scan():
+    return False

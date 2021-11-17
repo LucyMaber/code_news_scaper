@@ -3,7 +3,14 @@ urls = [
     "https://www.malverngazette.co.uk/"
 ]
 feeds = [
-
+"https://www.malverngazette.co.uk/news/rss/",
+"https://www.malverngazette.co.uk/sport/rss/",
+"https://www.malverngazette.co.uk/sport/local/rss/",
+"https://www.malverngazette.co.uk/news/malvern/rss/",
+"https://www.malverngazette.co.uk/news/community/rss/",
+"https://www.malverngazette.co.uk/news/business/rss/",
+"https://www.malverngazette.co.uk/news/general-election/rss/",
+"https://www.malverngazette.co.uk/news/coronavirus/rss/",
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',
@@ -29,4 +36,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('#subscription-replace-entire-article')[0]
     
-article("https://www.malverngazette.co.uk/sport/19699902.reaction-bristol-bears-27-worcester-warriors-5---jonathan-thomas/")
+async def scan():
+    return False

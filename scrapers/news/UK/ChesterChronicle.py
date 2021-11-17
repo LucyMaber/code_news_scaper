@@ -53,4 +53,5 @@ def article(url):
     #
     
 
-article("https://www.chardandilminsternews.co.uk/news/somerset_news/19688562.discovery-community-fund-invites-somerset-groups-apply-grants/")
+async def scan():
+    return False

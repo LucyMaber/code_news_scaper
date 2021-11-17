@@ -33,4 +33,5 @@ def article(url):
         s.extract()
     bodyCopy = soup.select('.entry-content')[0]
     
-article("https://thecentraltimes.com/asaduddin-owaisi-visits-bengal-holds-meeting-with-abbas-siddiqui-of-futura-sharif/")
+async def scan():
+    return False

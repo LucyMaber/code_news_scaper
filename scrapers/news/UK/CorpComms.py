@@ -30,4 +30,5 @@ def article(url):
     for s in soup.select('[itemprop="text"] > img'):
         s.extract()
     
-article("https://www.corpcommsmagazine.co.uk/2021/07/lessons-from-our-corporate-purpose-summit/")
+async def scan():
+    return False

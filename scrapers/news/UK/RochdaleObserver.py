@@ -31,4 +31,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('[itemprop="articleBody"]')[0] ### READ THE FULL STORY
     
-article("https://www.manchestereveningnews.co.uk/news/greater-manchester-news/pervert-33-followed-schoolgirls-shopped-22060354")
+async def scan():
+    return False

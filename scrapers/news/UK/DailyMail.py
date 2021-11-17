@@ -26,4 +26,5 @@ def article(url):
     for s in soup.select('[itemprop="articleBody"] > div:not(.mol-para-with-font)'):
         s.extract()
     
-article("https://www.dailymail.co.uk/news/article-10159877/Yorkshires-board-pressure-resign-brushing-P-slur-levelled-Azeem-Rafiq.html")
+async def scan():
+    return False

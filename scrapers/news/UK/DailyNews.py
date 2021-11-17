@@ -29,4 +29,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.body-copy')[0]
     
-article("https://www.dailynews.com/2021/11/03/la-mayor-eric-garcetti-test-positive-for-covid-19-during-scotland-trip/")
+async def scan():
+    return False

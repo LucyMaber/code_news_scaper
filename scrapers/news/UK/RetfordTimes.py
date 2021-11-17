@@ -28,4 +28,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.p402_hide ')[0] ### READ THE FULL STORY
     
-article("https://www.richmondandtwickenhamtimes.co.uk/news/19703214.arrest-pedestrian-hit-heathrow-critical/")
+async def scan():
+    return False

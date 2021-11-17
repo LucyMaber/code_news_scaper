@@ -30,4 +30,5 @@ def article(url):
     #     s.extract()
     bodyCopy =  soup.select('.story-content > div')[0]
     
-article("https://www.shropshirestar.com/news/health/2021/11/09/hospital-trust-hoping-for-rapid-move-to-future-fit-next-stage/")
+async def scan():
+    return False

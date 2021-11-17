@@ -3,7 +3,9 @@ urls = [
     "https://www.newburytoday.co.uk/"
 ]
 feeds = [
-
+    "https://www.newburytoday.co.uk/_api/rss/newbury_business_news_feed.xml",
+    "https://www.newburytoday.co.uk/_api/rss/newbury_news_feed.xml",
+    "https://www.newburytoday.co.uk/_api/rss/newbury_lifestyle_feed.xml",
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',
@@ -26,4 +28,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.pagestory')[0]
     
-article("https://www.newburytoday.co.uk/my-newbury/police-appeal-for-help-after-victim-left-with-facial-injurie-9224614/")
+async def scan():
+    return False

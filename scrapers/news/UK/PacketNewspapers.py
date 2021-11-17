@@ -3,6 +3,19 @@ urls = [
     "https://www.falmouthpacket.co.uk/"
 ]
 feeds = [
+"https://www.falmouthpacket.co.uk/news/rss/",
+"https://www.falmouthpacket.co.uk/news/fpfalmouth/rss/",
+"https://www.falmouthpacket.co.uk/news/helstonandporthleven/rss/",
+"https://www.falmouthpacket.co.uk/news/camborneandredruth/rss/",
+"https://www.falmouthpacket.co.uk/news/truro/rss/",
+"https://www.falmouthpacket.co.uk/news/westcornwall/rss/",
+"https://www.falmouthpacket.co.uk/news/business/rss/",
+"https://www.falmouthpacket.co.uk/news/truro_college/rss/",
+"https://www.falmouthpacket.co.uk/news/general-election/rss/",
+"https://www.falmouthpacket.co.uk/news/coronavirus/rss/",
+"https://www.falmouthpacket.co.uk/lettersandcomment/readerswrite/rss/",
+"https://www.falmouthpacket.co.uk/lettersandcomment/skipper/rss/",
+
 
 ]
 header={

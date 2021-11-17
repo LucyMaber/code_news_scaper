@@ -31,4 +31,5 @@ def article(url):
     #     s.extract()
     bodyCopy =  soup.select('[itemprop="articleBody"]')[0]
     
-article("https://socialistworker.co.uk/art/52643/Radical+climate+action+is+more+than+slogans")
+async def scan():
+    return False

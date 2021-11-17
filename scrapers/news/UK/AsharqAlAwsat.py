@@ -52,4 +52,5 @@ def article(url):
     subtitle =  soup.select('h2.ms-article_preview') [0]
     
     ##FIX ME SILL NEED TO REMOVE JUNK
-article("https://www.autosport.com/f1/news/williams-f1-walrus-nose-aerodynamicist-terzi-dies/6734186/")
+async def scan():
+    return False

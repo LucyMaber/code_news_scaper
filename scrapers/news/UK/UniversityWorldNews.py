@@ -31,4 +31,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.article-body')[0]
     
-article("https://www.universityworldnews.com/post.php?story=20211105110142162")
+async def scan():
+    return False

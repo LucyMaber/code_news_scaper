@@ -35,4 +35,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('[itemprop="articleBody"]')[0] ### READ THE FULL STORY
     
-article("https://www.dailyrecord.co.uk/sport/local-sport/perthshire-curlers-eve-muirhead-mili-25405333")
+async def scan():
+    return False

@@ -31,4 +31,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.p402_hide')[0]
     
-article("https://www.salisburyjournal.co.uk/news/19704332.salisbury-train-crash-rescue-efforts-shared-firefighter/")
+async def scan():
+    return False

@@ -29,4 +29,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.p402_hide')[0]
     
-article("https://www.maldonandburnhamstandard.co.uk/news/19698830.plume-academy-celebrates-superpowers-adhd-awareness-month/")
+async def scan():
+    return False

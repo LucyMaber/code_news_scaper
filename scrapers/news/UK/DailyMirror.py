@@ -27,4 +27,5 @@ def article(url):
     for s in soup.select('[itemprop="articleBody"] > :not(p)'):
         s.extract()
     
-article("https://www.mirror.co.uk/news/world-news/cleo-smith-found-girl-4-25371357")
+async def scan():
+    return False

@@ -33,4 +33,5 @@ def article(url):
         s.extract()
     bodyCopy = soup.select('.article__detail-text')[0]
     
-article("https://www.thecomet.net/news/skull-essex-building-site-letchworth-veteran-john-dick-8372220")
+async def scan():
+    return False

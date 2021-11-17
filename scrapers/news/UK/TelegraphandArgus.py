@@ -32,4 +32,5 @@ def article(url):
     except:
         bodyCopy = soup.select('.p402_hide')[0]
     
-article("https://www.thetelegraphandargus.co.uk/news/19705510.hospital-trust-acknowledges-missed-opportunity-tragic-stroke-death/")
+async def scan():
+    return False

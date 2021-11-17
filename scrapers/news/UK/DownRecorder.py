@@ -30,4 +30,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.cell_right_sub1')[0]
     
-article("http://www.thedownrecorder.co.uk/pages/?title=Vandals_target_special_school")
+async def scan():
+    return False

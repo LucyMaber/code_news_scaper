@@ -27,4 +27,5 @@ def article(url):
     #for s in soup.select('script'):
         #s.extract()
     #PAY WALL
-article("https://www.fnlondon.com/articles/twitter-tiktok-under-pressure-from-mps-over-plans-to-tackle-online-fraud-20211105")
+async def scan():
+    return False

@@ -3,7 +3,27 @@ urls = [
     "https://www.readingchronicle.co.uk/"
 ]
 feeds = [
-
+    "https://www.readingchronicle.co.uk/news/rss/",
+    "https://www.readingchronicle.co.uk/sport/rss/",
+    "https://www.readingchronicle.co.uk/news/readingretailawards2019/rss/",
+    "https://www.readingchronicle.co.uk/news/around/rss/",
+    "https://www.readingchronicle.co.uk/news/around/caversham/rss/",
+    "https://www.readingchronicle.co.uk/news/around/tilehurst/rss/",
+    "https://www.readingchronicle.co.uk/news/around/whitley/rss/",
+    "https://www.readingchronicle.co.uk/news/around/east_reading/rss/",
+    "https://www.readingchronicle.co.uk/news/around/west_reading/rss/",
+    "https://www.readingchronicle.co.uk/news/around/southcote/rss/",
+    "https://www.readingchronicle.co.uk/news/around/calcot/rss/",
+    "https://www.readingchronicle.co.uk/news/around/calcot/rss/",
+    "https://www.readingchronicle.co.uk/news/around/coley/rss/",
+    "https://www.readingchronicle.co.uk/news/around/katesgrove/rss/",
+    "https://www.readingchronicle.co.uk/news/around/villages/rss/",
+    "https://www.readingchronicle.co.uk/news/central/rss/",
+    "https://www.readingchronicle.co.uk/news/woodleyandearley/rss/",
+    "https://www.readingchronicle.co.uk/news/woodleyandearley/earley/rss/",
+    "https://www.readingchronicle.co.uk/news/woodleyandearley/lower_earley/rss/",
+    "https://www.readingchronicle.co.uk/news/woodleyandearley/woodley/rss/",
+    "https://www.readingchronicle.co.uk/news/west_berkshire/rss/"
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',
@@ -30,4 +50,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.article-body')[0] ### READ THE FULL STORY
     
-article("https://www.readingchronicle.co.uk/news/19703568.loddon-valley-police-officer-accused-making-racist-comments/")
+async def scan():
+    return False

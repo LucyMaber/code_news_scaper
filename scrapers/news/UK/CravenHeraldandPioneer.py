@@ -3,7 +3,12 @@ urls = [
     "https://www.cravenherald.co.uk/"
 ]
 feeds = [
-
+    "https://www.cravenherald.co.uk/news/rss/",
+    "https://www.cravenherald.co.uk/news/localnews/rss/",
+    "https://www.cravenherald.co.uk/news/farming/rss/",
+    "https://www.cravenherald.co.uk/news/business/rss/",
+    "https://www.cravenherald.co.uk/opinion/opinion_letters/rss/",
+    "https://www.cravenherald.co.uk/opinion/opinion_leader/rss/",
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',
@@ -25,4 +30,5 @@ def article(url):
         s.extract()
     articleBody =  soup.select('.p402_hide')[0]
     
-article("https://www.cravenherald.co.uk/news/national/uk-today/19690399.toby-carvery-issues-facebook-scam-warning-uk-customers/")
+async def scan():
+    return False

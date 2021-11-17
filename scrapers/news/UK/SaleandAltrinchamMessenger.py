@@ -3,7 +3,9 @@ urls = [
     "https://www.messengernewspapers.co.uk/"
 ]
 feeds = [
-
+    "https://www.messengernewspapers.co.uk/news/rss/",
+    "https://www.messengernewspapers.co.uk/yoursay/thought_of_week/rss/",
+    "https://www.messengernewspapers.co.uk/yoursay/letters/rss/"
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',
@@ -28,4 +30,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.p402_hide')[0] ### READ THE FULL STORY
     
-article("https://www.messengernewspapers.co.uk/news/19702259.food-hall-open-month-sale-shopping-centre/")
+async def scan():
+    return False

@@ -31,4 +31,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.p402_hide')[0]
     
-article("https://www.yourlocalguardian.co.uk/news/19705284.new-addington-stabbing-teen-rushed-major-trauma-centre/")
+async def scan():
+    return False

@@ -31,4 +31,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.gm-group')[0]
     
-article("https://www.questmedianetwork.co.uk/news/tameside-reporter/advice-available-to-families-at-the-healthy-hub-club/")
+async def scan():
+    return False

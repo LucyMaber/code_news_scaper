@@ -24,4 +24,5 @@ def article(url):
     tag =  soup.select('.tag-list')[0]
     
     tag =  soup.select('.lightbox-content')[0]
-article("https://www.eveningexpress.co.uk/fp/news/local/m90-perth-crash-lorry-driver-killed-in-bridge-plunge-named-by-police/")
+async def scan():
+    return False

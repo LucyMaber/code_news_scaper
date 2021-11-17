@@ -3,7 +3,18 @@ urls = [
     "https://www.bexhillobserver.net/"
 ]
 feeds = [
-
+    "https://www.bexhillobserver.net/rss",
+    "https://www.bexhillobserver.net/read-this/rss",
+    "https://www.bexhillobserver.net/news/opinion/rss",
+    "https://www.bexhillobserver.net/news/people/rss",
+    "https://www.bexhillobserver.net/health/rss",
+    "https://www.bexhillobserver.net/education/rss",
+    "https://www.bexhillobserver.net/business/rss",
+    "https://www.bexhillobserver.net/business/rss",
+    "https://www.bexhillobserver.net/news/weather/rss",
+    "https://www.bexhillobserver.net/news/crime/rss",
+    "https://www.bexhillobserver.net/news/traffic-and-travel/rss",
+    "https://www.bexhillobserver.net/rss",
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',
@@ -27,4 +38,5 @@ def article(url):
         s.extract()
     article_body =  soup.select_one('#content-wrapper')
     
-article("https://www.bexhillobserver.net/sport/football/hollingtons-halloween-nightmare-delivery-was-nothing-short-of-atrocious-3439329")
+async def scan():
+    return False

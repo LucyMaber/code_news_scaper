@@ -28,4 +28,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.p402_hide')[0] ### READ THE FULL STORY
     
-article("https://www.runcornandwidnesworld.co.uk/news/19704142.burglary-dentists-surgery-festival-way-runcorn/")
+async def scan():
+    return False

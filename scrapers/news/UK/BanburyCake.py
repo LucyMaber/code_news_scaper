@@ -3,7 +3,12 @@ urls = [
     "https://www.banburycake.co.uk/"
 ]
 feeds = [
-
+    "https://www.banburycake.co.uk/news/rss/",
+    "https://www.banburycake.co.uk/sport/rss/",
+    "https://www.banburycake.co.uk/news/headlines/rss/",
+    "https://www.banburycake.co.uk/news/banbury/rss/",
+    "https://www.banburycake.co.uk/news/general-election/rss/",
+    "https://www.banburycake.co.uk/news/coronavirus/rss/",
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',
@@ -28,4 +33,5 @@ def article(url):
     headline =  soup.select('h1.headline ') [0]
     time =  soup.select('time ') [0]
     
-article("https://www.banburycake.co.uk/news/19678856.kaleb-cooper-opens-farming-area-banbury-bicester-college/")
+async def scan():
+    return False

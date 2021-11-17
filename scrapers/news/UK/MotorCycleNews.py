@@ -27,4 +27,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.review__main-content__section')[0]
     
-article("https://www.motorcyclenews.com/bike-reviews/langen/two-stroke/2022/")
+async def scan():
+    return False

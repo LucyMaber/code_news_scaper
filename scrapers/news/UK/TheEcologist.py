@@ -3,7 +3,7 @@ urls = [
     "https://theecologist.org/"
 ]
 feeds = [
-
+    "https://theecologist.org/rss"
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',
@@ -32,4 +32,5 @@ def article(url):
         s.extract()
     bodyCopy = soup.select('[class="field field--name-field-paragraphs field--type-entity-reference-revisions field--label-hidden field__items"]')[0]
     
-article("https://theecologist.org/2021/nov/09/technology-fetishism-reigns-cop26")
+async def scan():
+    return False

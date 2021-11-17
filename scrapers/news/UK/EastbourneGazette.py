@@ -27,4 +27,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('#content-wrapper')[0]
     
-article("https://www.eastbourneherald.co.uk/news/crime/footage-shows-the-moment-heathfield-necrophiliac-who-killed-two-women-is-taken-into-custody-3445706")
+async def scan():
+    return False

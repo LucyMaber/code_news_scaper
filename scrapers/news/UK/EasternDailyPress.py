@@ -41,4 +41,5 @@ def article(url):
     #     s.extract()
     bodyCopy =  soup.select('.PageContent > .PageStory')[0]
     
-article("https://www.kentonline.co.uk/sheerness/news/holiday-parks-need-to-be-regulated-across-uk-257113/")
+async def scan():
+    return False

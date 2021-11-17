@@ -28,4 +28,5 @@ def article(url):
     article_text  =  soup.select("div.article__detail-text")[0]
     
 
-article("https://www.thewestonmercury.co.uk/news/baytree-school-judicial-review-lodged-8432964")
+async def scan():
+    return False

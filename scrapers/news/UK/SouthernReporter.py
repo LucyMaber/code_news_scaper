@@ -28,4 +28,5 @@ def article(url):
         s.extract()
     article =  soup.select('#content-wrapper')[0]
     
-article("https://www.thesouthernreporter.co.uk/news/people/salon-owner-thanks-crisis-team-for-help-with-mental-health-issues-3451378")
+async def scan():
+    return False

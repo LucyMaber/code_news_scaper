@@ -3,7 +3,16 @@ urls = [
     "https://www.coventrytelegraph.net/"
 ]
 feeds = [
-
+"https://www.coventrytelegraph.net/news/?service=rss y",
+"https://www.coventrytelegraph.net/news/coventry-news/?service=rss",
+"https://www.coventrytelegraph.net/news/uk-world-news/?service=rss",
+"https://www.coventrytelegraph.net/news/health/?service=rss",
+"https://www.coventrytelegraph.net/all-about/crime?service=rss",
+"https://www.coventrytelegraph.net/all-about/politics?service=rss",
+"https://www.coventrytelegraph.net/all-about/education?service=rss",
+"https://www.coventrytelegraph.net/news/motoring/?service=rss",
+"https://www.coventrytelegraph.net/news/history/?service=rss",
+"https://www.coventrytelegraph.net/news/news-opinion/?service=rss",
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',

@@ -29,4 +29,5 @@ def article(url):
         s.extract()
     article_body =  soup.select('div.entry') [0]
     
-article("https://banglamirrornews.com/2021/11/01/we-are-digging-our-own-graves/")
+async def scan():
+    return False

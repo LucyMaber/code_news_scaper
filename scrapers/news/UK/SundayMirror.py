@@ -30,4 +30,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('[itemprop="articleBody"]')[0]
     
-article("https://www.mirror.co.uk/news/politics/tory-plotters-gather-throw-boris-25397062")
+async def scan():
+    return False

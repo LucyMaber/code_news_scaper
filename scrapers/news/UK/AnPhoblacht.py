@@ -25,4 +25,5 @@ def article(url):
     
     articleBody = soup.select('.span5')[0]
     
-article("https://www.anphoblacht.com/contents/28198")
+async def scan():
+    return False

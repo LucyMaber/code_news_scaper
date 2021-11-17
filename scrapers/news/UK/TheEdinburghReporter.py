@@ -33,4 +33,5 @@ def article(url):
         s.extract()
     bodyCopy = soup.select('.td-post-content')[0]
     
-article("https://theedinburghreporter.co.uk/2021/11/all-three-christmas-planning-applications-recommended-for-approval/")
+async def scan():
+    return False

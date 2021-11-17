@@ -34,7 +34,8 @@ def article(url):
         soup = BeautifulSoup(content, 'html.parser')
         headline =  soup.select('h1')[0]
         article =  soup.select('p')[0]
-article("https://www.inyourarea.co.uk/news/daily-cuppa-and-quiz-november-15-2021/")
+async def scan():
+    return False
 
 async def scan():
     for post in postcode_generator():
@@ -104,6 +105,7 @@ async def scan():
                 await browser.close()
                 browser = await launch({ "headless": True })
                 page = await browser.newPage()
+    return True
 
-asyncio.get_event_loop().run_until_complete(scan())
+#asyncio.get_event_loop().run_until_complete(scan())
 

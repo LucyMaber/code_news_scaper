@@ -28,4 +28,5 @@ def article(url):
         s.extract()
     content =  soup.select('[itemprop="articleBody"]')[0]
     
-article("https://www.gloucestershirelive.co.uk/news/gloucester-news/wolf-sighting-near-forest-dean-6151117")
+async def scan():
+    return False

@@ -32,4 +32,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.pigeon-remove')[0]
     
-article("https://www.wearetyrone.com/news/business/mining-critical-to-climate-change-targets/")
+async def scan():
+    return False

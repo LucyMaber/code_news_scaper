@@ -31,4 +31,5 @@ def article(url):
     #     s.extract()
     bodyCopy =  soup.select('[class="fl-module fl-module-fl-post-content fl-node-5c7e18968ba4f extra-formating scidev-table-responsive"]>[class="fl-module-content fl-node-content"]')[0]
     
-article("https://www.scidev.net/global/news/doubt-grows-over-cop26-forest-pledge/")
+async def scan():
+    return False

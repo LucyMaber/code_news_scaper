@@ -45,4 +45,5 @@ def article(url):
         s.extract()
     articleBody =  soup.select('#content-wrapper')[0]
     
-article("https://www.northantstelegraph.co.uk/news/people/a45-chowns-mill-closures-start-tonight-with-more-to-come-3447223")
+async def scan():
+    return False

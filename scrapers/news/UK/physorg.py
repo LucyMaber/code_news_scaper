@@ -36,4 +36,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.article-main')[0] ### READ THE FULL STORY
     
-article("https://techxplore.com/news/2021-11-merlin-self-supervised-strategy-deep-despeckling.html")
+async def scan():
+    return False

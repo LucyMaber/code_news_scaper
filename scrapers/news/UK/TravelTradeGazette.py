@@ -35,4 +35,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.entry-content')[0]
     
-article("https://tribuneonlineng.com/over-2-74-million-nigerians-obtained-passports-in-the-last-two-years/")
+async def scan():
+    return False

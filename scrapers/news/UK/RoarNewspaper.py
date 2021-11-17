@@ -27,4 +27,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.td-post-content ')[0] ### READ THE FULL STORY
     
-article("http://roarnews.co.uk/2021/wigan-may-be-redeveloped-on-the-blood-of-uyghurs-this-must-be-stopped/")
+async def scan():
+    return False

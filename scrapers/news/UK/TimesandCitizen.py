@@ -36,4 +36,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('#content-wrapper')[0]
     
-article("https://www.bedfordtoday.co.uk/whats-on/arts-and-entertainment/don-broco-back-in-bedford-for-sold-out-hometown-esquires-show-3450123")
+async def scan():
+    return False

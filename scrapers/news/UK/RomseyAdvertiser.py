@@ -3,7 +3,9 @@ urls = [
     "https://www.romseyadvertiser.co.uk/"
 ]
 feeds = [
-
+    "https://www.romseyadvertiser.co.uk/news/news/rss/",
+    "https://www.romseyadvertiser.co.uk/news/business/rss/",
+    "https://www.romseyadvertiser.co.uk/yoursay/rss/"
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',
@@ -28,4 +30,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.p402_hide')[0] ### READ THE FULL STORY
     
-article("https://www.romseyadvertiser.co.uk/news/19702818.newly-qualified-hypnotherapist-open-business-romsey/")
+async def scan():
+    return False

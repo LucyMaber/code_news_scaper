@@ -29,4 +29,5 @@ def article(url):
     artcal =  soup.select('.live-event-lead-entry')[0]
     
 
-article("https://www.football.london/arsenal-fc/fixtures-results/arsenal-press-conference-live-mikel-22072410")
+async def scan():
+    return False

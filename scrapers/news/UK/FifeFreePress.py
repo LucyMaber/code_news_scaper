@@ -31,4 +31,5 @@ def article(url):
         s.extract()
     articleBody =  soup.select('#content-wrapper')[0]
     
-article("https://www.fifetoday.co.uk/news/crime/fife-man-sentenced-to-10-years-for-child-sex-abuse-at-the-high-court-in-edinburgh-3447757")
+async def scan():
+    return False

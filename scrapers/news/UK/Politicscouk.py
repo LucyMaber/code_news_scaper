@@ -28,4 +28,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('[itemprop="articleBody"]')[0] ### READ THE FULL STORY
     
-article("https://www.politics.co.uk/in-depth/2021/11/09/reaching-net-zero-can-the-government-afford-it/")
+async def scan():
+    return False

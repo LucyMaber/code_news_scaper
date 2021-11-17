@@ -31,4 +31,5 @@ def article(url):
     #     s.extract()
     bodyCopy =  soup.select('[itemprop="text"]')[0]
     
-article("https://www.scottishbanner.com/2021/11/09/mg-alba-scots-trad-music-awards-2021-the-pipes-of-christmas-virtual-concert/")
+async def scan():
+    return False

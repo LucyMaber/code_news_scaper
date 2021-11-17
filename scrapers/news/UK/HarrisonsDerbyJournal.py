@@ -3,7 +3,23 @@ urls = [
     "https://www.hastingsobserver.co.uk/"
 ]
 feeds = [
-
+"https://www.hastingsobserver.co.uk/news/traffic-and-travel/rss",
+"https://www.hastingsobserver.co.uk/news/crime",
+"https://www.hastingsobserver.co.uk/news/weather",
+"https://www.hastingsobserver.co.uk/news/politics",
+"https://www.hastingsobserver.co.uk/business",
+"https://www.hastingsobserver.co.uk/education",
+"https://www.hastingsobserver.co.uk/health",
+"https://www.hastingsobserver.co.uk/news/opinion",
+"https://www.hastingsobserver.co.uk/news/people",
+"https://www.hastingsobserver.co.uk/read-this",
+"https://www.hastingsobserver.co.uk/retro",
+"https://www.hastingsobserver.co.uk/recommended/entertainment",
+"https://www.hastingsobserver.co.uk/recommended/technology",
+"https://www.hastingsobserver.co.uk/recommended/lifestyle",
+"https://www.hastingsobserver.co.uk/recommended/home-and-garden",
+"https://www.hastingsobserver.co.uk/recommended/fashion-and-beauty",
+"https://www.hastingsobserver.co.uk/recommended/deals",
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',

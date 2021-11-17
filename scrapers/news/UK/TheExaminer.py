@@ -34,4 +34,5 @@ def article(url):
         s.extract()
     bodyCopy = soup.select('.article__detail-text')[0]
     
-article("https://www.eveningnews24.co.uk/news/crime/woman-wanted-for-prince-of-wales-burglary-norwich-8478690")
+async def scan():
+    return False

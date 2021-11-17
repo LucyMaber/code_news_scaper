@@ -37,4 +37,5 @@ def article(url):
     # y)
     
 
-article("https://www.churchtimes.co.uk/articles/2021/29-october/comment/opinion/stop-the-sex-education-opt-out")
+async def scan():
+    return False

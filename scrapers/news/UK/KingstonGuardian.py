@@ -27,4 +27,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select("div.p402_hide")[0]
     
-article("https://www.yourlocalguardian.co.uk/news/19691129.chelseas-tuchel-safe-now/")
+async def scan():
+    return False

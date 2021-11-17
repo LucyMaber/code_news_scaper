@@ -30,4 +30,5 @@ def article(url):
         s.extract()
     content =  soup.select('.article__detail-text')[0]
     
-article("https://www.greatyarmouthmercury.co.uk/news/business/great-yarmouth-carlton-hotel-apologises-poor-rating-8462432")
+async def scan():
+    return False

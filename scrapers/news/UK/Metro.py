@@ -29,4 +29,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.article-body')[0]
     
-article("https://metro.co.uk/2021/11/07/six-essential-habits-that-will-help-you-live-your-best-life-15558008/")
+async def scan():
+    return False

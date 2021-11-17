@@ -31,4 +31,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.article__content')[0]
     
-article("https://www.thesun.co.uk/news/16683232/prince-andrew-virginia-roberts-witness-evidence-documentary/")
+async def scan():
+    return False

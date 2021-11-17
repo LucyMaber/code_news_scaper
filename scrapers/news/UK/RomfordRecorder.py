@@ -26,4 +26,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('[class="article__detail-text mdc-typography--body1"]')[0] ### READ THE FULL STORY
     
-article("https://www.romfordrecorder.co.uk/news/health/st-georges-health-hub-hornchurch-approved-by-havering-8467984")
+async def scan():
+    return False

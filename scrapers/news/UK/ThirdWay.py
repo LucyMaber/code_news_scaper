@@ -33,4 +33,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.article-body')[0]
     
-article("https://www.washingtonpost.com/opinions/2021/11/08/democrats-cannot-simply-ignore-gops-culture-war-attacks/")
+async def scan():
+    return False

@@ -31,4 +31,5 @@ def article(url):
         s.extract()
     article_body =  soup.select_one('[itemprop="articleBody"]')
     
-article("https://www.business-live.co.uk/manufacturing/computer-chip-shortage-continues-hit-22032800")
+async def scan():
+    return False

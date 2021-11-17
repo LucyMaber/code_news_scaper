@@ -26,4 +26,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select(".p402_hide")[0]
     
-article("https://www.lancashiretelegraph.co.uk/news/19699708.blackburn-darwen-sees-10-per-cent-rise-reports-sexual-offences/")
+async def scan():
+    return False

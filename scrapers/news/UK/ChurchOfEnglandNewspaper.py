@@ -31,4 +31,5 @@ def article(url):
     #
     
 
-article("https://www.churchnewspaper.com/86267/archives")
+async def scan():
+    return False

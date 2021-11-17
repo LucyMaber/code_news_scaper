@@ -27,4 +27,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.article-body')[0]
     
-article("https://www.dorsetecho.co.uk/news/19692080.tributes-paid-selfless-passionate-youtuber-died-crash-dorset-route/")
+async def scan():
+    return False

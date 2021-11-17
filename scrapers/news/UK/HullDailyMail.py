@@ -34,4 +34,5 @@ def article(url):
         s.extract()
     article =  soup.select('[itemprop="articleBody"]')[0]
     
-article("https://www.hulldailymail.co.uk/special-features/win-dream-christmas-25000-won-6156424")
+async def scan():
+    return False

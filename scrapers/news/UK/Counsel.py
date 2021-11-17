@@ -28,4 +28,5 @@ def article(url):
         s.extract()
     for s in soup.select('[itemprop="headline name"] > img'):
         s.extract()
-article("https://www.counselmagazine.co.uk/articles/lessons-learnt-a-barrister-s-personal-development")
+async def scan():
+    return False

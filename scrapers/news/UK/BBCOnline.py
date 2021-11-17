@@ -3,7 +3,33 @@ urls = [
     "https://www.bbc.co.uk/"
 ]
 feeds = [
-
+"http://feeds.bbci.co.uk/news/rss.xml",
+"http://feeds.bbci.co.uk/news/world/rss.xml",
+"http://feeds.bbci.co.uk/news/uk/rss.xml",
+"http://feeds.bbci.co.uk/news/politics/rss.xml",
+"http://feeds.bbci.co.uk/news/business/rss.xml",
+"http://feeds.bbci.co.uk/news/health/rss.xml",
+"http://feeds.bbci.co.uk/news/education/rss.xml",
+"http://feeds.bbci.co.uk/news/science_and_environment/rss.xml",
+"http://feeds.bbci.co.uk/news/technology/rss.xml",
+"http://feeds.bbci.co.uk/news/entertainment_and_arts/rss.xml",
+"http://feeds.bbci.co.uk/news/world/africa/rss.xml",
+"http://feeds.bbci.co.uk/news/world/asia/rss.xml",
+"http://feeds.bbci.co.uk/news/world/europe/rss.xml",
+"http://feeds.bbci.co.uk/news/world/middle_east/rss.xml",
+"http://feeds.bbci.co.uk/news/world/us_and_canada/rss.xml",
+"http://feeds.bbci.co.uk/news/northern_ireland/rss.xml",
+"http://feeds.bbci.co.uk/news/scotland/rss.xml",
+"http://feeds.bbci.co.uk/news/wales/rss.xml",
+"http://feeds.bbci.co.uk/news/video_and_audio/news_front_page/rss.xml?edition=uk",
+"http://feeds.bbci.co.uk/news/video_and_audio/world/rss.xml",
+"http://feeds.bbci.co.uk/news/system/latest_published_content/rss.xml",
+"http://feeds.bbci.co.uk/news/magazine/rss.xml",
+"http://feeds.bbci.co.uk/news/also_in_the_news/rss.xml",
+"http://feeds.bbci.co.uk/news/special_reports/rss.xml",
+"http://feeds.bbci.co.uk/news/have_your_say/rss.xml",
+"https://www.bbc.co.uk/blogs/theeditors/rss.xml",
+"https://news.bbc.co.uk/sport1/hi/help/rss/default.stm",
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',
@@ -39,4 +65,5 @@ def article(url):
     for s in soup.select('header'):
         s.extract()
     
-article("https://www.bbc.co.uk/news/science-environment-59088498")
+async def scan():
+    return False

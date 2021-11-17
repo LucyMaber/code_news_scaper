@@ -33,4 +33,5 @@ def article(url):
         s.extract()
     bodyCopy = soup.select('[itemprop="articleBody"]')[0]
     
-article("https://www.thecanary.co/uk/news/2021/11/10/who-covid-special-envoy-calls-out-pm-for-not-wearing-a-mask-during-hospital-visit/")
+async def scan():
+    return False

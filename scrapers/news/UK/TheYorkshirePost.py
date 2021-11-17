@@ -32,4 +32,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.article-content')[0]
     
-article("https://www.yorkshirepost.co.uk/news/crime/watch-the-moment-hapless-yorkshire-driver-crashes-into-wall-landing-him-with-ps310-fine-3453729")
+async def scan():
+    return False

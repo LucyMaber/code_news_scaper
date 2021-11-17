@@ -32,4 +32,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('#content-wrapper')[0]
     
-article("https://www.sunderlandecho.com/news/people/family-of-keaton-burton-raise-ps7000-for-mental-health-charities-in-his-honour-3456604")
+async def scan():
+    return False

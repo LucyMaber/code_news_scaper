@@ -28,4 +28,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.body-content')[0] ### READ THE FULL STORY
     
-article("https://peterborough.net/the-best-ways-to-choose-the-appropriate-used-plant-machinery/")
+async def scan():
+    return False

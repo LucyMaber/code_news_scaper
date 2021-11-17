@@ -30,4 +30,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('.p402_hide')[0]
     
-article("https://www.guardian-series.co.uk/news/19710185.six-teens-arrested-cash-seized-chingford-shooting/")
+async def scan():
+    return False

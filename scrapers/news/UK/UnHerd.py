@@ -32,4 +32,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('div.article-body.container-fluid > div > div.col-sm-9.col-lg-6')[0]
     
-article("https://unherd.com/2021/11/what-the-poppy-really-means/")
+async def scan():
+    return False

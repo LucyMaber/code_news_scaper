@@ -3,7 +3,19 @@ urls = [
     "https://www.cheshire-live.co.uk/"
 ]
 feeds = [
-
+    "https://www.cheshire-live.co.uk/",
+    "https://www.cheshire-live.co.uk/news/uk-world-news/",
+    "https://www.cheshire-live.co.uk/news/motoring/",
+    "https://www.cheshire-live.co.uk/news/history/",
+    "https://www.cheshire-live.co.uk/news/showbiz/",
+    "https://www.cheshire-live.co.uk/news/health/",
+    "https://www.cheshire-live.co.uk/all-about/education/",
+    "https://www.cheshire-live.co.uk/all-about/politics/",
+    "https://www.cheshire-live.co.uk/all-about/traffic-and-travel/",
+    "https://www.cheshire-live.co.uk/all-about/crime/",
+    "https://www.cheshire-live.co.uk/all-about/cheshire/",
+    "https://www.cheshire-live.co.uk/news/",
+    "https://www.cheshire-live.co.uk/",
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',
@@ -25,4 +37,5 @@ def article(url):
         s.extract()
     headline =  soup.select('h1.headline')
     
-article("https://www.yourlocalguardian.co.uk/news/19687215.police-arrest-man-armed-knife-sutton/")
+async def scan():
+    return False

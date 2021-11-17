@@ -30,4 +30,5 @@ def article(url):
         s.extract()
     content =  soup.select('.bodytext')[0]
     
-article("https://www.gbnews.uk/news/covid-booster-jab-bookings-extended-to-a-month-in-advance/154362")
+async def scan():
+    return False

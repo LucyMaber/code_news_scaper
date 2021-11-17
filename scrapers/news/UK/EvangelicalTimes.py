@@ -33,4 +33,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select(".main")[0]
     
-article("https://www.evangelical-times.org/articles/as-we-prepare-to-remember/")
+async def scan():
+    return False

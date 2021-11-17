@@ -28,4 +28,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('[class="article-body-text mb-40"]')[0] ### READ THE FULL STORY
     
-article("https://www.pulsetoday.co.uk/resource/pulse-pcn/how-to-employ-a-pharmacy-technician/")
+async def scan():
+    return False

@@ -28,4 +28,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('[class="article-body-text mb-40"]')[0] ### READ THE FULL STORY
     
-article("https://www.racingpost.com/news/latest/middle-park-stakes-hero-the-last-lion-set-to-return-five-years-after-retirement/520951")
+async def scan():
+    return False

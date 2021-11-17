@@ -31,4 +31,5 @@ def article(url):
         s.extract()
     bodyCopy =  soup.select('div.blog-content-wrap > .w-richtext ')[0]
     
-article("https://www.tonguesonfire.com/news/big-wins-for-raahgir-at-the-uk-asian-film-festival")
+async def scan():
+    return False

@@ -27,4 +27,5 @@ def article(url):
         s.extract()
     bodyCopy = soup.select('.articleBody > p')[0]
     
-article("https://www.teesdalemercury.co.uk/news/cutlery-crafter-serves-up-successful-new-venture")
+async def scan():
+    return False

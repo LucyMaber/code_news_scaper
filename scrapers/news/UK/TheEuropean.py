@@ -35,4 +35,5 @@ def article(url):
         s.extract()
     bodyCopy = soup.select('main')[0]
     
-article("https://www.theneweuropean.co.uk/jk-rowling-trans-culture-war/")
+async def scan():
+    return False

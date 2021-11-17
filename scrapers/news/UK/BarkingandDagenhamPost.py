@@ -31,4 +31,5 @@ def article(url):
         s.extract()
     article_body =  soup.select('div.article__detail-text') [0]
     
-article("https://www.barkinganddagenhampost.co.uk/news/traffic/road-and-rail-delays-to-avoid-november-1-8449954")
+async def scan():
+    return False
