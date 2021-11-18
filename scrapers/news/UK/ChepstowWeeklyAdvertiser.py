@@ -1,4 +1,4 @@
-Q =''
+Q ='Q64356086'
 urls = [
     "https://www.chardandilminsternews.co.uk/"
 ]

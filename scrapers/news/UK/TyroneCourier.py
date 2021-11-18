@@ -3,7 +3,31 @@ urls = [
     "https://www.tyronecourier.co.uk/"
 ]
 feeds = [
-
+"https://www.glasgowtimes.co.uk/news/rss/",
+"https://www.glasgowtimes.co.uk/news/glasgow-crime/rss/",
+"https://www.glasgowtimes.co.uk/news/councilandpoliics/rss/",
+"https://www.glasgowtimes.co.uk/news/councilandpoliics/rss/",
+"https://www.glasgowtimes.co.uk/news/health/rss/",
+"https://www.glasgowtimes.co.uk/news/planning-development/rss/",
+"https://www.glasgowtimes.co.uk/news/glasgow-city-centre/rss/",
+"https://www.glasgowtimes.co.uk/news/glasgow-southside/rss/",
+"https://www.glasgowtimes.co.uk/news/glasgow-east-end/rss/",
+"https://www.glasgowtimes.co.uk/news/north-glasgow/rss/",
+"https://www.glasgowtimes.co.uk/news/best-of/rss/",
+"https://www.glasgowtimes.co.uk/sport/glasgowclan/rss/",
+"https://www.glasgowtimes.co.uk/sport/glasgow-warriors/rss/",
+"https://www.glasgowtimes.co.uk/news/north-glasgow/rss/",
+"https://www.glasgowtimes.co.uk/lifestyle/nostalgia/rss/",
+"https://www.glasgowtimes.co.uk/lifestyle/fashion/rss/",
+"https://www.glasgowtimes.co.uk/lifestyle/expert_advice/rss/",
+"https://www.glasgowtimes.co.uk/lifestyle/spring-in-the-city/rss/",
+"https://www.glasgowtimes.co.uk/lifestyle/homes/rss/",
+"https://www.glasgowtimes.co.uk/opinion/columnists/rss/",
+"https://www.glasgowtimes.co.uk/opinion/letters/rss/",
+"https://www.glasgowtimes.co.uk/opinion/et_view/rss/",
+"https://www.glasgowtimes.co.uk/campaigns/streets-ahead/rss/",
+"https://www.glasgowtimes.co.uk/campaigns/community-champs/rss/",
+"https://www.glasgowtimes.co.uk/campaigns/scotswoman-of-the-year/rss/",
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',

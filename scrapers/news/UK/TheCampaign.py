@@ -3,7 +3,11 @@ urls = [
     "https://www.campaignlive.co.uk/"
 ]
 feeds = [
-
+    "https://www.campaignlive.co.uk/rss/agency/campaigns",
+    "https://www.campaignlive.co.uk/rss/agency/account-reviews",
+    "https://www.campaignlive.co.uk/rss/latest/people-moves",
+    "https://www.campaignlive.co.uk/rss/media/latest",
+    "http://www.campaignlive.co.uk/rss/home",
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',

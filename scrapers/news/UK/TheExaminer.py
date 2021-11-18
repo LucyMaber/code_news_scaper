@@ -3,7 +3,15 @@ urls = [
     "https://www.examinerlive.co.uk/"
 ]
 feeds = [
-
+    "https://www.examinerlive.co.uk/rss.xml",
+    "https://www.examinerlive.co.uk/all-about/huddersfield/rss.xml",
+    "https://www.examinerlive.co.uk/all-about/huddersfield/rss.xml",
+    "https://www.examinerlive.co.uk/all-about/huddersfield/rss.xml",
+    "https://www.examinerlive.co.uk/all-about/huddersfield/rss.xml",
+    "https://www.examinerlive.co.uk/all-about/huddersfield/rss.xml",
+    "https://www.examinerlive.co.uk/all-about/huddersfield/rss.xml",
+    "https://www.examinerlive.co.uk/all-about/huddersfield/rss.xml",
+    "https://www.examinerlive.co.uk/all-about/huddersfield/rss.xml"
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',

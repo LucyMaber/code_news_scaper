@@ -1,8 +1,39 @@
 Q ='[[wikidata:Q1566255]]'
-urls = []
+urls = [
+    "https://www.newstatesman.com/"
+]
 feeds = [
-    "https://www.newstatesman.com/feed",
-    ""
+    "https://www.newstatesman.com/science-tech/science-of-us/feed",
+    "https://www.newstatesman.com/social-media/feed",
+    "https://www.newstatesman.com/science-tech/coronavirus/feed",
+    "https://www.newstatesman.com/internet/feed",
+    "https://www.newstatesman.com/environment/climate/feed",
+    "https://www.newstatesman.com/technology/feed",
+    "https://www.newstatesman.com/science-tech/feed",
+    "https://www.newstatesman.com/environment/feed",
+    "https://www.newstatesman.com/environment/just-transition/feed",
+    "https://www.newstatesman.com/environment/biodiversity/feed",
+    "https://www.newstatesman.com/environment/climate/feed",
+    "https://www.newstatesman.com/business/feed",
+    "https://www.newstatesman.com/business/work/feed",
+    "https://www.newstatesman.com/business/economics/feed",
+    "https://www.newstatesman.com/business/sustainability/feed",
+    "https://www.newstatesman.com/business/finance/feed",
+    "https://www.newstatesman.com/business/sectors/feed",
+    "https://www.newstatesman.com/business/companies/feed",
+    "https://www.newstatesman.com/spotlight/feed",
+    "https://www.newstatesman.com/spotlight/skills/feed",
+    "https://www.newstatesman.com/spotlight/emerging-technologies/feed",
+    "https://www.newstatesman.com/spotlight/devolution/feed",
+    "https://www.newstatesman.com/spotlight/housing/feed",
+    "https://www.newstatesman.com/spotlight/energy/feed",
+    "https://www.newstatesman.com/spotlight/transport/feed",
+    "https://www.newstatesman.com/spotlight/fintech/feed",
+    "https://www.newstatesman.com/spotlight/healthcare/feed",
+    "https://www.newstatesman.com/spotlight/manufacturing/feed",
+    "https://www.newstatesman.com/spotlight/cyber/feed",
+    "https://www.newstatesman.com/spotlight/manufacturing/feed",
+    "https://www.newstatesman.com/spotlight/healthcare/feed",
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',

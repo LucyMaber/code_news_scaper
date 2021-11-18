@@ -2,6 +2,7 @@ Q ='[[wikidata:Q7055124]]'
 urls = [
     "https://www.northdevongazette.co.uk"
 ]
+#NOfeed
 feeds = [
 
 ]

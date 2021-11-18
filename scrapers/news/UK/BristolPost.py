@@ -3,7 +3,18 @@ urls = [
     "https://www.bristolpost.co.uk/"
 ]
 feeds = [
-
+"https://www.bristolpost.co.uk/news/rss.xml",
+"https://www.bristolpost.co.uk/news/bristol-news/rss.xml",
+"https://www.bristolpost.co.uk/all-about/education/rss.xml",
+"https://www.bristolpost.co.uk/news/health/rss.xml",
+"https://www.bristolpost.co.uk/all-about/politics/rss.xml",
+"https://www.bristolpost.co.uk/all-about/traffic-travel/rss.xml",
+"https://www.bristolpost.co.uk/news/history/rss.xml",
+"https://www.bristolpost.co.uk/news/celebs-tv/rss.xml",
+"https://www.bristolpost.co.uk/news/property/rss.xml",
+"https://www.bristolpost.co.uk/news/motoring/rss.xml",
+"https://www.bristolpost.co.uk/news/jobs/rss.xml",
+"https://www.bristolpost.co.uk/news/uk-world-news/rss.xml"
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',

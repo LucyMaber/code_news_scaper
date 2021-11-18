@@ -1,7 +1,9 @@
 Q ='[[wikidata:Q7618158]]'
-urls = []
+urls = [
+"http://www.stockportexpress.co.uk"
+]
 feeds = [
-
+    "https://www.manchestereveningnews.co.uk/rss.xml",
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',

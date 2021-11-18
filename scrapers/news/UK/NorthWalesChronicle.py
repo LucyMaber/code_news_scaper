@@ -3,7 +3,17 @@ urls = [
     "https://www.northwaleschronicle.co.uk/"
 ]
 feeds = [
-
+    "https://www.northwaleschronicle.co.uk/news/rss/",
+    "https://www.northwaleschronicle.co.uk/news/anglesey/rss/",
+    "https://www.northwaleschronicle.co.uk/news/bangor/rss/",
+    "https://www.northwaleschronicle.co.uk/news/caernarfon/rss/",
+    "https://www.northwaleschronicle.co.uk/news/midgwynedd/rss/",
+    "https://www.northwaleschronicle.co.uk/news/crime/news/rss/",
+    "https://www.northwaleschronicle.co.uk/news/business/rss/",
+    "https://www.northwaleschronicle.co.uk/news/health/rss/",
+    "https://www.northwaleschronicle.co.uk/news/general-election/rss/",
+    "https://www.northwaleschronicle.co.uk/news/coronavirus/rss/",
+    "https://www.northwaleschronicle.co.uk/news/llynpeninsula/rss/",
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',

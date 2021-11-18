@@ -3,7 +3,10 @@ urls = [
     "https://www.guardian-series.co.uk/"
 ]
 feeds = [
-
+    "https://www.guardian-series.co.uk/news/rss/",
+    "https://www.guardian-series.co.uk/news/general-election/rss/",
+    "https://www.eppingforestguardian.co.uk/news/national-news/rss/",
+    "https://www.guardian-series.co.uk/news/coronavirus/rss/",
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',

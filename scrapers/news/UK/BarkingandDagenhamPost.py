@@ -1,7 +1,8 @@
-Q =''
+Q ='Q205358'
 urls = [
     "https://www.barkinganddagenhampost.co.uk/"
 ]
+#NO FEED
 feeds = [
 
 ]

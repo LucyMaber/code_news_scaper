@@ -3,7 +3,6 @@ urls = [
     "https://www.ilfordrecorder.co.uk/"
 ]
 feeds = [
-
 ]
 
 header={

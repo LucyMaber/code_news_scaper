@@ -1,4 +1,7 @@
 Q =""
+urls = [
+    "https://www.kentonline.co.uk/"
+]
 feeds = [
     "https://www.kentonline.co.uk/_api/rss/kent_online_news_feed.xml",
     "https://www.kentonline.co.uk/_api/rss/dartford_messenger_news_feed.xml",

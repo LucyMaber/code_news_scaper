@@ -2,6 +2,7 @@ Q =''
 urls = [
     "https://eu.lancastereaglegazette.com/"
 ]
+# NO FEED
 feeds = [
 
 ]

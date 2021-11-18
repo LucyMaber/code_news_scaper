@@ -3,7 +3,17 @@ urls = [
     "https://www.glasgowtimes.co.uk"
 ]
 feeds = [
-
+"https://www.glasgowtimes.co.uk/news/health/rss/",
+"https://www.glasgowtimes.co.uk/news/glasgow-crime/rss",
+"https://www.glasgowtimes.co.uk/news/councilandpoliics/rss",
+"https://www.glasgowtimes.co.uk/news/planning-development/rss",
+"https://www.glasgowtimes.co.uk/news/glasgow-city-centre/rss",
+"https://www.glasgowtimes.co.uk/news/glasgow-southside/rss",
+"https://www.glasgowtimes.co.uk/news/glasgow-east-end/rss",
+"https://www.glasgowtimes.co.uk/news/glasgow-west-end/rss",
+"https://www.glasgowtimes.co.uk/news/north-glasgow/rss",
+"https://www.glasgowtimes.co.uk/news/best-of/rss",
+"https://www.glasgowtimes.co.uk/news/rss",
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',

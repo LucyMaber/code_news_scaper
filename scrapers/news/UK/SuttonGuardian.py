@@ -3,7 +3,17 @@ urls = [
     "https://www.yourlocalguardian.co.uk/"
 ]
 feeds = [
-
+    "https://www.yourlocalguardian.co.uk/news/rss/",
+    "https://www.yourlocalguardian.co.uk/news/croydonnews/rss/",
+    "https://www.yourlocalguardian.co.uk/news/suttonnews/rss/",
+    "https://www.yourlocalguardian.co.uk/news/educationnews/rss/",
+    "https://www.yourlocalguardian.co.uk/sport/nonleague/rss/",
+    "https://www.yourlocalguardian.co.uk/sport/rss/",
+    "https://www.yourlocalguardian.co.uk/sport/nonleague/rss/",
+    "https://www.yourlocalguardian.co.uk/sport/nonleague/carshaltonathletic/rss/",
+    "https://www.yourlocalguardian.co.uk/sport/nonleague/hamptonandrichmond/rss/",
+    "https://www.yourlocalguardian.co.uk/sport/nonleague/tootingandmitcham/rss/",
+    "https://www.yourlocalguardian.co.uk/sport/nonleague/other/rss/",
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',

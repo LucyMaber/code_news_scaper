@@ -3,6 +3,9 @@ urls = [
     "https://www.richmondandtwickenhamtimes.co.uk/"
 ]
 feeds = [
+    "https://www.richmondandtwickenhamtimes.co.uk/news/national/rss/",
+    "https://www.richmondandtwickenhamtimes.co.uk/news/coronavirus/rss/",
+    "https://www.richmondandtwickenhamtimes.co.uk/news/rss/",
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',

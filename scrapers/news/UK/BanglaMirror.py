@@ -3,7 +3,16 @@ urls = [
     "https://banglamirrornews.com/"
 ]
 feeds = [
-
+"https://banglamirrornews.com/feed/",
+"https://banglamirrornews.com/Cat/international/feed/",
+"https://banglamirrornews.com/Cat/local-news/feed/",
+"https://banglamirrornews.com/Cat/sylhet-news-2/feed/",
+"https://banglamirrornews.com/Cat/entertainment/feed/",
+"https://banglamirrornews.com/Cat/life-style/feed/",
+"https://banglamirrornews.com/Cat/health/feed/",
+"https://banglamirrornews.com/Cat/technology/feed/",
+"https://banglamirrornews.com/Cat/feature/feed/",
+"https://banglamirrornews.com/Cat/business/feed/",
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',

@@ -3,7 +3,25 @@ urls = [
     "https://www.islingtongazette.co.uk/"
 ]
 feeds = [
-
+"https://www.manchestereveningnews.co.uk/all-about/bolton/rss.xml",
+"https://www.manchestereveningnews.co.uk/all-about/bury/rss.xml",
+"https://www.manchestereveningnews.co.uk/all-about/manchester-city-centre/rss.xml",
+"https://www.manchestereveningnews.co.uk/all-about/manchester/rss.xml",
+"https://www.manchestereveningnews.co.uk/all-about/oldham/rss.xml",
+"https://www.manchestereveningnews.co.uk/all-about/manchester-city-centre/rss.xml",
+"https://www.manchestereveningnews.co.uk/all-about/mancheste/rss.xml",
+"https://www.manchestereveningnews.co.uk/all-about/oldham/rss.xml",
+"https://www.manchestereveningnews.co.uk/all-about/rochdale/rss.xml",
+"https://www.manchestereveningnews.co.uk/all-about/salford/rss.xml",
+"https://www.manchestereveningnews.co.uk/all-about/stockport/rss.xml",
+"https://www.manchestereveningnews.co.uk/all-about/tameside/rss.xml",
+"https://www.manchestereveningnews.co.uk/all-about/trafford/rss.xml",
+"https://www.manchestereveningnews.co.uk/all-about/wigan/rss.xml",
+"https://www.manchestereveningnews.co.uk/news/rss.xml",
+"https://www.manchestereveningnews.co.uk/news/uk-news/rss.xml",
+"https://www.manchestereveningnews.co.uk/all-about/politics/rss.xml",
+"https://www.manchestereveningnews.co.uk/all-about/crime/rss.xml",
+"https://www.manchestereveningnews.co.uk/news/health/rss.xml",
 ]
 
 header={

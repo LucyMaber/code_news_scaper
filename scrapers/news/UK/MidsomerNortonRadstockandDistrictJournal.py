@@ -2,6 +2,7 @@ Q =''
 urls = [
     "https://www.motorcyclenews.com/"
 ]
+# NO FEED
 feeds = [
 
 ]

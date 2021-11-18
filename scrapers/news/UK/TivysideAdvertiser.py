@@ -3,7 +3,12 @@ urls = [
     "https://www.tivysideadvertiser.co.uk/"
 ]
 feeds = [
-
+    "https://www.tivysideadvertiser.co.uk/news/rss/",
+    "https://www.tivysideadvertiser.co.uk/news/pembrokeshire_news/rss/",
+    "https://www.tivysideadvertiser.co.uk/news/letters/rss/",
+    "https://www.tivysideadvertiser.co.uk/news/national/rss/",
+    "https://www.tivysideadvertiser.co.uk/news/general-election/rss/",
+    "https://www.tivysideadvertiser.co.uk/news/coronavirus/rss/",
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',

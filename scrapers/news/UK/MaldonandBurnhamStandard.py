@@ -3,7 +3,14 @@ urls = [
     "https://www.maldonandburnhamstandard.co.uk/"
 ]
 feeds = [
-
+    "https://www.maldonandburnhamstandard.co.uk/news/localnews/rss/",
+    "https://www.maldonandburnhamstandard.co.uk/news/rss/",
+    "https://www.maldonandburnhamstandard.co.uk/news/north_essex_news/rss/",
+    "https://www.maldonandburnhamstandard.co.uk/news/south_essex_news/rss/",
+    "https://www.maldonandburnhamstandard.co.uk/news/countywide/rss/",
+    "https://www.maldonandburnhamstandard.co.uk/news/national/rss/",
+    "https://www.maldonandburnhamstandard.co.uk/news/general-election/rss/",
+    "https://www.maldonandburnhamstandard.co.uk/news/coronavirus/rss/"
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',

@@ -2,6 +2,7 @@ Q ='[[wikidata:Q7894983]]'
 urls = [
     "https://www.universityworldnews.com/"
 ]
+# no feed
 feeds = [
 
 ]

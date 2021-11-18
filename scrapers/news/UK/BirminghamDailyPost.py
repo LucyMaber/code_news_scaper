@@ -1,9 +1,17 @@
-Q =''
+Q ='Q100280515'
 urls = [
     "https://www.business-live.co.uk/"
 ]
 feeds = [
-
+    "https://www.business-live.co.uk/rss.xml",
+    "https://www.business-live.co.uk/all-about/south-west/?service=rss",
+    "https://www.business-live.co.uk/all-about/north-west/?service=rss",
+    "https://www.business-live.co.uk/all-about/northern-ireland/?service=rss",
+    "https://www.business-live.co.uk/all-about/london/?service=rss",
+    "https://www.business-live.co.uk/all-about/east/?service=rss",
+    "https://www.business-live.co.uk/all-about/yorkshire-humber/?service=rss",
+    "https://www.business-live.co.uk/all-about/east-midlands/?service=rss",
+    "https://www.business-live.co.uk/all-about/west-midlands/?service=rss",
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',

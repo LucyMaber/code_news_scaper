@@ -3,7 +3,14 @@ urls = [
     "https://www.thevisitor.co.uk/"
 ]
 feeds = [
-
+    "https://www.thevisitor.co.uk/rss",
+    "https://www.thevisitor.co.uk/news/traffic-and-travel/rss",
+    "https://www.thevisitor.co.uk/news/crime/rss",
+    "https://www.thevisitor.co.uk/news/weather/rss",
+    "https://www.thevisitor.co.uk/business/rss",
+    "https://www.thevisitor.co.uk/education/rss",
+    "https://www.thevisitor.co.uk/health/rss",
+    "https://www.thevisitor.co.uk/news/peopl/rsse"
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',

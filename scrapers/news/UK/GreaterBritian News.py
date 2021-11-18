@@ -2,6 +2,7 @@ Q =''
 urls = [
     "https://www.gbnews.uk/"
 ]
+#no feed
 feeds = [
 
 ]

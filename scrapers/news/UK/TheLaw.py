@@ -3,7 +3,7 @@ urls = [
     "https://www.law.com/"
 ]
 feeds = [
-
+    "http://feeds.feedblitz.com/law/legal-news/"
 ]
 header={
     # 'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',

@@ -3,7 +3,7 @@ urls = [
     "https://www.manchestereveningnews.co.uk/"
 ]
 feeds = [
-
+    "https://www.manchestereveningnews.co.uk/rss.xml",
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',

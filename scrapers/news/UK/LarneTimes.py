@@ -1,7 +1,20 @@
 Q ='[[wikidata:Q6489711]]'
-urls = []
+urls = [
+    "https://www.larnetimes.co.uk/"
+]
 feeds = [
-
+    "https://www.larnetimes.co.uk/rss",
+    "https://www.larnetimes.co.uk/news/traffic-and-travel/rss",
+    "https://www.larnetimes.co.uk/news/crime/rss",
+    "https://www.larnetimes.co.uk/news/weather/rss",
+    "https://www.larnetimes.co.uk/news/politics/rss",
+    "https://www.larnetimes.co.uk/business/rss",
+    "https://www.larnetimes.co.uk/education/rss",
+    "https://www.larnetimes.co.uk/health/rss",
+    "https://www.larnetimes.co.uk/news/people/rss",
+    "https://www.larnetimes.co.uk/read-this/rss",
+    "https://www.larnetimes.co.uk/lifestyle/homes-and-gardens/rss",
+    "https://www.larnetimes.co.uk/lifestyle/cars/rss"
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',

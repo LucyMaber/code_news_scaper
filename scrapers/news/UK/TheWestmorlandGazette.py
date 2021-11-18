@@ -2,8 +2,12 @@ Q ='[[wikidata:Q17030995]]'
 urls = [
     "https://www.thewestmorlandgazette.co.uk/"
 ]
+# NO feed
 feeds = [
-
+    "https://www.thewestmorlandgazette.co.uk/news/rss/",
+    "https://www.thewestmorlandgazette.co.uk/give-them-a-break/rss/",
+    "https://www.thewestmorlandgazette.co.uk/tourism_guide/rss/",
+    "https://www.thewestmorlandgazette.co.uk/obituaries/rss/"
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',

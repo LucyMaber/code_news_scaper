@@ -2,6 +2,7 @@ Q =''
 urls = [
     "https://www.oddfellows.co.uk/"
 ]
+#NOFEED
 feeds = [
 
 ]

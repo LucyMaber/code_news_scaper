@@ -3,7 +3,11 @@ urls = [
     "https://www.gazetteandherald.co.uk/"
 ]
 feeds = [
-
+"https://www.gazetteandherald.co.uk/news/headlines/rss/",
+"https://www.gazetteandherald.co.uk/news/towns/calneheadlines/rss/",
+"https://www.gazetteandherald.co.uk/news/coronavirus/rss/",
+"https://www.gazetteandherald.co.uk/news/national/rss/",
+"https://www.gazetteandherald.co.uk/news/gazette_and_herald_columnists/rss/",
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',

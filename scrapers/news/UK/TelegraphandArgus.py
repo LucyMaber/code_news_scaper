@@ -3,7 +3,22 @@ urls = [
     "https://www.thetelegraphandargus.co.uk/"
 ]
 feeds = [
-
+"https://www.thetelegraphandargus.co.uk/news/rss/",
+"https://www.thetelegraphandargus.co.uk/news/localbrad/rss/",
+"https://www.thetelegraphandargus.co.uk/news/keighleynews/rss/",
+"https://www.thetelegraphandargus.co.uk/news/airelocal/rss/",
+"https://www.thetelegraphandargus.co.uk/news/ilkleynews/rss/",
+"https://www.thetelegraphandargus.co.uk/news/uk_today_homepage/rss/",
+"https://www.thetelegraphandargus.co.uk/news/bradford-means-business-awards/rss/",
+"https://www.thetelegraphandargus.co.uk/news/coronavirus/rss/",
+"https://www.thetelegraphandargus.co.uk/opinion/rss/",
+"https://www.thetelegraphandargus.co.uk/opinion/columnists/rss/",
+"https://www.thetelegraphandargus.co.uk/opinion/columnists/columnistshelenmead/rss/",
+"https://www.thetelegraphandargus.co.uk/opinion/columnists/opinion_emma/rss/",
+"https://www.thetelegraphandargus.co.uk/opinion/columnists/news_opinion_columnist_keith/rss/",
+"https://www.thetelegraphandargus.co.uk/opinion/columnists/timmurgatroyd/rss/",
+"https://www.thetelegraphandargus.co.uk/opinion/columnists/chrismoncrieff/rss/",
+"https://www.thetelegraphandargus.co.uk/opinion/comment/rss/",
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',

@@ -3,7 +3,12 @@ urls = [
     "https://www.warringtonguardian.co.uk/"
 ]
 feeds = [
-
+    "https://www.warringtonguardian.co.uk/news/rss/",
+    "https://www.warringtonguardian.co.uk/news/national/uk-today/rss/",
+    "https://www.warringtonguardian.co.uk/news/columnists/rss/",
+    "https://www.warringtonguardian.co.uk/sport/wolves/rss/",
+    "https://www.warringtonguardian.co.uk/leisure/interviews/rss/",
+    "https://www.warringtonguardian.co.uk/yoursay/letters/rss/",
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',

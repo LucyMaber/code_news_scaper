@@ -3,7 +3,7 @@ urls = [
     "https://www.lawgazette.co.uk/"
 ]
 feeds = [
-
+    "https://www.lawgazette.co.uk/17.rss"
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',

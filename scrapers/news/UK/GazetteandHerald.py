@@ -3,6 +3,23 @@ urls = [
     "https://www.gazetteandherald.co.uk/"
 ]
 feeds = [
+    "https://www.gazetteandherald.co.uk/news/rss/",
+    "https://www.gazetteandherald.co.uk/news/headlines/rss/",
+    "https://www.gazetteandherald.co.uk/news/headlines/nostalgia/rss/",
+    "https://www.gazetteandherald.co.uk/news/headlines/weddings/rss/",
+    "https://www.gazetteandherald.co.uk/news/towns/calneheadlines/rss/",
+    "https://www.gazetteandherald.co.uk/news/towns/chippenhamheadlines/rss/",
+    "https://www.gazetteandherald.co.uk/news/towns/corshamheadlines/rss/",
+    "https://www.gazetteandherald.co.uk/news/towns/corshamheadlines/rss/",
+    "https://www.gazetteandherald.co.uk/news/towns/devizesheadlines/rss/",
+    "https://www.gazetteandherald.co.uk/news/towns/malmesburyheadlines/rss/",
+    "https://www.gazetteandherald.co.uk/news/towns/marlboroughheadlines/rss/",
+    "https://www.gazetteandherald.co.uk/news/towns/pewseynews/rss/",
+    "https://www.gazetteandherald.co.uk/news/towns/swindon/rss/",
+    "https://www.gazetteandherald.co.uk/news/towns/wiltshire/rss/",
+    "https://www.gazetteandherald.co.uk/news/coronavirus/rss/",
+    "https://www.gazetteandherald.co.uk/news/gazette_and_herald_columnists/rss/",
+    "https://www.gazetteandherald.co.uk/news/national/rss/",
 
 ]
 header={

@@ -2,6 +2,7 @@ Q =''
 urls = [
     "https://www.eastlondonadvertiser.co.uk"
 ]
+# NO feed
 feeds = [
 
 ]

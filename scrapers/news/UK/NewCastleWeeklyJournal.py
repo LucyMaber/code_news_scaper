@@ -3,7 +3,7 @@ urls = [
     "https://newcastleweekly.com.au/"
 ]
 feeds = [
-
+    "https://newcastleweekly.com.au/feed/"
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',

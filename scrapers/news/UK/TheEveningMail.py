@@ -1,9 +1,22 @@
-Q =''
+Q ='Q100294194'
 urls = [
     "https://www.nwemail.co.uk/"
 ]
 feeds = [
-
+    "https://www.nwemail.co.uk/News/rss/",
+    "https://www.nwemail.co.uk/news/askam/rss/",
+    "https://www.nwemail.co.uk/news/barrow/rss/",
+    "https://www.nwemail.co.uk/news/dalton/rss/",
+    "https://www.nwemail.co.uk/news/lakes/rss/",
+    "https://www.nwemail.co.uk/news/grange/rss/",
+    "https://www.nwemail.co.uk/news/millom/rss/",
+    "https://www.nwemail.co.uk/news/ulverston/rss/",
+    "https://www.nwemail.co.uk/news/walney/rss/",
+    "https://www.nwemail.co.uk/news/business/rss/",
+    "https://www.nwemail.co.uk/news/national/rss/",
+    "https://www.nwemail.co.uk/news/general-election/rss/",
+    "https://www.nwemail.co.uk/news/coronavirus/rss/",
+    "https://www.nwemail.co.uk/news/national/rss/",
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',

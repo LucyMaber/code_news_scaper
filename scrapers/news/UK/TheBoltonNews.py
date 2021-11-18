@@ -3,7 +3,16 @@ urls = [
     "https://www.theboltonnews.co.uk/"
 ]
 feeds = [
-
+    "https://www.theboltonnews.co.uk/news/rss/",
+    "https://www.theboltonnews.co.uk/news/bolton/rss/",
+    "https://www.theboltonnews.co.uk/news/farnworth/rss/",
+    "https://www.theboltonnews.co.uk/news/westhoughton/rss/",
+    "https://www.theboltonnews.co.uk/news/horwich/rss/",
+    "https://www.theboltonnews.co.uk/news/crime/rss/",
+    "https://www.theboltonnews.co.uk/news/politics/rss/",
+    "https://www.theboltonnews.co.uk/news/business/rss/",
+    "https://www.theboltonnews.co.uk/news/entertainment/rss/",
+    "https://www.theboltonnews.co.uk/news/coronavirus/rss/",
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',

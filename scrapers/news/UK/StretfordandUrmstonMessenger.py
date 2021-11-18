@@ -3,7 +3,7 @@ urls = [
     "https://www.messengernewspapers.co.uk/"
 ]
 feeds = [
-
+    "https://www.messengernewspapers.co.uk/news/rss/"
 ]
 header={
     'sec-ch-ua': 'Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93',
