@@ -1,7 +1,7 @@
 import os
 import importlib.util
 import pywikibot
-
+import re
 from os import listdir
 from os.path import isfile, join
 mypath = "/home/william/Code/news_scaper/scrapers/news/UK"
@@ -20,7 +20,7 @@ def path_import(absolute_path, file):
 output = open("demofile2.txt", "a")
 urls = []
 import re
-for file in onlyfiles:
+for file in onlyfiles: 
     name = re.sub(r"(\w)([A-Z])", r"\1 \2", file)
     try:
         name= name.replace('.py','')
@@ -28,29 +28,32 @@ for file in onlyfiles:
         page = pywikibot.Page(site, name)
         item = str(pywikibot.ItemPage.fromPage(page))
     except:
-        item = ""
-
-    print(item)
-    print(name)
+        item = "" 
     file = join(mypath, file)
-
-    with open(file, 'r') as original: 
-        if len(original.read()) < 100:
-            os.remove(file)
-            continue
 
     try:
         f = path_import(file,file)
-        print(file)
+        m = re.search('^(https?:\/\/)?(www\.)?([a-z.]+)', f.urls[0])
+        new_file = m.group(3).replace(".", "_").replace("-", "_").replace("&", "And") + ".py"
+        new_file = join(mypath, new_file)
+        os.rename(file,new_file)
+        file  = new_file
+
+        with open(file, 'r') as original: 
+            if len(original.read()) < 100:
+            #os.remove(file)
+                continue
+        #print(file)
         if f.Q == "":
             output.write("Need Q:"+file + "\n") 
+            print(file)
         for i in f.urls:
             if i in urls:
-                os.remove(file)
+                #os.remove(file)
                 continue
         with open(file, 'r') as original: 
             data = original.read()
-            print(dir(f))
+            #print(dir(f))
             # with open(file, 'w') as modified: 
             #     modified.write("Q ='" +item+"'\n"+ data)
             #     modified.close()

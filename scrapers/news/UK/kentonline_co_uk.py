@@ -1,4 +1,7 @@
-Q ='Q7492510'
+Q ='Q6392034'
+urls= [
+      "https://www.kentonline.co.uk/"
+]
 feeds = [
     "https://www.kentonline.co.uk/_api/rss/kent_online_news_feed.xml",
     "https://www.kentonline.co.uk/_api/rss/dartford_messenger_news_feed.xml",
@@ -38,8 +41,6 @@ def article(url):
         s.extract()
     for s in soup.select('.PageContent > .PageStory > p:contains("Cosgrove Leisure was approached")'):
         s.extract()
-    # for s in soup.select('div[class="article__detail-text mdc-typography--body1" > script'):
-    #     s.extract()
     bodyCopy =  soup.select('.PageContent > .PageStory')[0]
     
 async def scan():
