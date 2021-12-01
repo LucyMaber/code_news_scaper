@@ -26,7 +26,7 @@ def article(url):
         s.extract()
     for s in soup.select('script'):
         s.extract()
-    for s in soup.select('.p402_hide > p:contains("READ MORE")'):
+    ('.p402_hide > p:contains("READ MORE")'):
         s.extract()
     bodyCopy =  soup.select('.article-body')[0] ### READ THE FULL STORY
     

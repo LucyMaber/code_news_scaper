@@ -3,3 +3,6 @@ test.html
 *.pyc
 *.pyo
 demofile2.txt
+./settings.py
+settings.py
+uitls/feed_walk.py

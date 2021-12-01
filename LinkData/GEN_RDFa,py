@@ -1,0 +1,1436 @@
+def  RDFa_Article(soup,count):
+    array = []
+    #TEXT
+    for s in soup.select('meta[itemprop="articleBody"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="articleBody"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="negativeNotes"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="negativeNotes"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="positiveNotes"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="positiveNotes"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop=" alternateName"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="abstract"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop=" description"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="award"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="disambiguatingDescription"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="creditText"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="creditText"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="conditionsOfAccess"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="articleBody"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="articleBody"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="negativeNotes"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="negativeNotes"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="positiveNotes"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="positiveNotes"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop=" alternateName"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="abstract"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop=" description"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="award"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="disambiguatingDescription"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="creditText"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="creditText"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="name"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="conditionsOfAccess"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    #meta
+    for s in soup.select('meta[itemprop="temporalCoverage"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="temporalCoverage"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="dateCreated"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="dateCreated"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="dateModified"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="dateModified"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="datePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="datePublished"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="expires"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="expires"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="sdDatePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="sdDatePublished"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="temporal"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="temporal"])')
+        array.append("  "*(count+1) +'s["content"]')
+    #TIME
+    for s in soup.select('time[itemprop="temporalCoverage"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="temporalCoverage"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="dateCreated"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="dateCreated"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="dateModified"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="dateModified"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="datePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="datePublished"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="expires"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="expires"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="sdDatePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="sdDatePublished"])')
+        array.append('s["content"]')
+    for s in soup.select('time[itemprop="temporal"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="temporal"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="creditText"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="creditText"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="isFamilyFriendly"])')
+        array.append("  "*(count+1) +'s["content"]')
+def  RDFa_AskPublicNewsArticle(soup,count):
+    array = []
+    #TEXT
+    for s in soup.select('meta[itemprop="articleBody"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="articleBody"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="negativeNotes"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="negativeNotes"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="positiveNotes"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="positiveNotes"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop=" alternateName"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="abstract"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop=" description"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="award"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="disambiguatingDescription"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="creditText"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="creditText"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="conditionsOfAccess"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="articleBody"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="articleBody"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="negativeNotes"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="negativeNotes"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="positiveNotes"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="positiveNotes"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop=" alternateName"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="abstract"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop=" description"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="award"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="disambiguatingDescription"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="creditText"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="creditText"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="name"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="conditionsOfAccess"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    #meta
+    for s in soup.select('meta[itemprop="temporalCoverage"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="temporalCoverage"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="dateCreated"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="dateCreated"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="dateModified"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="dateModified"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="datePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="datePublished"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="expires"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="expires"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="sdDatePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="sdDatePublished"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="temporal"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="temporal"])')
+        array.append("  "*(count+1) +'s["content"]')
+    #TIME
+    for s in soup.select('time[itemprop="temporalCoverage"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="temporalCoverage"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="dateCreated"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="dateCreated"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="dateModified"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="dateModified"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="datePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="datePublished"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="expires"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="expires"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="sdDatePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="sdDatePublished"])')
+        array.append('s["content"]')
+    for s in soup.select('time[itemprop="temporal"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="temporal"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="creditText"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="creditText"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="isFamilyFriendly"])')
+        array.append("  "*(count+1) +'s["content"]')
+def  RDFa_NewsArticle(soup,count):
+    array = []
+    #TEXT
+    for s in soup.select('meta[itemprop="articleBody"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="articleBody"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="negativeNotes"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="negativeNotes"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="positiveNotes"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="positiveNotes"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop=" alternateName"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="abstract"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop=" description"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="award"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="disambiguatingDescription"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="creditText"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="creditText"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="conditionsOfAccess"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="articleBody"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="articleBody"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="negativeNotes"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="negativeNotes"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="positiveNotes"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="positiveNotes"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop=" alternateName"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="abstract"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop=" description"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="award"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="disambiguatingDescription"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="creditText"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="creditText"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="name"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="conditionsOfAccess"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    #meta
+    for s in soup.select('meta[itemprop="temporalCoverage"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="temporalCoverage"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="dateCreated"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="dateCreated"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="dateModified"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="dateModified"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="datePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="datePublished"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="expires"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="expires"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="sdDatePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="sdDatePublished"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="temporal"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="temporal"])')
+        array.append("  "*(count+1) +'s["content"]')
+    #TIME
+    for s in soup.select('time[itemprop="temporalCoverage"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="temporalCoverage"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="dateCreated"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="dateCreated"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="dateModified"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="dateModified"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="datePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="datePublished"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="expires"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="expires"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="sdDatePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="sdDatePublished"])')
+        array.append('s["content"]')
+    for s in soup.select('time[itemprop="temporal"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="temporal"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="creditText"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="creditText"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="isFamilyFriendly"])')
+        array.append("  "*(count+1) +'s["content"]')
+def  RDFa_AnalysisNewsArticle(soup,count):
+    array = []
+    #TEXT
+    for s in soup.select('meta[itemprop="articleBody"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="articleBody"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="negativeNotes"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="negativeNotes"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="positiveNotes"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="positiveNotes"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop=" alternateName"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="abstract"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop=" description"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="award"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="disambiguatingDescription"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="creditText"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="creditText"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="conditionsOfAccess"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="articleBody"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="articleBody"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="negativeNotes"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="negativeNotes"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="positiveNotes"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="positiveNotes"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop=" alternateName"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="abstract"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop=" description"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="award"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="disambiguatingDescription"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="creditText"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="creditText"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="name"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="conditionsOfAccess"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    #meta
+    for s in soup.select('meta[itemprop="temporalCoverage"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="temporalCoverage"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="dateCreated"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="dateCreated"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="dateModified"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="dateModified"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="datePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="datePublished"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="expires"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="expires"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="sdDatePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="sdDatePublished"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="temporal"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="temporal"])')
+        array.append("  "*(count+1) +'s["content"]')
+    #TIME
+    for s in soup.select('time[itemprop="temporalCoverage"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="temporalCoverage"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="dateCreated"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="dateCreated"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="dateModified"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="dateModified"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="datePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="datePublished"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="expires"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="expires"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="sdDatePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="sdDatePublished"])')
+        array.append('s["content"]')
+    for s in soup.select('time[itemprop="temporal"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="temporal"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="creditText"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="creditText"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="isFamilyFriendly"])')
+        array.append("  "*(count+1) +'s["content"]')
+def  RDFa_BackgroundNewsArticle(soup,count):
+    array = []
+    #TEXT
+    for s in soup.select('meta[itemprop="articleBody"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="articleBody"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="negativeNotes"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="negativeNotes"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="positiveNotes"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="positiveNotes"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop=" alternateName"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="abstract"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop=" description"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="award"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="disambiguatingDescription"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="creditText"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="creditText"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="conditionsOfAccess"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="articleBody"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="articleBody"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="negativeNotes"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="negativeNotes"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="positiveNotes"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="positiveNotes"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop=" alternateName"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="abstract"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop=" description"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="award"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="disambiguatingDescription"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="creditText"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="creditText"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="name"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="conditionsOfAccess"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    #meta
+    for s in soup.select('meta[itemprop="temporalCoverage"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="temporalCoverage"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="dateCreated"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="dateCreated"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="dateModified"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="dateModified"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="datePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="datePublished"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="expires"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="expires"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="sdDatePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="sdDatePublished"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="temporal"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="temporal"])')
+        array.append("  "*(count+1) +'s["content"]')
+    #TIME
+    for s in soup.select('time[itemprop="temporalCoverage"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="temporalCoverage"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="dateCreated"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="dateCreated"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="dateModified"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="dateModified"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="datePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="datePublished"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="expires"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="expires"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="sdDatePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="sdDatePublished"])')
+        array.append('s["content"]')
+    for s in soup.select('time[itemprop="temporal"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="temporal"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="creditText"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="creditText"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="isFamilyFriendly"])')
+        array.append("  "*(count+1) +'s["content"]')
+def  RDFa_NewsArticle(soup):
+    array = []
+    for s in soup.select('[itemprop="articleBody"]'):
+        array.append('for s in soup.select(meta[itemprop="articleBody"])')
+        array.append('  s["content"]')
+    for s in soup.select('[itemprop="articleSection"]'):
+        array.append('for s in soup.select(meta[itemprop="articleSection"]):')
+        array.append('  s["content"]')
+    for s in soup.select('[itemprop="abstract"]'):
+        array.append('for s in soup.select(meta[itemprop="abstract"]):')
+        array.append('  s["content"]')
+    for s in soup.select('[itemprop="accessMode"]'):
+        array.append('for s in soup.select(meta[itemprop="accessMode"]):')
+        array.append('  s["content"]')
+    for s in soup.select('[itemprop="alternativeHeadline"]'):
+        array.append('for s in soup.select(meta[itemprop="alternativeHeadline"]):')
+        array.append('  s["content"]')
+    for s in soup.select('[itemprop="award"]'):
+        array.append('for s in soup.select(meta[itemprop="award"]):')
+        array.append('  s["content"]')
+    for s in soup.select('[itemprop="contentReferenceTime"]'):
+        array.append('for s in soup.select(meta[itemprop="contentReferenceTime"]):')
+        array.append('  s["content"]')
+    for s in soup.select('[itemprop="copyrightNotice"]'):
+        array.append('for s in soup.select(meta[itemprop="copyrightNotice"]):')
+        array.append('  s["content"]')
+    for s in soup.select('[itemprop="creativeWorkStatus"]'):
+        array.append('for s in soup.select(meta[itemprop="creativeWorkStatus"]):')
+        array.append('  s["content"]')
+    for s in soup.select('[itemprop="creditText"]'):
+        array.append('for s in soup.select(meta[itemprop="creditText"]):')
+        array.append('  s["content"]')
+    for s in soup.select('[itemprop="dateCreated"]'):
+        array.append('for s in soup.select(meta[itemprop="dateCreated"]):')
+        array.append('  s["content"]')
+    for s in soup.select('[itemprop="dateModified"]'):
+        array.append('for s in soup.select(meta[itemprop="dateModified"]):')
+        array.append('  s["content"]')
+    for s in soup.select('[itemprop="expires"]'):
+        array.append('for s in soup.select(meta[itemprop="expires"]):')
+        array.append('  s["content"]')
+    for s in soup.select('[itemprop="isFamilyFriendly"]'):
+        array.append('for s in soup.select(meta[itemprop="isFamilyFriendly"]):')
+        array.append('  s["content"]')
+    for s in soup.select('[itemprop="typicalAgeRange"]'):
+        array.append('for s in soup.select(meta[itemprop="typicalAgeRange"]):')
+        array.append('  s["content"]')
+    for s in soup.select('[itemprop="alternateName"]'):
+        array.append('for s in soup.select(meta[itemprop="alternateName"]):')
+        array.append('  s["content"]')
+    for s in soup.select('[itemprop="description"]'):
+        array.append('for s in soup.select(meta[itemprop="description"]):')
+        array.append('  s["content"]')
+    for s in soup.select('[itemprop="disambiguatingDescription"]'):
+        array.append('for s in soup.select(meta[itemprop="disambiguatingDescription"]):')
+        array.append('  s["content"]')
+    for s in soup.select('[itemprop="name"]'):
+        array.append('for s in soup.select(meta[itemprop="name"]):')
+        array.append('  s["content"]')
+    for s in soup.select('[itemprop="sameAs"]'):
+        array.append('for s in soup.select(meta[itemprop="sameAs"]):')
+        array.append('  s["content"]')
+    for s in soup.select('[itemprop="dateline"]'):
+        array.append('for s in soup.select(meta[itemprop="alternadatelineteName"]):')
+        array.append('  s["content"]')
+    for s in soup.select('[itemprop="isAccessibleForFree"]'):
+        array.append('for s in soup.select(meta[itemprop="isAccessibleForFree"]):')
+        array.append('  s["content"]')
+def  RDFa_AnalysisNewsArticle(soup,count):
+    array = []
+    #TEXT
+    for s in soup.select('meta[itemprop="articleBody"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="articleBody"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="negativeNotes"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="negativeNotes"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="positiveNotes"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="positiveNotes"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop=" alternateName"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="abstract"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop=" description"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="award"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="disambiguatingDescription"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="creditText"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="creditText"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="conditionsOfAccess"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="articleBody"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="articleBody"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="negativeNotes"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="negativeNotes"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="positiveNotes"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="positiveNotes"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop=" alternateName"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="abstract"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop=" description"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="award"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="disambiguatingDescription"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="creditText"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="creditText"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="name"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="conditionsOfAccess"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    #meta
+    for s in soup.select('meta[itemprop="temporalCoverage"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="temporalCoverage"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="dateCreated"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="dateCreated"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="dateModified"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="dateModified"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="datePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="datePublished"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="expires"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="expires"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="sdDatePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="sdDatePublished"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="temporal"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="temporal"])')
+        array.append("  "*(count+1) +'s["content"]')
+    #TIME
+    for s in soup.select('time[itemprop="temporalCoverage"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="temporalCoverage"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="dateCreated"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="dateCreated"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="dateModified"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="dateModified"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="datePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="datePublished"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="expires"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="expires"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="sdDatePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="sdDatePublished"])')
+        array.append('s["content"]')
+    for s in soup.select('time[itemprop="temporal"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="temporal"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="creditText"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="creditText"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="isFamilyFriendly"])')
+        array.append("  "*(count+1) +'s["content"]')
+def  RDFa_NewsArticle(soup,count):
+    array = []
+    #TEXT
+    for s in soup.select('meta[itemprop="articleBody"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="articleBody"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="negativeNotes"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="negativeNotes"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="positiveNotes"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="positiveNotes"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop=" alternateName"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="abstract"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop=" description"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="award"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="disambiguatingDescription"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="creditText"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="creditText"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="conditionsOfAccess"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="articleBody"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="articleBody"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="negativeNotes"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="negativeNotes"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="positiveNotes"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="positiveNotes"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop=" alternateName"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="abstract"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop=" description"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="award"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="disambiguatingDescription"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="creditText"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="creditText"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="name"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="conditionsOfAccess"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    #meta
+    for s in soup.select('meta[itemprop="temporalCoverage"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="temporalCoverage"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="dateCreated"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="dateCreated"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="dateModified"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="dateModified"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="datePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="datePublished"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="expires"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="expires"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="sdDatePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="sdDatePublished"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="temporal"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="temporal"])')
+        array.append("  "*(count+1) +'s["content"]')
+    #TIME
+    for s in soup.select('time[itemprop="temporalCoverage"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="temporalCoverage"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="dateCreated"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="dateCreated"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="dateModified"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="dateModified"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="datePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="datePublished"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="expires"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="expires"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="sdDatePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="sdDatePublished"])')
+        array.append('s["content"]')
+    for s in soup.select('time[itemprop="temporal"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="temporal"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="creditText"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="creditText"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="isFamilyFriendly"])')
+        array.append("  "*(count+1) +'s["content"]')
+def  RDFa_ReportageNewsArticle(soup,count):
+    array = []
+    #TEXT
+    for s in soup.select('meta[itemprop="articleBody"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="articleBody"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="negativeNotes"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="negativeNotes"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="positiveNotes"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="positiveNotes"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop=" alternateName"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="abstract"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop=" description"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="award"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="disambiguatingDescription"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="creditText"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="creditText"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="conditionsOfAccess"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="articleBody"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="articleBody"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="negativeNotes"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="negativeNotes"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="positiveNotes"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="positiveNotes"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop=" alternateName"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="abstract"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop=" description"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="award"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="disambiguatingDescription"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="creditText"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="creditText"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="name"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="conditionsOfAccess"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    #meta
+    for s in soup.select('meta[itemprop="temporalCoverage"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="temporalCoverage"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="dateCreated"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="dateCreated"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="dateModified"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="dateModified"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="datePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="datePublished"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="expires"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="expires"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="sdDatePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="sdDatePublished"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="temporal"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="temporal"])')
+        array.append("  "*(count+1) +'s["content"]')
+    #TIME
+    for s in soup.select('time[itemprop="temporalCoverage"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="temporalCoverage"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="dateCreated"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="dateCreated"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="dateModified"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="dateModified"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="datePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="datePublished"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="expires"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="expires"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="sdDatePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="sdDatePublished"])')
+        array.append('s["content"]')
+    for s in soup.select('time[itemprop="temporal"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="temporal"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="creditText"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="creditText"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="isFamilyFriendly"])')
+        array.append("  "*(count+1) +'s["content"]')
+def  RDFa_NewsArticle(soup,count):
+    array = []
+    #TEXT
+    for s in soup.select('meta[itemprop="articleBody"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="articleBody"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="negativeNotes"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="negativeNotes"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="positiveNotes"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="positiveNotes"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop=" alternateName"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="abstract"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop=" description"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="award"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="disambiguatingDescription"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="creditText"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="creditText"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="conditionsOfAccess"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="articleBody"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="articleBody"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="negativeNotes"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="negativeNotes"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="positiveNotes"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="positiveNotes"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop=" alternateName"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="abstract"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop=" description"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="award"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="disambiguatingDescription"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="creditText"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="creditText"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="name"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="conditionsOfAccess"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    #meta
+    for s in soup.select('meta[itemprop="temporalCoverage"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="temporalCoverage"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="dateCreated"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="dateCreated"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="dateModified"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="dateModified"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="datePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="datePublished"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="expires"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="expires"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="sdDatePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="sdDatePublished"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="temporal"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="temporal"])')
+        array.append("  "*(count+1) +'s["content"]')
+    #TIME
+    for s in soup.select('time[itemprop="temporalCoverage"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="temporalCoverage"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="dateCreated"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="dateCreated"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="dateModified"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="dateModified"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="datePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="datePublished"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="expires"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="expires"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="sdDatePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="sdDatePublished"])')
+        array.append('s["content"]')
+    for s in soup.select('time[itemprop="temporal"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="temporal"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="creditText"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="creditText"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="isFamilyFriendly"])')
+        array.append("  "*(count+1) +'s["content"]')
+def  RDFa_ReviewNewsArticle(soup,count):
+    array = []
+    #TEXT
+    for s in soup.select('meta[itemprop="articleBody"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="articleBody"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="negativeNotes"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="negativeNotes"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="positiveNotes"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="positiveNotes"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop=" alternateName"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="abstract"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop=" description"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="award"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="disambiguatingDescription"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="creditText"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="creditText"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="conditionsOfAccess"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="articleBody"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="articleBody"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="negativeNotes"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="negativeNotes"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="positiveNotes"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="positiveNotes"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop=" alternateName"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="abstract"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop=" description"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="award"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="disambiguatingDescription"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="creditText"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="creditText"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="name"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="conditionsOfAccess"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    #meta
+    for s in soup.select('meta[itemprop="temporalCoverage"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="temporalCoverage"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="dateCreated"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="dateCreated"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="dateModified"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="dateModified"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="datePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="datePublished"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="expires"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="expires"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="sdDatePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="sdDatePublished"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="temporal"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="temporal"])')
+        array.append("  "*(count+1) +'s["content"]')
+    #TIME
+    for s in soup.select('time[itemprop="temporalCoverage"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="temporalCoverage"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="dateCreated"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="dateCreated"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="dateModified"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="dateModified"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="datePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="datePublished"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="expires"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="expires"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="sdDatePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="sdDatePublished"])')
+        array.append('s["content"]')
+    for s in soup.select('time[itemprop="temporal"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="temporal"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="creditText"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="creditText"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="isFamilyFriendly"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="dateline"]'):
+        array.append('for s in soup.select(meta[itemprop="alternadatelineteName"]):')
+        array.append('  s["content"]')
+    for s in soup.select('[itemprop="isAccessibleForFree"]'):
+        array.append('for s in soup.select(meta[itemprop="isAccessibleForFree"]):')
+        array.append('  s["content"]')
+    for s in soup.select('[itemprop="reviewRating"]'):
+        array = array + rating(s,count+1)
+    #Rating
+    for s in soup.select('[itemprop="negativeNotes"]'):
+        array = array + Review(s,count+1)
+    #Review
+    for s in soup.select('[itemprop="positiveNotes"]'):
+        array = array + Review(s,count+1)
+    #Review
+    for s in soup.select('[itemprop="associatedMediaReview"]'):
+        array = array + Review(s,count+1)
+    #Review
+    for s in soup.select('[itemprop="associatedClaimReview"]'):
+        array = array + Review(s,count+1)
+    #Review
+def  RDFa_Report(soup,count):
+    array = []
+    for s in soup.select('time[itemprop="temporalCoverage"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="temporalCoverage"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="dateCreated"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="dateCreated"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="dateModified"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="dateModified"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="datePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="datePublished"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="expires"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="expires"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="sdDatePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="sdDatePublished"])')
+        array.append('s["content"]')
+    for s in soup.select('time[itemprop="temporal"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="temporal"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="creditText"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="creditText"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="isFamilyFriendly"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="dateline"]'):
+        array.append('for s in soup.select(meta[itemprop="alternadatelineteName"]):')
+        array.append('  s["content"]')
+    for s in soup.select('[itemprop="isAccessibleForFree"]'):
+        array.append('for s in soup.select(meta[itemprop="isAccessibleForFree"]):')
+        array.append('  s["content"]')
+    for s in soup.select('[itemprop="reviewRating"]'):
+        array = array + RDFa_Rating(s,count+1)
+    #
+def RDFa_Rating(soup,count):
+    array = []
+    for s in soup.select('[itemprop="ratingExplanation"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="ratingExplanation"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="ratingValue"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="ratingValue"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="reviewAspect"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="reviewAspect"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="worstRating"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="worstRating"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="ratingExplanation"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="ratingExplanation"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="ratingValue"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="ratingValue"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="reviewAspect"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="reviewAspect"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="worstRating"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="worstRating"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="bestRating"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="bestRating"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="alternateName"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="alternateName"])')
+        array.append("  "*(count+1) +'s.get_text()')
+    for s in soup.select('meta[itemprop="description"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="description"])')
+        array.append("  "*(count+1) +'s.get_text()')
+    for s in soup.select('meta[itemprop="disambiguatingDescription"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="disambiguatingDescription"])')
+        array.append("  "*(count+1) +'s.get_text()')
+    for s in soup.select('meta[itemprop="bestRating"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="bestRating"])')
+        array.append("  "*(count+1) +'s.get_text()')
+def  RDFa_SatiricalArticle (soup,count):
+    array = []
+    #TEXT
+    for s in soup.select('meta[itemprop="articleBody"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="articleBody"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="negativeNotes"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="negativeNotes"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="positiveNotes"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="positiveNotes"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop=" alternateName"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="abstract"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop=" description"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="award"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="disambiguatingDescription"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="creditText"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="creditText"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="conditionsOfAccess"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="articleBody"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="articleBody"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="negativeNotes"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="negativeNotes"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="positiveNotes"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="positiveNotes"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop=" alternateName"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="abstract"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop=" description"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="award"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="disambiguatingDescription"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="creditText"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="creditText"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="name"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="conditionsOfAccess"]:not(meta))')
+        array.append("  "*(count+1) +'s["content"]')
+    #meta
+    for s in soup.select('meta[itemprop="temporalCoverage"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="temporalCoverage"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="dateCreated"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="dateCreated"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="dateModified"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="dateModified"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="datePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="datePublished"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="expires"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="expires"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="sdDatePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="sdDatePublished"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="temporal"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="temporal"])')
+        array.append("  "*(count+1) +'s["content"]')
+    #TIME
+    for s in soup.select('time[itemprop="temporalCoverage"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="temporalCoverage"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="dateCreated"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="dateCreated"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="dateModified"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="dateModified"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="datePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="datePublished"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="expires"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="expires"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('time[itemprop="sdDatePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="sdDatePublished"])')
+        array.append('s["content"]')
+    for s in soup.select('time[itemprop="temporal"]'):
+        array.append("  "*(count) +'for s in soup.select(time[itemprop="temporal"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="creditText"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="creditText"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('meta[itemprop="name"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="isFamilyFriendly"])')
+        array.append("  "*(count+1) +'s["content"]')
+    for s in soup.select('[itemprop="dateline"]'):
+        array.append('for s in soup.select(meta[itemprop="alternadatelineteName"]):')
+        array.append('  s["content"]')
+    for s in soup.select('[itemprop="isAccessibleForFree"]'):
+        array.append('for s in soup.select(meta[itemprop="isAccessibleForFree"]):')
+        array.append('  s["content"]')
+    for s in soup.select('[itemprop="reviewRating"]'):
+        array = array + RDFa_Rating(s,count+1)
+    #Rating
+    for s in soup.select('[itemprop="negativeNotes"]'):
+        array = array + RDFa_Review(s,count+1)
+    #Review
+    for s in soup.select('[itemprop="positiveNotes"]'):
+        array = array + RDFa_Review(s,count+1)
+    #Review
+    for s in soup.select('[itemprop="associatedMediaReview"]'):
+        array = array + RDFa_Review(s,count+1)
+    #Review
+    for s in soup.select('[itemprop="associatedClaimReview"]'):
+        array = array + RDFa_Review(s,count+1)
+    #Review
+def  RDFa_Review(soup,count):
+    array =[]
+
+    for s in soup.select('[itemprop="alternateName"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="abstract"]:not(meta))')
+        array.append('  s.get_text()')
+    for s in soup.select('[itemprop="description"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="award"]:not(meta))')
+        array.append('  s.get_text()')
+    for s in soup.select('[itemprop="abstract"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop=" abstract"]:not(meta))')
+        array.append('  s.get_text()')
+    for s in soup.select('[itemprop="text"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select([itemprop="isAccessibleForFree"]:not(meta))')
+        array.append('  s.get_text()')
+
+    for s in soup.select('meta[itemprop="alternateName"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="abstract"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="description"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="award"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="abstract"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop=" abstract"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="text"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="isAccessibleForFree"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="accessibilitySummary"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="accessibilitySummary"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="isAccessibleForFree"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="isAccessibleForFree"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="text"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="isAccessibleForFree"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="typicalAgeRange"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="isAccessibleForFree"])')
+        array.append('  s["content"]')
+    #
+    for s in soup.select('meta[itemprop="dateCreated"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="dateCreated"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop= dateModified"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="dateModified"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="datePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="datePublished"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="sdDatePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="datePublished"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="expires"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="datePublished"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="typicalAgeRange"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="isAccessibleForFree"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="typicalAgeRange"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="isAccessibleForFree"])')
+        array.append('  s["content"]')
+    #TIME
+    for s in soup.select('time[itemprop="dateCreated"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="dateCreated"])')
+        array.append('  s["datetime"]')
+    for s in soup.select('time[itemprop= dateModified"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="dateModified"])')
+        array.append('  s["datetime"]')
+    for s in soup.select('time[itemprop="datePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="datePublished"])')
+        array.append('  s["datetime"]')
+    for s in soup.select('time[itemprop="sdDatePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="datePublished"])')
+        array.append('  s["datetime"]')
+    for s in soup.select('time[itemprop="expires"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="datePublished"])')
+        array.append('  s["datetime"]')
+    
+
+    for s in soup.select('meta[itemprop="dateCreated"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="dateCreated"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop= dateModified"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="dateModified"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="datePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="datePublished"])')
+        array.append('  s["content"]')
+    for s in soup.select('time[itemprop="sdDatePublished"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="datePublished"])')
+        array.append('  s["content"]')
+    for s in soup.select('meta[itemprop="expires"]'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="datePublished"])')
+        array.append('  s["content"]')
+
+    for s in soup.select('[itemprop="typicalAgeRange"]:not(meta)'):
+        array.append("  "(count) +'for s in soup.select(meta[itemprop="isAccessibleForFree"])')
+        array.append('  s.get_text()')
+    for s in soup.select('[itemprop="typicalAgeRange"]:not(meta)'):
+        array.append("  "*(count) +'for s in soup.select(meta[itemprop="isAccessibleForFree"])')
+        array.append('  s.get_text()')
+def  RDFa_ClaimReview(soup,count):
+    pass
+def  RDFa_CriticReview(soup,count):
+    pass
+def  RDFa_AboutPage(soup,count):
+    pass
+def  RDFa_ContactPage(soup,count):
+    pass
+def  RDFa_FAQPage(soup,count):
+    pass
+def  RDFa_ItemPage(soup,count):
+    pass
+def  RDFa_QAPage(soup,count):
+    pass
+def  RDFa_WebPage(soup,count):
+    pass
+def  RDFa_AmpStory(soup,count):
+    pass
+def  RDFa_Blog(soup,count):
+    pass
+def  RDFa_Claim(soup,count):
+    pass
+def  RDFa_EmailMessage(soup,count):
+    pass
+def  RDFa_Message(soup,count):
+    pass
+def  RDFa_WebPageElement(soup,count):
+    pass
+def  RDFa_SiteNavigationElement(soup,count):
+    pass
+def  RDFa_Table(soup):
+    pass
+def  RDFa_Message(soup,count):
+    pass
