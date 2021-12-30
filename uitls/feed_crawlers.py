@@ -1,4 +1,6 @@
+from asyncio.tasks import ALL_COMPLETED, FIRST_COMPLETED
 from re import T
+
 import requests
 from urllib.parse import urlparse, urljoin
 import asyncio
@@ -7,6 +9,10 @@ import rdflib
 import validators
 import urllib.robotparser
 import time
+import enlighten
+from uitls.enlightenPlus.cache import Cache
+
+from uitls.reqest_man import is_crawl_delay, reqest_saferobot
 
 
 FeedRdfTypes = [
@@ -99,6 +105,7 @@ class WebStiteScrapeFeed:
         self.places = []
         self.feed = []
         self.seen = []
+        self.x = {}
         self.count = count
         self.places.append({"href": url, "count": count})
         for Eurl in Eurls:
@@ -107,16 +114,16 @@ class WebStiteScrapeFeed:
             aurl = urllib.parse.urljoin(url, knownFeedEndpoint)
             self.places.append(
                 {"count": count, "where": aurl, "href": aurl, "type": "sitemap"})
-        try:
-            self.rp = urllib.robotparser.RobotFileParser()
-            self.rp.set_url(url+"/robots.txt")
-            self.rp.read()
-            for url_sitemap in self.robot_site_maps():
-                self.places.append(
-                    {"count": count, "where": url_sitemap, "href": url_sitemap, "type": "sitemap"})
-            self.robot = True
-        except:
-            self.robot = False
+        # try:
+        #     self.rp = urllib.robotparser.RobotFileParser()
+        #     self.rp.set_url(url+"/robots.txt")
+        #     self.rp.read()
+        #     for url_sitemap in self.robot_site_maps():
+        #         self.places.append(
+        #             {"count": count, "where": url_sitemap, "href": url_sitemap, "type": "sitemap"})
+        #     self.robot = True
+        # except:
+        #     self.robot = False
 
     def robot_mtime(self):
         try:
@@ -157,97 +164,91 @@ class WebStiteScrapeFeed:
     async def crawler_scan(self, place, r):
         mime = r.headers['Content-type']
         place['type'] = mime
-        if mime in FeedRdfTypes or "rdf" in place["type"]:
-            await asyncio.wait_for(self.scanRDF(r.content, place), timeout=60)
-        elif mime in FeedAtomTypes:
-            await asyncio.wait_for(self.scanAtom(r.content, place), timeout=60)
-        elif mime in FeedRssTypes or "rss" in place["type"]:
-            await asyncio.wait_for(self.scanRSS(r.content, place), timeout=60)
-        elif mime in feedJsonTypes or "json" in place["type"]:
-            await asyncio.wait_for(self.scanJSONFeed(r.content, place), timeout=60)
-        elif mime in HTMLTypes or "html" in place["type"]:
-            await asyncio.wait_for(self.scanHTML(r.content, place), timeout=60)
-        else:
+        if mime in FeedRdfTypes or "rdf" in place["type"]: #scanJSONFeed
             pass
+            # await asyncio.wait_for(self.scanRDF(r.content, place), timeout=60)
+        elif mime in FeedAtomTypes:
+            if await asyncio.wait_for(self.scanAtom(r.content, place), timeout=60):
+                return
+        elif mime in FeedRssTypes or "rss" in place["type"]:
+            if await asyncio.wait_for(self.scanRSS(r.content, place), timeout=60):
+                return
+        elif mime in feedJsonTypes or "json" in place["type"]:
+            if await asyncio.wait_for(self.scanJSONFeed(r.content, place), timeout=60):
+                return
+        elif mime in HTMLTypes or "html" in place["type"]:
+            if await asyncio.wait_for(self.scanHTML(r.content, place), timeout=60):
+                return
+        elif mime in HTMLTypes or "sitemap" in place["type"]:
+            if await asyncio.wait_for(self.scanSitemap(r.content, place), timeout=60):
+                return
+        elif mime in HTMLTypes or "JSONFeed" in place["type"]:
+            if await asyncio.wait_for(self.scanJSONFeed(r.content, place), timeout=60):
+                return
+        else:
+            if await asyncio.wait_for(self.scanHTML(r.content, place), timeout=60):
+                return 
+        #await asyncio.wait_for(self.scanAtom(r.content, place), timeout=60)
+        #await asyncio.wait_for(self.scanRSS(r.content, place), timeout=60)
+        #await asyncio.wait_for(self.scanJSONFeed(r.content, place), timeout=60)
+        #await asyncio.wait_for(self.scanHTML(r.content, place), timeout=60)
+        #await asyncio.wait_for(self.scanSitemap(r.content, place), timeout=60)
+        #await asyncio.wait_for(self.scanJSONFeed(r.content, place), timeout=60)
 
     async def crawler_fast_fach_scan(self, place):
-        if place['href'] in self.seen:
+        if place['href'].lower() in self.seen:
             return
-        else:
-            self.seen.append(place['href'])
         try:
-            r = requests.get(place["href"],timeout=(3.05, 27))
+            r = reqest_saferobot(place["href"],retry_on_code=[403])
             self.crawler_scan(place, r)
         except:
             return
 
     async def crawler(self):
-        crawler_list = []
-        while len(self.places) != 0 or len(crawler_list) != 0:
-            print(len(self.places))
+        # crawlerSoite = Spinner('crawler spiner ')
+        while len(self.places) != 0:
+            # crawlerSoite.update()
             Fail = False
             place = self.places.pop()
             place_keys = place.keys()
-            if "where" in place_keys and not validators.domain(place['href']):
-                place['href'] = urllib.parse.urljoin(
-                    place['where'], place['href'])
-            place['href'] = urllib.parse.urldefrag(place['href']).url
-            if place["count"] >= 0:
-                place["count"] = place["count"] - 1
-            else:
+            print(place_keys)
+            if place["href"]  in self.x:
                 continue
+            if place["href"].lower()  in self.seen:
+                continue
+            self.seen.append(place["href"].lower())
+            self.x[place["href"]] =  1
+            if "where" in place_keys and not validators.domain(place['href']):
+                place['href'] = urllib.parse.urljoin(place['where'], place['href'])
+            place['href'] = urllib.parse.urldefrag(place['href']).url
+            if place["count"] == 0:
+                continue
+            else:
+                print("count of places:",len(self.places))
+                print("count of feed:",len(self.feed))
+                print("count of seen:",len(self.seen))
+                print("count:",place["count"])
+                place["count"] = place["count"] - 1
             domain = urlparse(self.url).netloc
             href = urlparse(place['href']).netloc
             if not href in domain:
                 continue
-
-            if domain == href:
-                has_robot_daly = self.robot
-                if not self.robot_can_fetch(place['href']):
-                    continue
-                time.sleep(self.robot_crawl_delay())
-            else:
-                url_rbot = urllib.parse.urljoin(place['href'], "/robots.txt")
-                try:
-                    rp = urllib.robotparser.RobotFileParser()
-                    rp.set_url(url_rbot)
-                    rp.read()
-                    rate = rp.request_rate("*")
-                    if not rp.set_url(place['href']):
-                        has_robot_daly = True
-                        continue
-                    if rate is not None:
-                        time.sleep(rate)
-                    else:
-                        has_robot_daly = False
-                except:
-                    pass
-            if has_robot_daly:
-                try:
-                    r = requests.get(place["href"], timeout=(5, 10))
-                    crawler_list.append(asyncio.create_task(
-                        self.crawler_scan(place, r)))
-                except:
-                    continue
-            else:
-                crawler_list.append(asyncio.create_task(
-                    self.crawler_fast_fach_scan(place)))
-            if len(self.places) == 0:
-                done, pending = await asyncio.wait(crawler_list)
-                crawler_list = []
-                if len(crawler_list) != 0:
+            r = reqest_saferobot(place["href"],retry_on_code=[403])
+            if r   is not None:
+                await self.crawler_scan(place, r)
+                if len(self.places) == 0:
                     break
 
-    def sitemap(self, content, place):
+    def scanSitemap(self, content, place):
         try:
             soup = BeautifulSoup(content, 'lxml')
             for urlset in soup.select('sitemap , urlset'):
                 for sitemap in urlset.select('sitemapindex'):
                     self.places.append(
-                        {"where": place["href"], "href": sitemap.getText(), "type": "sitemap", "count": place["count"]})
+                        {"where": place["href"], "href": sitemap.getText(), "type": "sitemap", "count": place["count"]+1})
                 for url in urlset.select('url'):
                     self.places.append(
-                        {"where": place["href"], "href": sitemap.getText(), "type": "sitemap", "count": place["count"]})
+                        {"where": place["href"], "href": sitemap.getText(), "type": "sitemap", "count": place["count"]+1})
             return True
         except:
             return False
@@ -305,9 +306,8 @@ class WebStiteScrapeFeed:
                     except:
                         pass
 
-            if hasContent and place["href"] not in self.seen:
-                self.feed.append(
-                    {"type": "hfeed", "url": place["href"], "count": place["count"]})
+            if hasContent :
+                self.feed.append({"type": "hfeed", "url": place["href"], "count": place["count"]})
             # Scan for LINKS
             for i in (soup.select('area ,link ,a')):
                 link = {"count": place["count"], "where": place["href"]}
@@ -337,9 +337,8 @@ class WebStiteScrapeFeed:
                         link["rel"] = i["rel"]
                     if i.has_attr('type'):
                         link["type"] = i["type"]
-                        if i["type"] in FeedTypes and place["href"] not in self.seen:
+                        if i["type"] in FeedTypes:
                             self.feed.append(link)
-                            self.seen.append(link)
                         else:
                             continue
                     self.places.append(link)
@@ -364,9 +363,8 @@ class WebStiteScrapeFeed:
                                 self.places.append(link)
                             except:
                                 pass
-            if not place["href"] not in self.seen and isGood:
+            if isGood:
                 self.feed.append(place)
-                self.seen.append(place["href"])
             return isGood
         except:
             return False
@@ -385,9 +383,8 @@ class WebStiteScrapeFeed:
                             self.places.append(link)
                         except:
                             pass
-            if not place["href"] not in self.seen and isGood:
+            if  isGood:
                 self.feed.append(place)
-                self.seen.append(place["href"])
             return isGood
         except:
             return False
@@ -407,9 +404,6 @@ class WebStiteScrapeFeed:
                     except:
                         pass
             place["type"].append("RDF")
-            if not place["href"] not in self.seen and isGood:
-                self.feed.append(place)
-                self.seen.append(place["href"])
             return isGood
         except:
             return False
@@ -426,14 +420,12 @@ class WebStiteScrapeFeed:
                     isGood = True
                     try:
                         link["href"] = item["url"]
-                        if not place["href"] not in self.seen:
-                            self.places.append(link)
+                        self.places.append(link)
                     except:
                         pass
             place["type"].append("JSONFeed")
-            if not place["href"] not in self.seen and isGood:
+            if  isGood:
                 self.feed.append(place)
-                self.seen.append(place["href"])
             return isGood
         except:
             return False

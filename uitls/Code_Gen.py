@@ -1,5 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
+
+from uitls.reqest_man import reqest_saferobot
 names = []
 dText_ = """
 from bs4 import BeautifulSoup
@@ -72,7 +74,8 @@ def scan_for (value,soup,tab, isTime, listP = []):
 
 class CodeGen:
     def __init__(self, url=[], feed=[]) -> None:
-        pass
+        self.url =url +feed
+        
 
     def gen_handle(self):
         pass
@@ -614,12 +617,12 @@ class CodeGen:
             return []
 
     def gen_article_article(self,urls):
-        from bs4 import BeautifulSoup
         seen = []
         code = []
         for url in urls:
+            print("GEN:",url)
             array = []
-            r =requests.get(url,timeout=(3.05, 27))
+            r = reqest_saferobot(url)
             soup = BeautifulSoup(r.text, 'html.parser')
             array = array + [(("\t"*1)+"try:")]
             array = array + (self.gen_article_articleBody(soup,2))
@@ -689,7 +692,6 @@ class CodeGen:
             if output in seen:
                 continue
             seen.append(output)
-            print(output)
 
     def gen_scan(self):
         pass
@@ -701,11 +703,3 @@ class CodeGen:
             article=self.gen_article()
             )
 
-
-# l = CodeGen()
-# urls= [
-# #"https://www.dailymail.co.uk/news/article-10251469/Britain-records-case-Omicron-coronavirus-variant.html",
-# #"https://www.theguardian.com/uk-news/2021/nov/28/anxious-wait-in-calais-camps-for-news-on-channel-victims",
-# "https://www.foxnews.com/sports/celtics-enes-kanter-rants-china-report"
-# ]
-# l.gen_article_article(urls)

@@ -43,17 +43,14 @@ for file in onlyfiles:
             if len(original.read()) < 100:
             #os.remove(file)
                 continue
-        #print(file)
         if f.Q == "":
             output.write("Need Q:"+file + "\n") 
-            print(file)
         for i in f.urls:
             if i in urls:
                 #os.remove(file)
                 continue
         with open(file, 'r') as original: 
             data = original.read()
-            #print(dir(f))
             # with open(file, 'w') as modified: 
             #     modified.write("Q ='" +item+"'\n"+ data)
             #     modified.close()

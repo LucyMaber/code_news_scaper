@@ -1,0 +1,23 @@
+{
+    "chronicle.com":{
+
+        "Cookie":{
+
+        },
+        "LocalStorage":{
+
+        },
+        "SessionStorage":{
+
+        },
+        "IndexedDB":{
+
+        },
+        "WebSQL":{
+
+        },
+        "TrustToken":{
+
+        }
+    }
+}

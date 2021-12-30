@@ -33,8 +33,6 @@ def article(url):
     # for s in soup.select('#content-wrapper > #axate-wallet'):
     #     s.extract()
     articleContent  =  soup.select('.articleContent > div') [0]
-    #print(articleBod
-    # y)
     
 
 async def scan():
