@@ -1,5 +1,5 @@
 from urllib.parse import urlparse
-from uitls.reqest_man import reqest_saferobot
+from uitls.reqest_man import  reqest_saferobot
 from requests.models import PreparedRequest
 import json
 
@@ -9302,7 +9302,7 @@ def merge_two_dicts(x, y):
 
 
 # ?url=*.com&output=json
-def scan_common_crawl_index_server():
+async def scan_common_crawl_index_server():
     d = []
     for endpoint in (endpoints):
         for topLevel in topLevels:
@@ -9310,14 +9310,16 @@ def scan_common_crawl_index_server():
                                 'output': "json", "showNumPages": "true"}
             req_page = PreparedRequest()
             req_page.prepare_url(endpoint, new_params_Pages)
-            reqest_page = reqest_saferobot(req_page.url)
+            reqest_page = await reqest_saferobot(req_page.url)
             page_f = reqest_page.json()
             for pageNum in range(page_f["pages"]):
                 new_params = {'url': topLevel,
                               'output': "json", "page": pageNum}
                 req = PreparedRequest()
                 req.prepare_url(endpoint, new_params)
-                reqest = reqest_saferobot(req.url)
+                reqest = None
+                while reqest is None:
+                    reqest = await reqest_saferobot(req.url)
                 texts = reqest.text.split("\n")
                 for text in texts:
                     if len(text) != 0:
@@ -9325,7 +9327,7 @@ def scan_common_crawl_index_server():
     return d
 
 
-def finder(url):
+async def common_crawl_finder(url):
     domains = {}
     domain = urlparse(url)
     if domain.netloc == "":
@@ -9337,21 +9339,35 @@ def finder(url):
     domain = domain.replace("www.", "")
     d = []
     for endpoint in (endpoints):
-        new_params_Pages =         {'url': domain, 'output': "json", "showNumPages": "true","matchType":"domain"}
+        new_params_Pages = {'url': domain, 'output': "json",
+                            "showNumPages": "true", "matchType": "domain"}
         req_page = PreparedRequest()
         req_page.prepare_url(endpoint, new_params_Pages)
-        reqest_page = reqest_saferobot(req_page.url)
-        page_f = reqest_page.json()
+        reqest_page = await reqest_saferobot(req_page.url)
+        page_f = await reqest_page.json()
         for pageNum in (range(page_f["pages"])):
-            new_params =  {'url': domain, 'output': "json", "page": pageNum,"matchType":"domain"}
+            new_params = {'url': domain, 'output': "json",
+                          "page": pageNum, "matchType": "domain"}
             req = PreparedRequest()
             req.prepare_url(endpoint, new_params)
-            reqest = reqest_saferobot(req.url)
+            reqest = await reqest_saferobot(req.url)
             texts = reqest.text.split("\n")
             for text in texts:
                 if len(text) != 0:
                     a = json.loads(text)
+                    try:
+                        if int(a["status"]) > 300 and int(a["status"]) not in [500, 501, 504, 506]:
+                            continue
+                    except:
+                        pass
+                    try:
+                        if "html" in a["mime"] or "xml" in a["mime"] or "rss" in a["mime"] or "atom" in a["mime"]:
+                            pass
+                    except:
+                        pass
+                    else:
+                        continue
                     if a["url"] not in domains:
-                        domains[a["url"]] =1
-                        d.append(a)
+                        domains[a["url"]] = 1
+                        d.append(a["url"])
     return d

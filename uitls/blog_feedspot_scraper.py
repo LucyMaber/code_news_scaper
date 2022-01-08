@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 import requests
 import enlighten
 
-from uitls.reqest_man import reqest_saferobot
+from uitls.reqest_man import  reqest_saferobot
 headers = {
     "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:94.0) Gecko/20100101 Firefox/94.0",
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
@@ -27,14 +27,14 @@ headers = {
 url_f = {}
 
 
-def feedSpot(url):
+async def feedSpot(url):
     if url in url_f:
         return [], []
     url_f[url] = 1
     # spinner.update()
     feeds = []
     webs = []
-    r = reqest_saferobot(url,rate =0.45)
+    r = await reqest_saferobot(url,rate =0.45)
     if r is None:
         return [], []
     soup = BeautifulSoup(r.text, 'html.parser')

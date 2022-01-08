@@ -5,8 +5,6 @@ from urllib.parse import urljoin, urlparse
 import aiohttp
 from aiohttp_retry import RetryClient, ExponentialRetry
 from aiohttp import ClientSession
-import dns.resolver
-
 
 from bs4 import BeautifulSoup
 import urllib.robotparser
@@ -33,28 +31,11 @@ headers = {
 }
 
 
-class FakeReqest:
-    async def create(self, response) -> None:
-        self._json = await response.json()
-        print(self._json)
-        self._text = await response.text()
-        self._contents = await response.contents()
-        self._status = response.status
-    def json(self):
-        return self._json
-    def text(self):
-        return self._text
-    def contents(self):
-        return self._contents
-    def status(self):
-        return self._status
-
-
 async def reqests_saferobots(urls, bot=True, rate=0, retry_on_code=[]):
     for url in urls:
         o = urlparse(url)
         if o.scheme == 'mailto':
-            yield None
+            return None
         elif o.scheme == '':
             pass
         elif o.scheme == 'http':
@@ -62,7 +43,7 @@ async def reqests_saferobots(urls, bot=True, rate=0, retry_on_code=[]):
         elif o.scheme == 'https':
             pass
         else:
-            yield None
+            return None
         if not o.netloc in sites.keys() and not o.netloc in URLLookups.keys():
             sites[o.netloc] = {"robots": None}
             try:
@@ -78,37 +59,30 @@ async def reqests_saferobots(urls, bot=True, rate=0, retry_on_code=[]):
         if is_crawl_delay(url):
             timeout = sites[o.netloc]["robots"].crawl_delay("*")
             timeout = timeout + rate
-        else:
-            timeout = rate
         for i in range(10):
             print(i)
             try:
                 async with ClientSession() as client:
                     async with client.get(url) as response:
-                        if response.status in [404, 401, 451, 410, 408, 510, 508, 501, 511]:
-                            yield response
-                        elif response.status in retry_on_code or response.status in [500, 501, 504, 506]:
-                            if is_crawl_delay(url):
-                                timeout = sites[o.netloc]["robots"].crawl_delay(
-                                    "*")
-                            elif rate is not None:
-                                timeout = rate
+                            if response.status in [404, 401, 451, 410, 408, 510, 508, 501, 511]:
+                                yield response
+                            elif response.status in retry_on_code or response.status in [500, 501, 504, 506]:
+                                if is_crawl_delay(url):
+                                    timeout = sites[o.netloc]["robots"].crawl_delay("*")
+                                elif rate is not None:
+                                    timeout = rate
+                                else:
+                                    timeout = 10
+                                try:
+                                    timeout = timeout + int(response.headers["Retry-After"])
+                                except:
+                                    pass
+                                sleep(timeout)
+                                raise aiohttp.ClientResponseError()
                             else:
-                                timeout = 10
-                            try:
-                                timeout = timeout + \
-                                    int(response.headers["Retry-After"])
-                            except:
-                                pass
-                            await sleep(timeout)
-                            raise aiohttp.ClientResponseError()
-                        else:
-                            co = FakeReqest()
-                            await co.create(response)
-                            yield co
+                                yield response
             except:
                 pass
-
 
 async def reqest_saferobot(url, bot=True, rate=0, retry_on_code=[]):
     o = urlparse(url)
@@ -122,15 +96,7 @@ async def reqest_saferobot(url, bot=True, rate=0, retry_on_code=[]):
         pass
     else:
         return None
-    try:
-        if not o.netloc in sites.keys():
-            result = dns.resolver.query(o.netloc)
-    except:
-        sites[o.netloc] = {}
-        sites[o.netloc]["DNS"] = False
-        return None
-
-    if not o.netloc in sites.keys():
+    if not o.netloc in sites.keys() and not o.netloc in URLLookups.keys():
         sites[o.netloc] = {"robots": None}
         try:
             rp = urllib.robotparser.RobotFileParser()
@@ -140,42 +106,35 @@ async def reqest_saferobot(url, bot=True, rate=0, retry_on_code=[]):
             sites[o.netloc]["robots"] = rp
         except:
             pass
-    
-    sites[o.netloc]["DNS"] = True
 
     if sites[o.netloc]["robots"] is not None:
         sites[o.netloc]["robots"].can_fetch("*", url)
     if is_crawl_delay(url):
         timeout = sites[o.netloc]["robots"].crawl_delay("*")
-        timeout = timeout + rate
-    else:
-        timeout = rate
-    await sleep(timeout)
+    timeout = timeout + rate
+    sleep(timeout)
     for i in range(10):
+        print(i)
         try:
             async with ClientSession() as client:
                 async with client.get(url) as response:
-                    if response.status in [404, 401, 451, 410, 408, 510, 508, 501, 511]:
-                        return response
-                    elif response.status in retry_on_code or response.status in [500, 501, 504, 506]:
-                        if is_crawl_delay(url):
-                            timeout = sites[o.netloc]["robots"].crawl_delay(
-                                "*") + rate
-                        elif rate is not None:
-                            timeout = rate
+                        if response.status in [404, 401, 451, 410, 408, 510, 508, 501, 511]:
+                            return response
+                        elif response.status in retry_on_code or response.status in [500, 501, 504, 506]:
+                            if is_crawl_delay(url):
+                                timeout = sites[o.netloc]["robots"].crawl_delay("*") + rate
+                            elif rate is not None:
+                                timeout = rate
+                            else:
+                                timeout = 10
+                            try:
+                                timeout = timeout + int(response.headers["Retry-After"])
+                            except:
+                                pass
+                            sleep(timeout)
+                            raise aiohttp.ClientResponseError()
                         else:
-                            timeout = 10
-                        try:
-                            timeout = timeout + \
-                                int(response.headers["Retry-After"])
-                        except:
-                            pass
-                        await sleep(timeout)
-                        raise aiohttp.ClientResponseError()
-                    else:
-                        co = FakeReqest()
-                        await co.create(response)
-                        return co
+                            return response
         except:
             pass
 
@@ -211,3 +170,8 @@ def is_crawl_delay(url, useragent="FeedScaner"):
 def site_maps(url):
     o = urlparse(url)
     return sites[o.netloc]["robots"].site_maps()
+
+
+response = asyncio.run(reqest_saferobot(
+    "https://www.twilio.com/blog/asynchronous-http-requests-in-python-with-aiohttp/aaaaaaaa"))
+print(response)

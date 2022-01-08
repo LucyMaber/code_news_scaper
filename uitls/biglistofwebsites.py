@@ -52,10 +52,10 @@ urls = [
     "http://biglistofwebsites.com/list-top-websites-like-dell.com",
     "http://biglistofwebsites.com/list-top-websites-like-dafont.com",
 ]
-def crawling_big_list_of_websites ():
+async  def crawling_big_list_of_websites ():
     href = []
     for url in urls:
-        request = reqest_saferobot(url)
+        request = await reqest_saferobot(url)
         soup = BeautifulSoup(request.text, 'html.parser')
         for a in soup.select(".cell-row.hover-highlight .cell .cell.cell-md  a"):
             href.append((a["href"]))

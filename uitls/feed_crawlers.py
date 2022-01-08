@@ -1,6 +1,6 @@
 from asyncio.tasks import ALL_COMPLETED, FIRST_COMPLETED
 from re import T
-
+import json
 import requests
 from urllib.parse import urlparse, urljoin
 import asyncio
@@ -11,7 +11,7 @@ import urllib.robotparser
 import time
 import enlighten
 from uitls.enlightenPlus.cache import Cache
-
+import tldextract
 from uitls.reqest_man import is_crawl_delay, reqest_saferobot
 
 
@@ -100,30 +100,23 @@ coros = []
 
 
 class WebStiteScrapeFeed:
-    def __init__(self, url, count, Eurls = []) -> None:
-        self.url = url
+    def __init__(self, sprql, count,) -> None:
+        self.url = sprql["official_website"]
         self.places = []
         self.feed = []
         self.seen = []
         self.x = {}
         self.count = count
-        self.places.append({"href": url, "count": count})
-        for Eurl in Eurls:
-            self.places.append( {"count": count, "where": Eurl, "href": Eurl})
+        for Eurl in sprql["web_feed_URL"]:
+            self.places.append({"count": count, "where": Eurl, "href": Eurl})
+        for Eurl in sprql["web_feed_URL"]:
+            self.feed.append({"count": count, "where": Eurl, "href": Eurl})
+        for Eurl in sprql["page_url"]:
+            self.places.append({"count": count, "where": Eurl, "href": Eurl})
         for knownFeedEndpoint in knownFeedEndpoints:
-            aurl = urllib.parse.urljoin(url, knownFeedEndpoint)
-            self.places.append(
-                {"count": count, "where": aurl, "href": aurl, "type": "sitemap"})
-        # try:
-        #     self.rp = urllib.robotparser.RobotFileParser()
-        #     self.rp.set_url(url+"/robots.txt")
-        #     self.rp.read()
-        #     for url_sitemap in self.robot_site_maps():
-        #         self.places.append(
-        #             {"count": count, "where": url_sitemap, "href": url_sitemap, "type": "sitemap"})
-        #     self.robot = True
-        # except:
-        #     self.robot = False
+            for url in self.url:
+                url = urllib.parse.urljoin(url, knownFeedEndpoint)
+                self.places.append({"count": count, "where": url, "href": url})
 
     def robot_mtime(self):
         try:
@@ -162,44 +155,69 @@ class WebStiteScrapeFeed:
             return None
 
     async def crawler_scan(self, place, r):
-        mime = r.headers['Content-type']
-        place['type'] = mime
-        if mime in FeedRdfTypes or "rdf" in place["type"]: #scanJSONFeed
-            pass
-            # await asyncio.wait_for(self.scanRDF(r.content, place), timeout=60)
-        elif mime in FeedAtomTypes:
-            if await asyncio.wait_for(self.scanAtom(r.content, place), timeout=60):
+        try:
+            if r is None:
                 return
-        elif mime in FeedRssTypes or "rss" in place["type"]:
-            if await asyncio.wait_for(self.scanRSS(r.content, place), timeout=60):
+            if r.content is None:
                 return
-        elif mime in feedJsonTypes or "json" in place["type"]:
-            if await asyncio.wait_for(self.scanJSONFeed(r.content, place), timeout=60):
+            if len(r.content) == 0:
                 return
-        elif mime in HTMLTypes or "html" in place["type"]:
-            if await asyncio.wait_for(self.scanHTML(r.content, place), timeout=60):
+            if len(r.content) in [404, 401, 451, 410, 408, 510, 508, 501, 511]:
                 return
-        elif mime in HTMLTypes or "sitemap" in place["type"]:
-            if await asyncio.wait_for(self.scanSitemap(r.content, place), timeout=60):
+            if "Content-type" in r.headers.keys():
+                mime = r.headers['Content-type']
+            else:
+                mime = ""
+            # if mime in FeedRdfTypes or "rdf" in place["type"]:  # scanJSONFeed
+            #     pass
+                # await asyncio.wait_for(self.scanRDF(r.content, place), timeout=60)
+            if mime in FeedAtomTypes:
+                if await asyncio.wait_for(self.scanAtom(r.content, place), timeout=10):
+                    print("found= ","FeedAtom")
+                    return
+            elif mime in FeedRssTypes or "rss" in place["type"]:
+                if await asyncio.wait_for(self.scanRSS(r.content, place), timeout=10):
+                    print("found= ","rss")
+                    return
+            elif mime in feedJsonTypes or "json" in place["type"]:
+                if await asyncio.wait_for(self.scanJSONFeed(r.content, place), timeout=10):
+                    print("found= ","json")
+                    return
+            elif mime in HTMLTypes or "html" in place["type"]:
+                if await asyncio.wait_for(self.scanHTML(r.content, place), timeout=10):
+                    print("found= ","html")
+                    return
+            elif mime in HTMLTypes or "sitemap" in place["type"]:
+                if await asyncio.wait_for(self.scanSitemap(r.content, place), timeout=10):
+                    print("found= ","sitemap")
+                    return
+            elif mime in HTMLTypes or "JSONFeed" in place["type"]:
+                if await asyncio.wait_for(self.scanJSONFeed(r.content, place), timeout=10):
+                    print("found= ","JSONFeed")
+                    return
+            else:
+                if await asyncio.wait_for(self.scanHTML(r.content, place), timeout=10):
+                    return
+            if await asyncio.wait_for(self.scanHTML(r.content, place), timeout=10):
                 return
-        elif mime in HTMLTypes or "JSONFeed" in place["type"]:
-            if await asyncio.wait_for(self.scanJSONFeed(r.content, place), timeout=60):
+            if await asyncio.wait_for(self.scanAtom(r.content, place), timeout=10):
                 return
-        else:
-            if await asyncio.wait_for(self.scanHTML(r.content, place), timeout=60):
-                return 
-        #await asyncio.wait_for(self.scanAtom(r.content, place), timeout=60)
-        #await asyncio.wait_for(self.scanRSS(r.content, place), timeout=60)
-        #await asyncio.wait_for(self.scanJSONFeed(r.content, place), timeout=60)
-        #await asyncio.wait_for(self.scanHTML(r.content, place), timeout=60)
-        #await asyncio.wait_for(self.scanSitemap(r.content, place), timeout=60)
-        #await asyncio.wait_for(self.scanJSONFeed(r.content, place), timeout=60)
+            if await asyncio.wait_for(self.scanRSS(r.content, place), timeout=10):
+                return
+            if await asyncio.wait_for(self.scanJSONFeed(r.content, place), timeout=10):
+                return
+            if await asyncio.wait_for(self.scanSitemap(r.content, place), timeout=10):
+                return
+            if await asyncio.wait_for(self.scanJSONFeed(r.content, place), timeout=10):
+                return
+        except Exception as e:
+            print(e)
 
     async def crawler_fast_fach_scan(self, place):
         if place['href'].lower() in self.seen:
             return
         try:
-            r = reqest_saferobot(place["href"],retry_on_code=[403])
+            r = await reqest_saferobot(place["href"], retry_on_code=[403])
             self.crawler_scan(place, r)
         except:
             return
@@ -212,220 +230,177 @@ class WebStiteScrapeFeed:
             place = self.places.pop()
             place_keys = place.keys()
             print(place_keys)
-            if place["href"]  in self.x:
+            if place["href"] in self.x:
                 continue
-            if place["href"].lower()  in self.seen:
+            if place["href"].lower() in self.seen:
                 continue
             self.seen.append(place["href"].lower())
-            self.x[place["href"]] =  1
+            self.x[place["href"]] = 1
             if "where" in place_keys and not validators.domain(place['href']):
-                place['href'] = urllib.parse.urljoin(place['where'], place['href'])
+                place['href'] = urllib.parse.urljoin(
+                    place['where'], place['href'])
             place['href'] = urllib.parse.urldefrag(place['href']).url
             if place["count"] == 0:
                 continue
             else:
-                print("count of places:",len(self.places))
-                print("count of feed:",len(self.feed))
-                print("count of seen:",len(self.seen))
-                print("count:",place["count"])
+                print("count of places:", len(self.places))
+                print("count of :", len(self.feed))
+                print("count of seen:", len(self.seen))
+                print("count of feed:", len(self.feed))
+                print("count:", place["count"])
                 place["count"] = place["count"] - 1
-            domain = urlparse(self.url).netloc
-            href = urlparse(place['href']).netloc
-            if not href in domain:
+            isDomainOrSub = False
+            for url in self.url:
+                urlT1 = tldextract.extract(url)
+                urlT2 = tldextract.extract(place['href'])
+                if urlT2.domain == urlT1.domain:
+                    isDomainOrSub =True
+                #the wayback Machine 
+            if not isDomainOrSub:
                 continue
-            r = reqest_saferobot(place["href"],retry_on_code=[403])
-            if r   is not None:
+            r = await reqest_saferobot(place["href"], retry_on_code=[403])
+            if r is not None:
+                print(r)
                 await self.crawler_scan(place, r)
                 if len(self.places) == 0:
                     break
 
     def scanSitemap(self, content, place):
-        try:
-            soup = BeautifulSoup(content, 'lxml')
-            for urlset in soup.select('sitemap , urlset'):
-                for sitemap in urlset.select('sitemapindex'):
-                    self.places.append(
-                        {"where": place["href"], "href": sitemap.getText(), "type": "sitemap", "count": place["count"]+1})
-                for url in urlset.select('url'):
-                    self.places.append(
-                        {"where": place["href"], "href": sitemap.getText(), "type": "sitemap", "count": place["count"]+1})
-            return True
-        except:
-            return False
-
-    def XBEL(self, content, url, count, place):
-        try:
-            soup = BeautifulSoup(content, 'lxml')
-            for opml in soup.select('opml'):
-                for body in opml.select('body'):
-                    for outline in body.select('outline'):
-                        if outline.has_attr('xmlUrl'):
-                            self.places.append({outline["xmlUrl"]})
-                        if outline.has_attr('htmlUrl'):
-                            self.places.append({outline["htmlUrl"]})
-                        if outline.has_attr('url'):
-                            self.places.append({outline["url"]})
-            return True
-        except:
-            return False
-
-    async def scanHTML(self, content, place):
         isGood = False
         try:
-            soup = BeautifulSoup(content, 'html.parser')
-            hasContent = False
-            # hAtom
+            soup = BeautifulSoup(content, 'xml')
+            for sitemap in soup.select('sitemap'):
+                isGood = True
+                for loc in sitemap.select('loc'):
+                    self.places.append(
+                        {"where":  loc.text, "count": place["count"]+1})
+            for url in soup.select('url'):
+                for loc in url.select('loc'):
+                    isGood = True
+                    self.places.append(
+                        {"where":  loc.text, "count": place["count"]+1})
+        except:
+            return False
+        return isGood
+
+    def scanHTML(self, content, place):
+        isGood = False
+        isFeed = False
+        soup = BeautifulSoup(content, 'html.parser')
+        # hAtom
+        try:
             for hfeed in (soup.select('[rel="hfeed"],.hfeed')):
                 for hentry in hfeed.select('[rel="hentry"],.hentry'):
                     for bookmark in hentry.select('[rel="bookmark"], .bookmark'):
-                        hasContent = True
-                        link = {"count": place["count"],
-                                "where": place["href"]}
                         if bookmark.has_attr("href") and validators.url(bookmark['href']):
-                            link["href"] = bookmark["href"]
-                    for tag in hentry.select('[rel="tag"],.tag'):
-                        hasContent = True
-                        link = {"count": place["count"],
-                                "where": place["href"]}
-                        if tag.has_attr("href") and validators.url(tag['href']):
-                            link["href"] = tag["href"]
-            # hslice
+                            url =urljoin(place["href"],bookmark["href"])
+                            link = {"count": place["count"],
+                                    "where": bookmark["href"],
+                                    "href":url}
+                            self.places.append(link)
+                            isFeed = True
+        except:
+            pass
+        # hslice
+        try:
             for hslice in (soup.select('[rel="hslice"],.hslice')):
                 for bookmark in hslice.select('[rel="bookmark"], .bookmark'):
-                    try:
-                        if bookmark.has_attr("href") and validators.url(bookmark['href']):
-                            link["href"] = bookmark["href"]
-                    except:
-                        pass
-                for feedurl in hslice.select('[rel="feedurl"], .feedurl'):
-                    try:
-                        link = {"count": place["count"],
-                                "where": place["href"]}
-                        if feedurl.has_attr("href") and validators.url(feedurl['href']):
-                            link["href"] = tag["href"]
-                    except:
-                        pass
-
-            if hasContent :
-                self.feed.append({"type": "hfeed", "url": place["href"], "count": place["count"]})
-            # Scan for LINKS
-            for i in (soup.select('area ,link ,a')):
-                link = {"count": place["count"], "where": place["href"]}
-                try:
-                    link["href"] = i["href"]
-                    if i.has_attr('rel'):
-                        if "stylesheet" in i["rel"]:
-                            continue
-                        if "modulepreload" in i["rel"]:
-                            continue
-                        if "manifest" in i["rel"]:
-                            continue
-                        if "license" in i["rel"]:
-                            continue
-                        if "noreferrer" in i["rel"]:
-                            continue
-                        if "help" in i["rel"]:
-                            continue
-                        if "icon" in i["rel"]:
-                            continue
-                        if "canonical" in i["rel"]:
-                            continue
-                        if "author" in i["rel"]:
-                            continue
-                        if "dns-prefetch" in i["rel"]:
-                            continue
-                        link["rel"] = i["rel"]
-                    if i.has_attr('type'):
-                        link["type"] = i["type"]
-                        if i["type"] in FeedTypes:
-                            self.feed.append(link)
-                        else:
-                            continue
-                    self.places.append(link)
-                except:
-                    pass
-            return isGood
+                    if bookmark.has_attr("href"):
+                        url =urljoin(place["href"],bookmark["href"])
+                        link = {
+                            "count": place["count"], "where": bookmark["href"], "href": url}
+                        self.feed.append(link)
+                        isFeed = True
         except:
-            return False
+            pass
+        # Scan for LINKS
+        for i in (soup.select('area ,link ,a')):
+            print(i)
+            isGood = True
+            url =urljoin(place["href"],bookmark["href"])
+            link = {"count": place["count"],
+                    "where":url, "href": url}
+            if i.has_attr('type'):
+                pass
+            if i.has_attr('rel'):
+                if "stylesheet" in i["rel"]:
+                    continue
+                if "modulepreload" in i["rel"]:
+                    continue
+                if "manifest" in i["rel"]:
+                    continue
+                if "license" in i["rel"]:
+                    continue
+                if "noreferrer" in i["rel"]:
+                    continue
+                if "help" in i["rel"]:
+                    continue
+                if "icon" in i["rel"]:
+                    continue
+                if "canonical" in i["rel"]:
+                    continue
+                if "author" in i["rel"]:
+                    continue
+                if "dns-prefetch" in i["rel"]:
+                    continue
+                link["rel"] = i["rel"]
+            if i.has_attr('type'):
+                if i["type"] in FeedTypes:
+                    self.feed.append(link)
+                else:
+                    continue
+            self.places.append(link)
+        if isFeed:
+            place["type"] = "HTML_Feed"
+            self.feed.append(place)
+            isGood = True
+        return isGood
 
     async def scanRSS(self, content, place):
         isGood = False
-        try:
-            soup = BeautifulSoup(content, 'lxml')
-            for rss in soup.select('rss'):
-                for channel in rss.select('channel'):
-                    for item in channel.select('item'):
-                        for i in item.select('link'):
-                            link = {"count": place["count"],
-                                    "where": place["href"]}
-                            try:
-                                link["href"] = i.get_text()
-                                self.places.append(link)
-                            except:
-                                pass
-            if isGood:
-                self.feed.append(place)
-            return isGood
-        except:
-            return False
+        soup = BeautifulSoup(content, features='xml')
+        articles = soup.findAll('item')
+        for a in articles:
+            url =urljoin(place["href"],place["href"])
+            link = {"count": place["count"], "href": url, "where":url}
+            self.places.append(link)
+        if isGood:
+            place["type"] = "Atom"
+            self.feed.append(place)
+        return isGood
 
     async def scanAtom(self, content, place):
         isGood = False
-        try:
-            soup = BeautifulSoup(content, 'lxml')
-            for feed in soup.select('feed'):
-                for entry in feed.select('entry'):
-                    for i in feed.select('link'):
-                        isGood = True
-                        link = {"count": place["count"], "where": place["href"]}
-                        try:
-                            link["href"] = link["href"]
-                            self.places.append(link)
-                        except:
-                            pass
-            if  isGood:
-                self.feed.append(place)
-            return isGood
-        except:
-            return False
-
-    async def scanRDF(self, content, place):
-        isGood = False
-        try:
-            graph = rdflib.Graph()
-            graph.parse(place["href"])
-            for subj, pexternalDomain, obj in graph:
-                if (validators.url(str(obj))):
-                    link = {"count": place["count"], "where": place["href"]}
-                    try:
-                        isGood = True
-                        link["href"] = obj
-                        self.feed.append(link)
-                    except:
-                        pass
-            place["type"].append("RDF")
-            return isGood
-        except:
-            return False
+        soup = BeautifulSoup(content, 'xml')
+        for feed in soup.select('feed'):
+            for i in feed.select('link'):
+                isGood = True
+                try:
+                    print(i)
+                    url =urljoin(place["href"],place["href"])
+                    link = {"count": place["count"],
+                            "where": i["href"], "href":url}
+                    self.places.append(link)
+                except:
+                    pass
+        if isGood:
+            place["type"] = "Atom"
+            self.feed.append(place)
+        return isGood
 
     async def scanJSONFeed(self, content, place):
         isGood = False
         try:
-            content["version"]
-            content["title"]
+            content = json.loads(content)
             for item in content["items"]:
-                item["id"]
-                if (validators.url(str(item["url"]))):
-                    link = {"count": place["count"], "where": place["href"]}
-                    isGood = True
-                    try:
-                        link["href"] = item["url"]
-                        self.places.append(link)
-                    except:
-                        pass
-            place["type"].append("JSONFeed")
-            if  isGood:
-                self.feed.append(place)
-            return isGood
+                url =urljoin( item["url"],place["href"])
+                link = {"count": place["count"],
+                        "where": item["url"], "href": url}
+                self.places.append(link)
+                isGood = True
         except:
-            return False
+            pass
+        if isGood:
+            place["type"] = "JSONFeed"
+            self.feed.append(place)
+        return isGood
