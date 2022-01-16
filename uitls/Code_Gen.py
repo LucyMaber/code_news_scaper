@@ -773,8 +773,8 @@ class CodeGen:
     async def getURl(self):
         for i_url in self.feed:
             response = await reqest_saferobot(i_url)
-            ## by mime type
-            ## Fallback
+            # by mime type
+            # Fallback
             isGood,  list_pace = readFeedHTML(response.content)
             if isGood:
                 self.list_pace = self.list_pace + list_pace
@@ -791,7 +791,7 @@ class CodeGen:
             if isGood:
                 self.list_pace = self.list_pace + list_pace
                 continue
-    
+
     def gen(self):
         print("gen code")
         dText = dText_.format(
@@ -803,4 +803,3 @@ class CodeGen:
         f = open(p, "w")
         f.write(dText)
         f.close()
-        

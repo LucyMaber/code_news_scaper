@@ -3,6 +3,8 @@ import asyncio
 from pyppeteer import launch
 import csv
 
+# TO USED YET
+
 
 def postcode_generator():
     with open('ukpostcodes.csv', newline='') as csvfile:
@@ -22,7 +24,7 @@ async def feed(post, where, page, browser):
                                     }
                                     return out;
                                 }""")
-            return where, page, browser ,elements
+            return where, page, browser, elements
         except:
             await page.close()
             page = await browser.newPage()
@@ -39,7 +41,7 @@ async def notices(post, page, browser):
                 }
                 return out;
             }""")
-            return page, browser ,elements
+            return page, browser, elements
         except:
             await page.close()
             page = await browser.newPage()
@@ -56,7 +58,7 @@ async def mynews(post, where, page, browser):
                                     }
                                     return out;
                                 }""")
-            return where, page, browser ,elements
+            return where, page, browser, elements
         except:
             await page.close()
             page = await browser.newPage()
@@ -75,7 +77,7 @@ async def feedFinder(post, page, browser):
                     }""")
             for where in elements:
                 test = True
-            return post, page, browser ,elements
+            return post, page, browser, elements
         except:
             await page.close()
             page = await browser.newPage()
@@ -86,13 +88,13 @@ async def scan_inyourarea():
     for post in postcode_generator():
         browser = await launch({"headless": True, "args": ['--disable-gpu', '--no-sandbox', '--lang=en-US', '--disable-setuid-sandbox', '--disable-dev-shm-usage']})
         page = await browser.newPage()
-        post, page, browser ,wheres = await feedFinder(post, page, browser)
+        post, page, browser, wheres = await feedFinder(post, page, browser)
         for where in wheres:
-            where, page, browser ,feed_list = await feed(post, where, page, browser)
+            where, page, browser, feed_list = await feed(post, where, page, browser)
             lookat = lookat + feed_list
-            page, browser ,notices_list = await notices(post, page, browser)
+            page, browser, notices_list = await notices(post, page, browser)
             lookat = lookat + notices_list
-            where, page, browser ,mynews_list = await mynews(post, where, page, browser)
+            where, page, browser, mynews_list = await mynews(post, where, page, browser)
             lookat = lookat + mynews_list
     browser.close()
     return lookat

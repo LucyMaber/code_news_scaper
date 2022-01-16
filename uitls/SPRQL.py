@@ -1,3 +1,4 @@
+from time import sleep
 import requests
 SPARQL_other = """
 
@@ -158,21 +159,35 @@ SELECT ?Thing ?countryLabel ?official_website ?Twitter_username ?subreddit ?web_
   MINUS { ?Thing wdt:P582 ?end_time. }
 }
 """
+
+
 class SPRQL:
-    def  __init__(self,sparql,url) -> None:
+    def __init__(self, sparql, url) -> None:
         self.sparql = sparql
         self.url = url
-    def  run(self) -> None:
+
+    def run(self) -> None:
         da = {}
-        #print(self.url)
-        r = requests.get(self.url, params = {'format': 'json', 'query': self.sparql})
-        data = r.json()
+        # print(self.url)
+        while True:
+            r = requests.get(self.url, params={
+                             'format': 'json', 'query': self.sparql})
+            if not r.ok:
+                sleep(10)
+                print("wilidata eoror")
+                print(r)
+                continue
+            try:
+                data = r.json()
+            except:
+                continue
+            break
         for i in data["results"]["bindings"]:
             if i["Thing"]["value"] not in da.keys():
                 da[i["Thing"]["value"]] = {}
             for ke in i.keys():
                 if not ke in da[i["Thing"]["value"]].keys():
-                  da[i["Thing"]["value"]][ke] = []
+                    da[i["Thing"]["value"]][ke] = []
                 if i[ke]["value"] not in da[i["Thing"]["value"]][ke]:
-                  da[i["Thing"]["value"]][ke].append(i[ke]["value"])
-        return  da
+                    da[i["Thing"]["value"]][ke].append(i[ke]["value"])
+        return da
